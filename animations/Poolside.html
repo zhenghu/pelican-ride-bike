@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鹈鹕骑自行车动画</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .scene {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            background: linear-gradient(to bottom, #87CEEB 0%, #B0E2FF 40%, #E0F7FA 100%);
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .ground {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, #228B22 0%, #32CD32 50%, #228B22 100%);
+            border-top: 2px solid #006400;
+        }
+        
+        .road {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to top, #555 0%, #333 50%, #555 100%);
+            border-top: 1px solid #111;
+        }
+        
+        .road::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: #fff;
+            opacity: 0.5;
+        }
+        
+        .bicycle-group {
+            position: absolute;
+            bottom: 80px;
+            left: 100px;
+        }
+        
+        .bicycle {
+            transform-origin: 50% 50%;
+            animation: ride 8s linear infinite;
+        }
+        
+        @keyframes ride {
+            0% { transform: translateX(0) rotate(0); }
+            10% { transform: translateX(100px) rotate(-5); }
+            20% { transform: translateX(200px) rotate(0); }
+            30% { transform: translateX(300px) rotate(5); }
+            40% { transform: translateX(400px) rotate(0); }
+            50% { transform: translateX(500px) rotate(-5); }
+            60% { transform: translateX(600px) rotate(0); }
+            70% { transform: translateX(700px) rotate(5); }
+            80% { transform: translateX(800px) rotate(0); }
+            90% { transform: translateX(900px) rotate(-5); }
+            100% { transform: translateX(1000px) rotate(0); }
+        }
+        
+        .bicycle-wheel {
+            fill: none;
+            stroke: #333;
+            stroke-width: 4;
+            animation: spin 0.5s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .bicycle-wheel-spokes {
+            stroke: #666;
+            stroke-width: 2;
+        }
+        
+        .bicycle-frame {
+            fill: #4a90e2;
+            stroke: #2d5a87;
+            stroke-width: 2;
+        }
+        
+        .bicycle-seat {
+            fill: #5d8cf0;
+            stroke: #2d5a87;
+            stroke-width: 1.5;
+        }
+        
+        .bicycle-handlebar {
+            fill: #5d8cf0;
+            stroke: #2d5a87;
+            stroke-width: 1.5;
+        }
+        
+        .bicycle-pedal {
+            fill: #ff6b6b;
+            stroke: #c44;
+            stroke-width: 1.5;
+        }
+        
+        .bicycle-wheel-center {
+            fill: #222;
+        }
+        
+        .cat {
+            fill: #8B4513;
+            stroke: #654321;
+            stroke-width: 1.5;
+        }
+        
+        .cat-ear {
+            fill: #CD853F;
+            stroke: #8B4513;
+            stroke-width: 1;
+        }
+        
+        .cat-eye {
+            fill: #fff;
+            stroke: #000;
+            stroke-width: 1;
+        }
+        
+        .cat-pupil {
+            fill: #000;
+        }
+        
+        .cat-nose {
+            fill: #FF6B6B;
+            stroke: #C44;
+            stroke-width: 1;
+        }
+        
+        .cat-whisker {
+            stroke: #8B4513;
+            stroke-width: 1;
+            stroke-dasharray: 3 2;
+        }
+        
+        .tail {
+            fill: #CD853F;
+            stroke: #8B4513;
+            stroke-width: 1;
+        }
+        
+        .shadow {
+            fill: rgba(0, 0, 0, 0.3);
+            opacity: 0.5;
+        }
+        
+        .speed-lines {
+            stroke: rgba(255, 255, 255, 0.8);
+            stroke-width: 2;
+            stroke-dasharray: 5 5;
+            animation: dash 0.5s linear infinite;
+        }
+        
+        @keyframes dash {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 20; }
+        }
+        
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">🐱鹈鹕骑自行车 🚴</h1>
+    
+    <div class="scene">
+        <div class="ground"></div>
+        <div class="road"></div>
+        
+        <g class="bicycle-group">
+            <!-- Speed lines -->
+            <path class="speed-lines" d="M100,180 L150,170 M120,190 L170,180 M140,160 L190,150"></path>
+            
+            <!-- Bicycle Shadow -->
+            <ellipse class="shadow" cx="150" cy="230" rx="40" ry="15" transform="rotate(-15 150 230)"></ellipse>
+            
+            <!-- Bicycle -->
+            <g class="bicycle">
+                <!-- Rear Wheel -->
+                <circle class="bicycle-wheel" cx="120" cy="210" r="25">
+                    <circle class="bicycle-wheel-spokes" cx="120" cy="210" r="20" fill="none" stroke="#666" stroke-width="2"/>
+                    <circle class="bicycle-wheel-center" cx="120" cy="210" r="5"/>
+                </circle>
+                
+                <!-- Front Wheel -->
+                <circle class="bicycle-wheel" cx="180" cy="210" r="20">
+                    <circle class="bicycle-wheel-spokes" cx="180" cy="210" r="15" fill="none" stroke="#666" stroke-width="2"/>
+                    <circle class="bicycle-wheel-center" cx="180" cy="210" r="4"/>
+                </circle>
+                
+                <!-- Frame -->
+                <path class="bicycle-frame" d="M120,210 L150,180 L180,210 L150,190 Z"/>
+                
+                <!-- Seat -->
+                <rect class="bicycle-seat" x="145" y="175" width="15" height="8" rx="2"/>
+                
+                <!-- Handlebar -->
+                <path class="bicycle-handlebar" d="M150,180 L165,165 L175,170"/>
+                
+                <!-- Pedals -->
+                <circle class="bicycle-pedal" cx="150" cy="195" r="4"/>
+                <line x1="150" y1="185" x2="150" y2="205" stroke="#ff6b6b" stroke-width="2"/>
+                <line x1="140" y1="195" x2="160" y2="195" stroke="#ff6b6b" stroke-width="2"/>
+                
+                <!-- Chain -->
+                <path d="M125,205 L175,185" stroke="#888" stroke-width="2" fill="none"/>
+                
+                <!-- Cat Rider -->
+                <g class="cat" transform="translate(145, 175)">
+                    <!-- Tail -->
+                    <path class="tail" d="M155,100 C180,80 200,120 170,140"/>
+                    
+                    <!-- Body -->
+                    <ellipse cx="150" cy="130" rx="25" ry="35"/>
+                    
+                    <!-- Head -->
+                    <circle cx="150" cy="90" r="20"/>
+                    
+                    <!-- Ears -->
+                    <path class="cat-ear" d="M135,75 L140,55 L145,75"/>
+                    <path class="cat-ear" d="M165,75 L170,55 L175,75"/>
+                    
+                    <!-- Eyes -->
+                    <circle class="cat-eye" cx="140" cy="85" r="6"/>
+                    <circle class="cat-eye" cx="160" cy="85" r="6"/>
+                    <circle class="cat-pupil" cx="140" cy="85" r="3"/>
+                    <circle class="cat-pupil" cx="160" cy="85" r="3"/>
+                    
+                    <!-- Nose -->
+                    <polygon class="cat-nose" points="150,95 145,105 155,105"/>
+                    
+                    <!-- Whiskers -->
+                    <line class="cat-whisker" x1="130" y1="95" x2="115" y2="90"/>
+                    <line class="cat-whisker" x1="130" y1="100" x2="115" y2="100"/>
+                    <line class="cat-whisker" x1="130" y1="105" x2="115" y2="110"/>
+                    <line class="cat-whisker" x1="170" y1="95" x2="185" y2="90"/>
+                    <line class="cat-whisker" x1="170" y1="100" x2="185" y2="100"/>
+                    <line class="cat-whisker" x1="170" y1="105" x2="185" y2="110"/>
+                    
+                    <!-- Legs -->
+                    <path d="M130,160 L125,180" stroke="#8B4513" stroke-width="3" fill="none"/>
+                    <path d="M170,160 L175,180" stroke="#8B4513" stroke-width="3" fill="none"/>
+                    
+                    <!-- Paws -->
+                    <ellipse cx="125" cy="180" rx="8" ry="5" fill="#8B4513"/>
+                    <ellipse cx="175" cy="180" rx="8" ry="5" fill="#8B4513"/>
+                </g>
+            </g>
+        </g>
+    </div>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+        .title {
+            font-family: 'Comic Neue', cursive;
+        }
+    </style>
+</body>
+</html>

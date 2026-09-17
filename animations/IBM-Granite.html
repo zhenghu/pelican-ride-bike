@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>鹈鹕骑自行车 SVG 2D 动画</title>
+<style>
+  body {
+    margin: 0;
+    background: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .description {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="description">
+  <p>鹈鹕骑自行车 2D 动画（无交互，自动播放）</p>
+</div>
+
+<svg width="500" height="300" viewBox="0 0 500 300"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+  <!-- 轨道路径 -->
+  <path id="track" d="0,150 C100,50 400,50 500,150" stroke="#cccccc" stroke-width="10" fill="none"/>
+  
+  <!-- 鹈鹕头 -->
+  <g id="pelican-head">
+    <!-- 鹈鹕头形状 -->
+    <ellipse cx="80" cy="120" rx="30" ry="25" fill="#a0c4ff" stroke="#5588ff" stroke-width="2"/>
+    <!-- 鼻子 -->
+    <ellipse cx="100" cy="110" rx="8" ry="6" fill="#333"/>
+    <!-- 眼睛 -->
+    <circle cx="90" cy="115" r="4" fill="#000"/>
+    <circle cx="95" cy="115" r="2" fill="#fff"/>
+  </g>
+  
+  <!-- 鹈鹕身体 -->
+  <g id="pelican-body">
+    <path d="80,140 L110,140 L110,160" fill="#a0c4ff" stroke="#5588ff" stroke-width="2"/>
+  </g>
+  
+  <!-- 鹈鹕脚/脚趾 -->
+  <g id="pelican-foot">
+    <polygon points="110,160 120,150 110,140" fill="#a0c4ff"/>
+  </g>
+  
+  <!-- 自行车车架 -->
+  <g id="bicycle-frame">
+    <!-- 悬挂架 -->
+    <line x1="180" y1="160" x2="180" y2="180" stroke="#555" stroke-width="6"/>
+    <!-- 前轮轮廓 -->
+    <circle cx="180" cy="180" r="15" fill="none" stroke="#555" stroke-width="6"/>
+    <!-- 后轮轮廓 -->
+    <circle cx="320" cy="180" r="15" fill="none" stroke="#555" stroke-width="6"/>
+    <!-- 前管 -->
+    <line x1="180" y1="180" x2="140" y2="180" stroke="#555" stroke-width="6"/>
+    <!-- 后管 -->
+    <line x1="320" y1="180" x2="380" y2="180" stroke="#555" stroke-width="6"/>
+  </g>
+  
+  <!-- 自行车座椅 -->
+  <g id="seat">
+    <rect x="170" y="170" width="60" height="20" fill="#888" stroke="#555" stroke-width="2"/>
+  </g>
+  
+  <!-- 鹈鹕“骑行”状态：连接鹈鹕脚到自行车座椅 -->
+  <g id="pelican-rider" opacity="0">
+    <!-- 鹈鹕坐在自行车座椅上的连接线 -->
+    <line x1="110" y1="160" x2="170" y2="170" stroke="#a0c4ff" stroke-width="6" stroke-dasharray="10,5" stroke-dashoffset="30"/>
+  </g>
+  
+  <!-- 动画控制 -->
+  <animate xlink:href="#pelican-head"
+           attributeName="transform"
+           from="translate(80, 120)"
+           to="translate(80, 120)"
+           dur="8s"
+           repeatCount="indefinite"
+           keyTimes="0 0.3 0.6 0.9 1"
+           keySplines="0.42,0 0.58,1">
+    <keyTimes keyTime="0">0</keyTimes>
+    <keyTimes keyTime="0.3">40</keyTimes>
+    <keyTimes keyTime="0.6">40</keyTimes>
+    <keyTimes keyTime="0.9">40</keyTimes>
+  </animate>
+  
+  <animate xlink:href="#pelican-body"
+           attributeName="transform"
+           from="translate(0, 0)"
+           to="translate(0, 0)"
+           dur="8s"
+           repeatCount="indefinite"
+           keyTimes="0 0.3 0.6 0.9 1"
+           keySplines="0.42,0 0.58,1">
+    <keyTimes keyTime="0">0</keyTimes>
+    <keyTimes keyTime="0.3">40</keyTimes>
+    <keyTimes keyTime="0.6">40</keyTimes>
+    <keyTimes keyTime="0.9">40</keyTimes>
+  </animate>
+  
+  <animate xlink:href="#pelican-foot"
+           attributeName="transform"
+           from="translate(0, 0)"
+           to="translate(0, 0)"
+           dur="8s"
+           repeatCount="indefinite"
+           keyTimes="0 0.3 0.6 0.9 1"
+           keySplines="0.42,0 0.58,1">
+    <keyTimes keyTime="0">0</keyTimes>
+    <keyTimes keyTime="0.3">40</keyTimes>
+    <keyTimes keyTime="0.6">40</keyTimes>
+    <keyTimes keyTime="0.9">40</keyTimes>
+  </animate>
+  
+  <animate xlink:href="#pelican-rider"
+           attributeName="opacity"
+           from="0"
+           to="1"
+           dur="4s"
+           repeatCount="indefinite"
+           begin="0.4s"
+           fill="freeze">
+    <keyTimes keyTime="0">0</keyTimes>
+    <keyTimes keyTime="1">1</keyTimes>
+  </animate>
+  
+  <!-- 鹈鹕移动到自行车上的连接线动画 -->
+  <g id="pelican-rider-line">
+    <line x1="110" y1="160" x2="170" y2="170"
+          stroke="#a0c4ff" stroke-width="6"
+          stroke-dasharray="40,10" stroke-dashoffset="40"
+          opacity="0">
+      <animate xlink:href="#pelican-rider-line"
+               attributeName="stroke-dashoffset"
+               from="40"
+               to="0"
+               dur="4s"
+               begin="0.4s"
+               fill="freeze">
+        <keyTimes keyTime="0">0</keyTimes>
+        <keyTimes keyTime="1">1</keyTimes>
+      </animate>
+      <animate xlink:href="#pelican-rider-line"
+               attributeName="opacity"
+               from="0"
+               to="1"
+               dur="1s"
+               begin="0.4s"
+               fill="freeze">
+        <keyTimes keyTime="0">0</keyTimes>
+        <keyTimes keyTime="1">1</keyTimes>
+      </animate>
+    </line>
+  </g>
+  
+  <!-- 自行车移动轨道动画 -->
+  <g id="bicycle-move">
+    <g id="bike-group">
+      <g id="bicycle-frame">
+        <line x1="180" y1="160" x2="180" y2="180" stroke="#555" stroke-width="6"/>
+        <circle cx="180" cy="180" r="15" fill="none" stroke="#555" stroke-width="6"/>
+        <circle cx="320" cy="180" r="15" fill="none" stroke="#555" stroke-width="6"/>
+        <line x1="180" y1="180" x2="140" y2="180" stroke="#555" stroke-width="6"/>
+        <line x1="320" y1="180" x2="380" y2="180" stroke="#555" stroke-width="6"/>
+      </g>
+      <g id="seat">
+        <rect x="170" y="170" width="60" height="20" fill="#888" stroke="#555" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="pelican-rider-line">
+      <line x1="110" y1="160" x2="170" y2="170" stroke="#a0c4ff" stroke-width="6" stroke-dasharray="40,10" stroke-dashoffset="40" opacity="0"/>
+    </g>
+  </g>
+  
+  <animate xlink:href="#bicycle-move"
+           attributeName="transform"
+           from="translate(0, 0)"
+           to="translate(500, 0)"
+           dur="8s"
+           repeatCount="indefinite"
+           begin="0s">
+    <keyTimes keyTime="0">0</keyTimes>
+    <keyTimes keyTime="0.5">0</keyTimes>
+    <keyTimes keyTime="1">1</keyTimes>
+  </animate>
+  
+  <!-- 添加一些简单的背景元素 -->
+  <g id="ground">
+    <path d="0,180 L500,180" stroke="#999" stroke-width="4"/>
+  </g>
+  
+  <animate xlink:href="#ground"
+           attributeName="transform"
+           from="translate(0, 0)"
+           to="translate(0, 0)"
+           dur="inf"
+           repeatCount="indefinite"/>
+  
+</svg>
+
+</body>
+</html>

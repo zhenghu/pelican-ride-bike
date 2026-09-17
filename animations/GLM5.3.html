@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>鹈鹕骑自行车</title>
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#aee3f5 0%, #d9f0fa 60%, #f6e7c1 60%, #f0dca4 100%);
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+  .scene {
+    width: min(90vw, 900px);
+    aspect-ratio: 16 / 9;
+  }
+
+  /* ---- 自行车整体前进（视觉平移感由背景元素反向滚动实现） ---- */
+  .bike-group {
+    animation: bob 0.9s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
+  }
+
+  /* ---- 车轮旋转 ---- */
+  .wheel-spin {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spin 0.55s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* ---- 踏板与腿 ---- */
+  .pedal-cranks {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: spin 0.55s linear infinite;
+  }
+
+  .leg-left {
+    animation: pedal-left 0.55s linear infinite;
+    transform-origin: 0 0;
+  }
+  .leg-right {
+    animation: pedal-right 0.55s linear infinite;
+    transform-origin: 0 0;
+    opacity: 0.85;
+  }
+  @keyframes pedal-left {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes pedal-right {
+    0%   { transform: rotate(180deg); }
+    100% { transform: rotate(540deg); }
+  }
+
+  /* ---- 围巾飘动 ---- */
+  .scarf {
+    transform-origin: 0 0;
+    animation: scarf-wave 0.7s ease-in-out infinite alternate;
+  }
+  @keyframes scarf-wave {
+    from { transform: rotate(-6deg) scaleX(1); }
+    to   { transform: rotate(8deg) scaleX(1.12); }
+  }
+
+  /* ---- 头部轻微起伏 ---- */
+  .head-group {
+    animation: head-bob 0.9s ease-in-out infinite;
+  }
+  @keyframes head-bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50%      { transform: translateY(-3px) rotate(-3deg); }
+  }
+
+  /* ---- 云朵与地面滚动（向左移动，制造前进感） ---- */
+  .cloud {
+    animation: scroll-left linear infinite;
+  }
+  .cloud-1 { animation-duration: 14s; }
+  .cloud-2 { animation-duration: 20s; animation-delay: -8s; }
+  .cloud-3 { animation-duration: 17s; animation-delay: -13s; }
+  @keyframes scroll-left {
+    from { transform: translateX(900px); }
+    to   { transform: translateX(-350px); }
+  }
+
+  .road-dash {
+    stroke-dasharray: 40 60;
+    animation: roadmove 0.6s linear infinite;
+  }
+  @keyframes roadmove {
+    to { stroke-dashoffset: -100; }
+  }
+
+  .hills path {
+    animation: hillmove 8s linear infinite;
+  }
+  @keyframes hillmove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-320px); }
+  }
+</style>
+</head>
+<body>
+  <svg class="scene" viewBox="0 0 900 506" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="一只鹈鹕骑着自行车">
+    <defs>
+      <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8fd3f4"/>
+        <stop offset="1" stop-color="#d3ecf7"/>
+      </linearGradient>
+      <radialGradient id="sunG">
+        <stop offset="0" stop-color="#fff7c0"/>
+        <stop offset="1" stop-color="#ffd93d"/>
+      </radialGradient>
+    </defs>
+
+    <!-- ====== 背景 ====== -->
+    <rect width="900" height="506" fill="url(#skyG)"/>
+    <circle cx="770" cy="80" r="46" fill="url(#sunG)"/>
+    <circle cx="770" cy="80" r="60" fill="#ffd93d" opacity="0.25">
+      <animate attributeName="r" values="58;66;58" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 远处群山（两组循环平移） -->
+    <g class="hills" opacity="0.55">
+      <path d="M-320,330 Q-160,240 0,330 T320,330 T640,330 T960,330 T1280,330 V400 H-320 Z" fill="#a8c98a"/>
+    </g>
+
+    <!-- 云朵 -->
+    <g class="cloud cloud-1" opacity="0.9">
+      <ellipse cx="150" cy="90" rx="55" ry="20" fill="#fff"/>
+      <ellipse cx="185" cy="78" rx="35" ry="18" fill="#fff"/>
+    </g>
+    <g class="cloud cloud-2" opacity="0.8">
+      <ellipse cx="420" cy="60" rx="65" ry="22" fill="#fff"/>
+      <ellipse cx="460" cy="48" rx="40" ry="18" fill="#fff"/>
+    </g>
+    <g class="cloud cloud-3" opacity="0.7">
+      <ellipse cx="650" cy="140" rx="45" ry="16" fill="#fff"/>
+      <ellipse cx="680" cy="130" rx="28" ry="14" fill="#fff"/>
+    </g>
+
+    <!-- 地面与道路 -->
+    <rect x="0" y="400" width="900" height="106" fill="#e8d8a0"/>
+    <rect x="0" y="400" width="900" height="8" fill="#c9b878"/>
+    <line class="road-dash" x1="-40" y1="460" x2="940" y2="460" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- ====== 鹈鹕 + 自行车 ====== -->
+    <g class="bike-group" transform="translate(330,150)">
+      <!-- 尾羽 -->
+      <path d="M60,108 q-30,-6 -44,10 q24,-2 40,10 q-8,-8 4,-20 Z" fill="#e9e4d8"/>
+      <!-- 身体 -->
+      <ellipse cx="90" cy="118" rx="52" ry="36" fill="#f5f0e6"/>
+      <!-- 翅膀 -->
+      <path d="M70,100 q28,18 10,42 q-22,-12 -14,-42 Z" fill="#e3dccd"/>
+      <!-- 围巾 -->
+      <g class="scarf" transform="translate(108,96)">
+        <path d="M0,0 q34,10 62,-4 l10,-6 q-30,14 -66,14 Z" fill="#e14b4b"/>
+        <path d="M8,4 q28,14 58,4 l8,-8 q-26,12 -60,10 Z" fill="#c73e3e"/>
+      </g>
+
+      <!-- 头颈 -->
+      <g class="head-group">
+        <path d="M128,92 q22,-40 58,-44 q42,-4 50,30 q6,30 -24,42 q-34,12 -58,-8 Z"
+              fill="#f5f0e6"/>
+        <!-- 喙（大袋子） -->
+        <path d="M232,86 q34,4 44,18 q-14,26 -48,20 q-18,-4 -16,-18 q2,-14 20,-20 Z"
+              fill="#f7b32b"/>
+        <path d="M234,118 q22,14 40,6 q4,10 -14,16 q-22,2 -30,-12 q-2,-6 4,-10 Z"
+              fill="#e69a1f"/>
+        <circle cx="196" cy="60" r="7" fill="#2b2b2b"/>
+        <circle cx="198.5" cy="58" r="2.2" fill="#fff"/>
+        <!-- 小帽子 -->
+        <path d="M186,38 q14,-22 32,-6 l-6,10 q-12,-10 -22,2 Z" fill="#3f6fb5"/>
+        <circle cx="216" cy="32" r="4" fill="#3f6fb5"/>
+      </g>
+
+      <!-- 眼镜腿铰接处的小装饰 -->
+      <path d="M208,58 l16,4" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- 腿（带动踏板） -->
+      <!-- 右腿（远侧，先画） -->
+      <g transform="translate(150,168)">
+        <g class="leg-right">
+          <path d="M0,0 L26,18" stroke="#e3dccd" stroke-width="14" stroke-linecap="round"/>
+          <path d="M26,18 L30,44" stroke="#e3dccd" stroke-width="11" stroke-linecap="round"/>
+          <path d="M24,46 l22,0 l-2,8 l-20,0 Z" fill="#c73e3e"/>
+        </g>
+      </g>
+      <!-- 左腿（近侧，后画） -->
+      <g transform="translate(150,168)">
+        <g class="leg-left">
+          <path d="M0,0 L26,18" stroke="#f5f0e6" stroke-width="15" stroke-linecap="round"/>
+          <path d="M26,18 L30,44" stroke="#f5f0e6" stroke-width="12" stroke-linecap="round"/>
+          <path d="M24,46 l22,0 l-2,8 l-20,0 Z" fill="#e14b4b"/>
+        </g>
+      </g>
+
+      <!-- ===== 自行车 ===== -->
+      <!-- 后轮 -->
+      <g transform="translate(60,258)">
+        <circle class="wheel-spin" r="52" fill="none" stroke="#2b2b2b" stroke-width="7"/>
+        <g class="wheel-spin">
+          <circle r="52" fill="none" stroke="#555" stroke-width="2" stroke-dasharray="10 6"/>
+          <circle r="9" fill="#2b2b2b"/>
+          <path d="M0,-52 V52 M-52,0 H52 M-37,-37 L37,37 M-37,37 L37,-37"
+                stroke="#777" stroke-width="2.5"/>
+        </g>
+      </g>
+      <!-- 前轮 -->
+      <g transform="translate(300,258)">
+        <circle class="wheel-spin" r="52" fill="none" stroke="#2b2b2b" stroke-width="7"/>
+        <g class="wheel-spin">
+          <circle r="52" fill="none" stroke="#555" stroke-width="2" stroke-dasharray="10 6"/>
+          <circle r="9" fill="#2b2b2b"/>
+          <path d="M0,-52 V52 M-52,0 H52 M-37,-37 L37,37 M-37,37 L37,-37"
+                stroke="#777" stroke-width="2.5"/>
+        </g>
+      </g>
+
+      <!-- 车架 -->
+      <path d="M60,258 L150,168 L232,258 M150,168 L232,258 M60,258 L150,258 L232,258 M232,258 L300,258"
+            stroke="#e14b4b" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <!-- 座椅 -->
+      <path d="M126,158 l56,-6 l-4,10 l-52,2 Z" fill="#7a5230"/>
+      <!-- 车把 -->
+      <path d="M232,258 L262,150 q6,-14 22,-10" stroke="#555" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M278,140 l18,6" stroke="#2b2b2b" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- 曲柄与踏板 -->
+      <g transform="translate(150,258)">
+        <g class="pedal-cranks">
+          <circle r="16" fill="none" stroke="#555" stroke-width="4"/>
+          <path d="M0,-16 V16 M-16,0 H16" stroke="#777" stroke-width="4" stroke-linecap="round"/>
+          <rect x="-12" y="-22" width="24" height="7" rx="3" fill="#2b2b2b"/>
+          <rect x="-12" y="15"  width="24" height="7" rx="3" fill="#2b2b2b"/>
+        </g>
+        <circle r="7" fill="#2b2b2b"/>
+      </g>
+    </g>
+
+    <!-- 标题 -->
+    <text x="450" y="480" text-anchor="middle" font-size="22" fill="#6b5b34" font-weight="bold">🚲 Pelican Rider 🚲</text>
+  </svg>
+</body>
+</html>

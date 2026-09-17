@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelican Riding a Bike</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+            overflow: hidden;
+        }
+        svg {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Ground -->
+        <rect x="0" y="250" width="500" height="50" fill="#8B4513" />
+        
+        <!-- Road -->
+        <path d="M0 260 Q125 240 250 260 T500 260" stroke="#333" stroke-width="20" fill="none" />
+        <path d="M0 260 Q125 240 250 260 T500 260" stroke="#fff" stroke-width="18" fill="none" stroke-dasharray="20, 20" />
+        
+        <!-- Bike -->
+        <g id="bike">
+            <!-- Frame -->
+            <path d="M100 220 L150 200 L200 220" stroke="#000" stroke-width="4" fill="none" />
+            <path d="M150 200 L150 180" stroke="#000" stroke-width="4" fill="none" />
+            
+            <!-- Wheels -->
+            <circle cx="100" cy="220" r="20" stroke="#000" stroke-width="3" fill="none" />
+            <circle cx="200" cy="220" r="20" stroke="#000" stroke-width="3" fill="none" />
+            
+            <!-- Pedals -->
+            <circle cx="150" cy="200" r="5" fill="#000" />
+            <line x1="150" y1="195" x2="150" y2="205" stroke="#000" stroke-width="2" />
+            <line x1="145" y1="200" x2="155" y2="200" stroke="#000" stroke-width="2" />
+            
+            <!-- Handlebar -->
+            <path d="M200 220 L220 200" stroke="#000" stroke-width="3" fill="none" />
+            <path d="M220 200 L220 190" stroke="#000" stroke-width="3" fill="none" />
+        </g>
+        
+        <!-- Pelican -->
+        <g id="pelican">
+            <!-- Body -->
+            <ellipse cx="160" cy="180" rx="25" ry="15" fill="#fff" stroke="#000" stroke-width="2" />
+            
+            <!-- Head -->
+            <circle cx="130" cy="170" r="12" fill="#fff" stroke="#000" stroke-width="2" />
+            
+            <!-- Beak -->
+            <path d="M118 170 L90 165 L90 175 Z" fill="#FFD700" stroke="#000" stroke-width="1" />
+            
+            <!-- Eye -->
+            <circle cx="125" cy="165" r="2" fill="#000" />
+            
+            <!-- Wing -->
+            <path d="M140 180 Q160 160 180 180" fill="none" stroke="#000" stroke-width="2" />
+            
+            <!-- Legs -->
+            <line x1="150" y1="195" x2="150" y2="215" stroke="#000" stroke-width="3" />
+            <line x1="170" y1="195" x2="170" y2="215" stroke="#000" stroke-width="3" />
+            
+            <!-- Feet -->
+            <path d="M145 215 L150 220 L155 215" stroke="#000" stroke-width="2" fill="none" />
+            <path d="M165 215 L170 220 L175 215" stroke="#000" stroke-width="2" fill="none" />
+        </g>
+        
+        <!-- Animation -->
+        <animateTransform
+            xlink:href="#bike"
+            attributeName="transform"
+            type="translate"
+            from="0 0"
+            to="200 0"
+            dur="5s"
+            repeatCount="indefinite"
+        />
+        
+        <animateTransform
+            xlink:href="#pelican"
+            attributeName="transform"
+            type="translate"
+            from="0 0"
+            to="200 0"
+            dur="5s"
+            repeatCount="indefinite"
+        />
+        
+        <!-- Pedal Rotation -->
+        <animateTransform
+            xlink:href="#bike"
+            attributeName="transform"
+            type="rotate"
+            from="0 150 200"
+            to="360 150 200"
+            dur="1s"
+            repeatCount="indefinite"
+        />
+    </svg>
+</body>
+</html>

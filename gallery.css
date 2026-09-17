@@ -1,0 +1,16 @@
+.gallery-main{max-width:2200px;margin:0 auto;padding:36px 32px}
+.gallery-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}
+.gallery-heading h1{display:flex;align-items:center;gap:16px;font-size:30px;line-height:1.4}
+.gallery-count{border:1px solid #445137;background:#242e1c;color:var(--accent);border-radius:6px;padding:4px 9px;font-size:14px;font-weight:400}
+.gallery-heading>p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.gallery-card .panel-header{min-height:85px}
+.gallery-card h2{font-size:16px;font-weight:600;letter-spacing:normal;line-height:1.4;overflow-wrap:anywhere}
+.gallery-number{min-width:26px;color:var(--accent);font-size:14px;font-variant-numeric:tabular-nums}
+.gallery-card .panel-footer{padding:14px 16px}
+.gallery-card .panel-footer a{font-size:14px;color:var(--accent)}
+.gallery-card .panel-footer a:hover{text-decoration:underline}
+.gallery-card .stage{box-sizing:content-box;border-left:0;border-right:0}
+@media(min-width:1750px){.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1100px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.gallery-main{padding:28px 22px}}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr}.gallery-main{padding:26px 16px}.gallery-heading{align-items:flex-start;flex-direction:column;gap:12px}.gallery-heading h1{font-size:26px}}

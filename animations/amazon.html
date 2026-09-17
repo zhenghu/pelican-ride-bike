@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelican Riding Bicycle</title>
+    <style>
+        @keyframes ride {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+       .pelican,.bicycle {
+            animation: ride 4s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <svg width="500" height="300" viewBox="0 0 500 300">
+        <!-- Pelican -->
+        <path class="pelican" d="M100 150 Q120 100, 140 150 Q160 200, 180 150" stroke="black" stroke-width="2" fill="none" />
+        <circle class="pelican" cx="100" cy="150" r="10" fill="black" />
+        <!-- Bicycle -->
+        <rect class="bicycle" x="200" y="200" width="100" height="20" fill="black" />
+        <circle class="bicycle" cx="250" cy="250" r="20" fill="black" />
+        <circle class="bicycle" cx="300" cy="250" r="20" fill="black" />
+    </svg>
+</body>
+</html>

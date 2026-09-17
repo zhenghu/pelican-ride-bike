@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鹈鹕骑自行车 🚴‍♂️🦩</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #87CEEB 0%, #E0F6FF 50%, #FFF8E7 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 400px;
+    }
+
+    /* 天空背景 */
+    .sky {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 100%);
+      z-index: 0;
+    }
+
+    /* 太阳 */
+    .sun {
+      position: absolute;
+      top: 40px;
+      right: 60px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #FFD700, #FFA500);
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+      animation: sunPulse 4s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes sunPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+      50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(255, 215, 0, 0.8); }
+    }
+
+    /* 云朵 */
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 50px;
+      opacity: 0.9;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+      z-index: 2;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .cloud-1 {
+      top: 60px;
+      left: -150px;
+      width: 120px;
+      height: 40px;
+      animation: cloudMove 30s linear infinite;
+    }
+    .cloud-1::before { width: 50px; height: 50px; top: -25px; left: 20px; }
+    .cloud-1::after { width: 40px; height: 40px; top: -15px; right: 15px; }
+
+    .cloud-2 {
+      top: 120px;
+      right: -200px;
+      width: 160px;
+      height: 50px;
+      animation: cloudMove 40s linear infinite reverse;
+    }
+    .cloud-2::before { width: 60px; height: 60px; top: -30px; left: 30px; }
+    .cloud-2::after { width: 50px; height: 50px; top: -20px; right: 25px; }
+
+    .cloud-3 {
+      top: 30px;
+      left: -100px;
+      width: 100px;
+      height: 35px;
+      animation: cloudMove 35s linear infinite;
+      animation-delay: -10s;
+    }
+    .cloud-3::before { width: 45px; height: 45px; top: -22px; left: 15px; }
+    .cloud-3::after { width: 35px; height: 35px; top: -12px; right: 10px; }
+
+    @keyframes cloudMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(1100px); }
+    }
+
+    /* 地面/草地 */
+    .ground {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(180deg, #7CB342 0%, #4CAF50 100%);
+      border-radius: 20px 20px 0 0;
+      z-index: 3;
+    }
+
+    .grass-blade {
+      position: absolute;
+      bottom: 80px;
+      width: 4px;
+      height: 30px;
+      background: linear-gradient(180deg, #8BC34A, #4CAF50);
+      border-radius: 2px;
+      transform-origin: bottom;
+      animation: grassSway 3s ease-in-out infinite;
+    }
+
+    @keyframes grassSway {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+
+    /* 道路 */
+    .road {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: #37474F;
+      z-index: 4;
+    }
+
+    .road-line {
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      width: 60px;
+      height: 4px;
+      background: #FFD600;
+      animation: roadLineMove 1s linear infinite;
+    }
+
+    @keyframes roadLineMove {
+      0% { left: -50px; }
+      100% { left: 100%; }
+    }
+
+    /* 自行车 + 鹈鹕容器 */
+    .bike-container {
+      position: absolute;
+      bottom: 140px;
+      left: -200px;
+      z-index: 10;
+      animation: bikeMove 8s linear infinite;
+      transform-origin: center bottom;
+    }
+
+    @keyframes bikeMove {
+      0% { left: -200px; }
+      100% { left: 1100px; }
+    }
+
+    /* 鹈鹕身体 */
+    .pelican {
+      position: relative;
+      transform-origin: center center;
+      animation: pelicanBounce 0.5s ease-in-out infinite;
+    }
+
+    @keyframes pelicanBounce {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-3px) rotate(1deg); }
+    }
+
+    /* 鹈鹕头部 */
+    .pelican-head {
+      position: relative;
+      z-index: 5;
+    }
+
+    .pelican-head svg {
+      display: block;
+    }
+
+    /* 鹈鹕身体主体 */
+    .pelican-body {
+      position: relative;
+      z-index: 3;
+    }
+
+    /* 翅膀 */
+    .wing {
+      position: absolute;
+      top: 20px;
+      left: 35px;
+      z-index: 2;
+      transform-origin: right center;
+      animation: wingFlap 0.8s ease-in-out infinite;
+    }
+
+    .wing.back {
+      left: 25px;
+      z-index: 1;
+      opacity: 0.7;
+      animation-delay: 0.1s;
+    }
+
+    @keyframes wingFlap {
+      0%, 100% { transform: rotate(0deg) translateY(0); }
+      25% { transform: rotate(-25deg) translateY(-5px); }
+      50% { transform: rotate(15deg) translateY(3px); }
+      75% { transform: rotate(-10deg) translateY(-2px); }
+    }
+
+    /* 自行车 */
+    .bicycle {
+      position: relative;
+      z-index: 4;
+    }
+
+    /* 车轮 */
+    .wheel {
+      position: absolute;
+      border: 4px solid #37474F;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #546E7A, #263238);
+      animation: wheelSpin 0.6s linear infinite;
+    }
+
+    .wheel-front {
+      width: 70px;
+      height: 70px;
+      bottom: 0;
+      left: 140px;
+    }
+
+    .wheel-back {
+      width: 70px;
+      height: 70px;
+      bottom: 0;
+      left: 10px;
+    }
+
+    .wheel-spokes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: wheelSpin 0.6s linear infinite;
+    }
+
+    .spoke {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 50%;
+      background: #78909C;
+      transform-origin: bottom center;
+    }
+
+    @keyframes wheelSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 车架 */
+    .frame {
+      position: absolute;
+      background: linear-gradient(180deg, #E91E63, #C2185B);
+      border-radius: 3px;
+      z-index: 2;
+    }
+
+    .frame-top {
+      width: 130px;
+      height: 5px;
+      top: -35px;
+      left: 15px;
+      transform: rotate(-5deg);
+    }
+
+    .frame-down {
+      width: 5px;
+      height: 50px;
+      top: -35px;
+      left: 140px;
+      transform: rotate(10deg);
+    }
+
+    .frame-seat {
+      width: 5px;
+      height: 40px;
+      top: -75px;
+      left: 55px;
+    }
+
+    .frame-chainstay {
+      width: 110px;
+      height: 4px;
+      top: 10px;
+      left: 15px;
+      transform: rotate(2deg);
+    }
+
+    .frame-fork {
+      width: 4px;
+      height: 55px;
+      top: -40px;
+      left: 170px;
+      transform: rotate(-15deg);
+    }
+
+    /* 座位 */
+    .seat {
+      position: absolute;
+      top: -80px;
+      left: 40px;
+      width: 35px;
+      height: 10px;
+      background: #263238;
+      border-radius: 5px 5px 0 0;
+      z-index: 3;
+    }
+
+    .seat::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 5px;
+      width: 25px;
+      height: 5px;
+      background: #37474F;
+      border-radius: 3px;
+    }
+
+    /* 车把手 */
+    .handlebar {
+      position: absolute;
+      top: -80px;
+      left: 165px;
+      width: 40px;
+      height: 4px;
+      background: #263238;
+      border-radius: 2px;
+      z-index: 3;
+      transform: rotate(-15deg);
+    }
+
+    .handlebar-grip {
+      position: absolute;
+      width: 8px;
+      height: 15px;
+      background: #455A64;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .grip-left {
+      top: -15px;
+      left: -2px;
+      transform: rotate(-20deg);
+    }
+
+    .grip-right {
+      top: -15px;
+      right: -2px;
+      transform: rotate(20deg);
+    }
+
+    /* 踏板 */
+    .pedal {
+      position: absolute;
+      width: 20px;
+      height: 6px;
+      background: #546E7A;
+      border-radius: 2px;
+      animation: pedalRotate 1.2s linear infinite;
+      transform-origin: 55px 35px;
+    }
+
+    .pedal-left {
+      top: 35px;
+      left: 55px;
+    }
+
+    .pedal-right {
+      top: 35px;
+      left: 55px;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes pedalRotate {
+      0% { transform: rotate(0deg) translateX(0); }
+      100% { transform: rotate(360deg) translateX(0); }
+    }
+
+    /* 踏板连杆 */
+    .crank {
+      position: absolute;
+      top: 38px;
+      left: 58px;
+      width: 30px;
+      height: 4px;
+      background: #78909C;
+      border-radius: 2px;
+      transform-origin: right center;
+      animation: pedalRotate 1.2s linear infinite;
+      z-index: 1;
+    }
+
+    .crank-back {
+      animation-delay: 0.6s;
+    }
+
+    /* 链条 */
+    .chain {
+      position: absolute;
+      top: 38px;
+      left: 58px;
+      width: 85px;
+      height: 3px;
+      background: repeating-linear-gradient(90deg, #546E7A 0px, #546E7A 3px, #37474F 3px, #37474F 6px);
+      border-radius: 1px;
+      z-index: 1;
+    }
+
+    /* 鹈鹕腿部踩踏板 */
+    .pelican-leg {
+      position: absolute;
+      width: 6px;
+      height: 35px;
+      background: linear-gradient(180deg, #FFB74D, #FF9800);
+      border-radius: 3px;
+      transform-origin: top center;
+      z-index: 5;
+    }
+
+    .leg-left {
+      top: 5px;
+      left: 75px;
+      animation: legPedalLeft 1.2s ease-in-out infinite;
+    }
+
+    .leg-right {
+      top: 5px;
+      left: 85px;
+      animation: legPedalRight 1.2s ease-in-out infinite;
+    }
+
+    @keyframes legPedalLeft {
+      0% { transform: rotate(20deg) translateY(0); }
+      25% { transform: rotate(-60deg) translateY(10px); }
+      50% { transform: rotate(-120deg) translateY(5px); }
+      75% { transform: rotate(-60deg) translateY(-5px); }
+      100% { transform: rotate(20deg) translateY(0); }
+    }
+
+    @keyframes legPedalRight {
+      0% { transform: rotate(-100deg) translateY(5px); }
+      25% { transform: rotate(-160deg) translateY(10px); }
+      50% { transform: rotate(140deg) translateY(5px); }
+      75% { transform: rotate(80deg) translateY(-5px); }
+      100% { transform: rotate(-100deg) translateY(5px); }
+    }
+
+    /* 脚 */
+    .foot {
+      position: absolute;
+      bottom: -8px;
+      left: -4px;
+      width: 14px;
+      height: 10px;
+      background: #FFB74D;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .foot::before,
+    .foot::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 4px;
+      height: 12px;
+      background: #FFB74D;
+      border-radius: 2px;
+    }
+
+    .foot::before { left: 2px; }
+    .foot::after { right: 2px; }
+
+    /* 花朵装饰 */
+    .flower {
+      position: absolute;
+      bottom: 80px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      animation: flowerSway 4s ease-in-out infinite;
+      transform-origin: bottom center;
+      z-index: 4;
+    }
+
+    .flower-1 { left: 50px; background: #FF6B9D; animation-delay: 0s; }
+    .flower-2 { left: 200px; background: #FFD93D; animation-delay: -1s; }
+    .flower-3 { left: 350px; background: #6BCB77; animation-delay: -2s; }
+    .flower-4 { left: 500px; background: #4D96FF; animation-delay: -3s; }
+    .flower-5 { left: 650px; background: #FF6B9D; animation-delay: -0.5s; }
+    .flower-6 { left: 800px; background: #FFD93D; animation-delay: -1.5s; }
+
+    @keyframes flowerSway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+
+    .flower-stem {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 40px;
+      background: #4CAF50;
+      z-index: 3;
+    }
+
+    /* 标题 */
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .title h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #E91E63, #FF9800, #4CAF50);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      animation: titleFloat 3s ease-in-out infinite;
+    }
+
+    .title p {
+      font-size: 1.1rem;
+      color: #546E7A;
+      margin-top: 8px;
+      animation: titleFloat 3s ease-in-out infinite 0.5s;
+    }
+
+    @keyframes titleFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .scene { height: 350px; }
+      .title h1 { font-size: 1.8rem; }
+      .bike-container { animation-duration: 10s; }
+      .cloud-1 { animation-duration: 40s; }
+      .cloud-2 { animation-duration: 50s; }
+      .cloud-3 { animation-duration: 45s; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <!-- 天空 -->
+    <div class="sky"></div>
+    <div class="sun"></div>
+
+    <!-- 云朵 -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <!-- 地面 -->
+    <div class="ground">
+      <div class="grass-blade" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="grass-blade" style="left: 15%; animation-delay: -0.3s;"></div>
+      <div class="grass-blade" style="left: 20%; animation-delay: -0.6s;"></div>
+      <div class="grass-blade" style="left: 25%; animation-delay: -0.9s;"></div>
+      <div class="grass-blade" style="left: 30%; animation-delay: -1.2s;"></div>
+      <div class="grass-blade" style="left: 35%; animation-delay: -1.5s;"></div>
+      <div class="grass-blade" style="left: 40%; animation-delay: -1.8s;"></div>
+      <div class="grass-blade" style="left: 45%; animation-delay: -2.1s;"></div>
+      <div class="grass-blade" style="left: 50%; animation-delay: -2.4s;"></div>
+      <div class="grass-blade" style="left: 55%; animation-delay: -2.7s;"></div>
+      <div class="grass-blade" style="left: 60%; animation-delay: -3s;"></div>
+      <div class="grass-blade" style="left: 65%; animation-delay: -0.1s;"></div>
+      <div class="grass-blade" style="left: 70%; animation-delay: -0.4s;"></div>
+      <div class="grass-blade" style="left: 75%; animation-delay: -0.7s;"></div>
+      <div class="grass-blade" style="left: 80%; animation-delay: -1s;"></div>
+      <div class="grass-blade" style="left: 85%; animation-delay: -1.3s;"></div>
+      <div class="grass-blade" style="left: 90%; animation-delay: -1.6s;"></div>
+      <div class="grass-blade" style="left: 95%; animation-delay: -1.9s;"></div>
+    </div>
+
+    <!-- 道路 -->
+    <div class="road">
+      <div class="road-line"></div>
+      <div class="road-line" style="animation-delay: -0.25s;"></div>
+      <div class="road-line" style="animation-delay: -0.5s;"></div>
+      <div class="road-line" style="animation-delay: -0.75s;"></div>
+    </div>
+
+    <!-- 花朵 -->
+    <div class="flower flower-1"><div class="flower-stem"></div></div>
+    <div class="flower flower-2"><div class="flower-stem"></div></div>
+    <div class="flower flower-3"><div class="flower-stem"></div></div>
+    <div class="flower flower-4"><div class="flower-stem"></div></div>
+    <div class="flower flower-5"><div class="flower-stem"></div></div>
+    <div class="flower flower-6"><div class="flower-stem"></div></div>
+
+    <!-- 标题 -->
+    <div class="title">
+      <h1>鹈鹕骑自行车 🦩🚴‍♂️</h1>
+      <p>悠闲的下午时光</p>
+    </div>
+
+    <!-- 自行车 + 鹈鹕 -->
+    <div class="bike-container">
+      <div class="pelican">
+        <!-- 鹈鹕头部 -->
+        <div class="pelican-head">
+          <svg width="100" height="80" viewBox="0 0 100 80">
+            <!-- 头部主体 -->
+            <ellipse cx="50" cy="45" rx="30" ry="25" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+            <!-- 嘴巴上半部分 -->
+            <path d="M75,40 Q110,30 120,45 Q110,55 75,50" fill="#FFB74D" stroke="#F57C00" stroke-width="1.5"/>
+            <!-- 嘴巴下半部分 (大喉囊) -->
+            <path d="M75,50 Q95,70 75,65" fill="#FFCC80" stroke="#FFB74D" stroke-width="1" opacity="0.8"/>
+            <!-- 鼻孔 -->
+            <ellipse cx="95" cy="38" rx="3" ry="2" fill="#E65100"/>
+            <!-- 眼睛 -->
+            <ellipse cx="45" cy="35" rx="8" ry="10" fill="#263238"/>
+            <ellipse cx="47" cy="33" rx="3" ry="4" fill="#FFFFFF"/>
+            <!-- 眼睫毛 -->
+            <g stroke="#263238" stroke-width="1.5" fill="none">
+              <line x1="38" y1="28" x2="35" y2="24"/>
+              <line x1="42" y1="27" x2="38" y2="22"/>
+              <line x1="47" y1="27" x2="43" y2="21"/>
+            </g>
+            <!-- 头顶羽毛 -->
+            <g fill="#FFFFFF" stroke="#E0E0E0" stroke-width="0.5">
+              <path d="M40,20 Q35,10 45,15 Q50,10 45,20"/>
+              <path d="M50,18 Q48,8 55,12 Q58,8 53,18"/>
+              <path d="M58,22 Q55,12 62,15 Q65,12 60,22"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 翅膀 -->
+        <div class="wing">
+          <svg width="60" height="50" viewBox="0 0 60 50">
+            <path d="M5,25 Q15,10 30,5 Q45,15 55,25 Q40,35 25,40 Q10,35 5,25" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+            <path d="M15,25 Q20,18 30,15 Q40,20 45,28" fill="none" stroke="#E0E0E0" stroke-width="0.5" opacity="0.5"/>
+            <path d="M20,30 Q25,25 35,28" fill="none" stroke="#E0E0E0" stroke-width="0.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="wing back">
+          <svg width="60" height="50" viewBox="0 0 60 50">
+            <path d="M5,25 Q15,10 30,5 Q45,15 55,25 Q40,35 25,40 Q10,35 5,25" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <!-- 鹈鹕身体 -->
+        <div class="pelican-body">
+          <svg width="120" height="80" viewBox="0 0 120 80">
+            <!-- 身体主体 -->
+            <ellipse cx="55" cy="50" rx="45" ry="35" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+            <!-- 胸部羽毛纹理 -->
+            <g fill="none" stroke="#E0E0E0" stroke-width="0.5" opacity="0.4">
+              <path d="M20,40 Q40,35 60,40"/>
+              <path d="M20,50 Q40,45 60,50"/>
+              <path d="M20,60 Q40,55 60,60"/>
+            </g>
+            <!-- 尾巴 -->
+            <path d="M10,50 Q-5,40 5,55 Q0,60 10,55" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+            <path d="M10,50 Q-5,60 5,45 Q0,40 10,45" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <!-- 鹈鹕腿部 -->
+        <div class="pelican-leg leg-left">
+          <div class="foot"></div>
+        </div>
+        <div class="pelican-leg leg-right">
+          <div class="foot"></div>
+        </div>
+      </div>
+
+      <!-- 自行车 -->
+      <div class="bicycle">
+        <!-- 后轮 -->
+        <div class="wheel wheel-back">
+          <div class="wheel-spokes">
+            <div class="spoke" style="transform: rotate(0deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(45deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(90deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(135deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(180deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(225deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(270deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(315deg) translateY(-100%);"></div>
+          </div>
+        </div>
+
+        <!-- 前轮 -->
+        <div class="wheel wheel-front">
+          <div class="wheel-spokes">
+            <div class="spoke" style="transform: rotate(0deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(45deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(90deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(135deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(180deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(225deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(270deg) translateY(-100%);"></div>
+            <div class="spoke" style="transform: rotate(315deg) translateY(-100%);"></div>
+          </div>
+        </div>
+
+        <!-- 车架 -->
+        <div class="frame frame-top"></div>
+        <div class="frame frame-down"></div>
+        <div class="frame frame-seat"></div>
+        <div class="frame frame-chainstay"></div>
+        <div class="frame frame-fork"></div>
+
+        <!-- 座位 -->
+        <div class="seat"></div>
+
+        <!-- 车把手 -->
+        <div class="handlebar">
+          <div class="handlebar-grip grip-left"></div>
+          <div class="handlebar-grip grip-right"></div>
+        </div>
+
+        <!-- 踏板连杆 -->
+        <div class="crank"></div>
+        <div class="crank crank-back"></div>
+
+        <!-- 链条 -->
+        <div class="chain"></div>
+
+        <!-- 踏板 -->
+        <div class="pedal pedal-left"></div>
+        <div class="pedal pedal-right"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 简单的交互：点击切换暂停/播放
+    let isPaused = false;
+    const bikeContainer = document.querySelector('.bike-container');
+    const pelican = document.querySelector('.pelican');
+    const wings = document.querySelectorAll('.wing');
+    const wheels = document.querySelectorAll('.wheel, .wheel-spokes, .crank, .pedal');
+    const legs = document.querySelectorAll('.pelican-leg');
+    const clouds = document.querySelectorAll('.cloud');
+    const sun = document.querySelector('.sun');
+    const grass = document.querySelectorAll('.grass-blade');
+    const flowers = document.querySelectorAll('.flower');
+    const roadLines = document.querySelectorAll('.road-line');
+    const title = document.querySelector('.title h1, .title p');
+
+    function togglePause() {
+      isPaused = !isPaused;
+      const state = isPaused ? 'paused' : 'running';
+      
+      [bikeContainer, pelican, ...wings, ...wheels, ...legs, ...clouds, sun, ...grass, ...flowers, ...roadLines, ...title].forEach(el => {
+        if (el) el.style.animationPlayState = state;
+      });
+    }
+
+    document.addEventListener('click', togglePause);
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePause();
+      }
+    });
+
+    // 添加提示
+    const hint = document.createElement('div');
+    hint.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      pointer-events: none;
+      z-index: 100;
+      animation: fadeInOut 4s ease-in-out infinite;
+    `;
+    hint.textContent = '点击或按空格键暂停/继续动画';
+    document.body.appendChild(hint);
+
+    // 添加淡入淡出动画
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInOut {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
