@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="在同一画布尺寸下，浏览和对比不同版本的鹈鹕骑自行车动画。">
   <title>Pelican Bicycle · 动画对比</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="models.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="data/generated/models.js" defer></script>
+  <script src="data/generated/usage-data.js" defer></script>
+  <script src="assets/js/usage.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
 </head>
 <body>
   <header class="topbar topbar-nav">
     <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">P<span>↗</span></span><span>PELICAN <strong>BICYCLE</strong></span></a>
     <span class="top-caption">动画观察室 <span class="divider">/</span> <span id="total-count">22</span> 个版本</span>
-    <nav class="page-nav" aria-label="页面导航"><a href="index.html" aria-current="page">预览与对比</a><a href="gallery.html">全部动画</a></nav>
+    <nav class="page-nav" aria-label="页面导航"><a href="index.html" aria-current="page">预览与对比</a><a href="pages/gallery.html">全部动画</a></nav>
   </header>
   <div class="layout">
     <aside class="sidebar" aria-label="动画版本">
@@ -31,14 +33,17 @@
         <article id="panel-a" class="preview-panel active-slot" aria-label="画面 A">
           <header class="panel-header"><button class="slot-badge" type="button" data-slot="a" aria-label="选择画面 A" aria-pressed="true">A</button><div class="panel-heading"><h3 id="name-a"></h3><p id="tech-a"></p></div><a id="original-a" class="original-link" target="_blank" rel="noopener">原页 ↗</a></header>
           <div class="stage" id="stage-a"><div class="loading-note" role="status">正在载入画面…</div></div>
+          <div id="usage-a"></div>
           <footer class="panel-footer"><span>1000 × 650 <span class="muted">· 等比缩放</span></span><div><button class="step-button" data-slot="a" data-step="-1" type="button" aria-label="画面 A 上一个版本">←</button><span id="position-a" class="position"></span><button class="step-button" data-slot="a" data-step="1" type="button" aria-label="画面 A 下一个版本">→</button></div></footer>
         </article>
         <article id="panel-b" class="preview-panel" aria-label="画面 B">
           <header class="panel-header"><button class="slot-badge" type="button" data-slot="b" aria-label="选择画面 B" aria-pressed="false">B</button><div class="panel-heading"><h3 id="name-b"></h3><p id="tech-b"></p></div><a id="original-b" class="original-link" target="_blank" rel="noopener">原页 ↗</a></header>
           <div class="stage" id="stage-b"><div class="loading-note" role="status">正在载入画面…</div></div>
+          <div id="usage-b"></div>
           <footer class="panel-footer"><span>1000 × 650 <span class="muted">· 等比缩放</span></span><div><button class="step-button" data-slot="b" data-step="-1" type="button" aria-label="画面 B 上一个版本">←</button><span id="position-b" class="position"></span><button class="step-button" data-slot="b" data-step="1" type="button" aria-label="画面 B 下一个版本">→</button></div></footer>
         </article>
       </section>
+      <p class="usage-period" data-usage-period></p>
       <div class="workspace-footer"><p>同一画布，自由比较。留意脚踏衔接、车轮转动与场景细节。</p><span>PELICAN / STUDIES</span></div>
       <p class="timing-note">重播会同时重新载入画面；各作品的动画周期与起始时刻可能不同。</p>
       <noscript><p>请启用 JavaScript 以使用版本切换。也可直接打开目录中的 HTML 作品。</p></noscript>

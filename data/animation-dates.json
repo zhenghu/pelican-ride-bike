@@ -1,0 +1,28 @@
+{
+  "timezone": "Europe/Berlin",
+  "source": "Original macOS file creation time (st_birthtime)",
+  "createdDates": {
+    "animations/DeepSeek4.1.html": "2026-09-16",
+    "animations/GLM5.3.html": "2026-09-17",
+    "animations/Google-gemini3.8.html": "2026-09-17",
+    "animations/IBM-Granite.html": "2026-09-17",
+    "animations/Nvidia-Nemotron.html": "2026-09-17",
+    "animations/Poolside.html": "2026-09-17",
+    "animations/Qwen3.7max.html": "2026-09-17",
+    "animations/Qwen3.8max.html": "2026-09-17",
+    "animations/Tencent-hy3.html": "2026-09-17",
+    "animations/Tencent-hy4.html": "2026-09-17",
+    "animations/amazon.html": "2026-09-17",
+    "animations/bytedance-seed.html": "2026-09-17",
+    "animations/fable5.1.html": "2026-09-16",
+    "animations/fable5.html": "2026-09-16",
+    "animations/grok4.6.html": "2026-09-17",
+    "animations/k3.html": "2026-09-17",
+    "animations/meta-muse1.6.html": "2026-09-17",
+    "animations/mimo2.5.html": "2026-09-16",
+    "animations/mistrial.html": "2026-09-17",
+    "animations/openpangu2.html": "2026-09-16",
+    "animations/opus4.8.html": "2026-09-16",
+    "animations/opus5.html": "2026-09-16"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "European Central Bank reference exchange rates",
+  "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+  "retrievedAt": "2026-09-17T10:49:36.064624+00:00",
+  "rates": {
+    "2026-09-16": {
+      "usdPerEur": "1.1537",
+      "cnyPerEur": "7.738"
+    }
+  }
+}

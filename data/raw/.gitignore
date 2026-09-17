@@ -1,0 +1,3 @@
+# Local exports and machine-specific files stay on this computer.
+*
+!.gitignore

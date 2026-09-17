@@ -1,7 +1,0 @@
-.DS_Store
-__pycache__/
-*.pyc
-
-# Local usage exports, unrelated to the animation site.
-explorer_tokens_total_*.csv
-explorer_total_usage_*.csv
