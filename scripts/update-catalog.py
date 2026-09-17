@@ -5,6 +5,8 @@ import re
 from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
+alias_file = root / 'data' / 'animation-aliases.json'
+aliases = json.loads(alias_file.read_text(encoding='utf-8')) if alias_file.exists() else {}
 models = []
 for path in sorted((root / 'animations').glob('*.html'), key=lambda path: path.name.casefold()):
     source = path.read_text(encoding='utf-8')
@@ -19,7 +21,10 @@ for path in sorted((root / 'animations').glob('*.html'), key=lambda path: path.n
         tech.append('SMIL')
     if 'requestAnimationFrame' in source:
         tech.append('JavaScript 动画')
-    models.append({'name': path.stem, 'file': path.relative_to(root).as_posix(), 'tech': tech or ['HTML']})
+    file = path.relative_to(root).as_posix()
+    previous_names = [old for old, current in aliases.items() if current == file]
+    legacy_aliases = list(dict.fromkeys(previous_names + [Path(old).name for old in previous_names]))
+    models.append({'name': path.stem, 'file': file, 'aliases': legacy_aliases, 'tech': tech or ['HTML']})
 output = root / 'data' / 'generated' / 'models.js'
 output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text(

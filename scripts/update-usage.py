@@ -3,43 +3,56 @@
 import argparse
 import csv
 import json
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PERIOD = '2026-08-18_2026-09-17'
 # Explicit aliases only: similarly named model variants must not be merged.
 MODEL_MAP = {
-    'fable5': ('Claude Fable 5', 'matched'),
-    'fable5.1': ('Claude Fable 5.1', 'matched'),
-    'opus4.8': ('Claude Opus 4.8', 'matched'),
-    'opus5': ('Claude Opus 5', 'matched'),
-    'GLM5.3': ('GLM 5.3', 'matched'),
-    'k3': ('Kimi K3', 'matched'),
-    'DeepSeek4.1': ('DeepSeek V4.1 Flash', 'confirmed-alias'),
-    'bytedance-seed': ('Seed 2.1 Turbo', 'confirmed-alias'),
-    'Tencent-hy4': ('Hy4 preview', 'confirmed-alias'),
+    'OpenAI-GPTSolPro-5.6': ('GPT-5.6 Sol Pro', 'confirmed-alias'),
+    'OpenAI-GPTAstra-6': ('GPT-6 Astra', 'confirmed-alias'),
+    'Anthropic-ClaudeFable-5': ('Claude Fable 5', 'matched'),
+    'Anthropic-ClaudeFable-5.1': ('Claude Fable 5.1', 'matched'),
+    'Anthropic-ClaudeOpus-4.8': ('Claude Opus 4.8', 'matched'),
+    'Anthropic-ClaudeOpus-5': ('Claude Opus 5', 'matched'),
+    'ZhipuAI-GLM-5.3': ('GLM 5.3', 'matched'),
+    'MoonshotAI-Kimi-K3': ('Kimi K3', 'matched'),
+    'DeepSeek-DeepSeekFlash-4.1': ('DeepSeek V4.1 Flash', 'confirmed-alias'),
+    'ByteDance-SeedTurbo-2.1': ('Seed 2.1 Turbo', 'confirmed-alias'),
+    'Tencent-HunyuanPreview-4': ('Hy4 preview', 'confirmed-alias'),
 }
 
 
 def read_metric(path, field):
     result = {}
+    seen = set()
     with path.open(encoding='utf-8-sig', newline='') as source:
         reader = csv.DictReader(source)
-        if not {'date__day', 'model', field}.issubset(reader.fieldnames or []):
+        columns = set(reader.fieldnames or [])
+        date_columns = columns & {'date__day', 'date__hour'}
+        if not {'model', field}.issubset(columns) or len(date_columns) != 1:
             raise ValueError(f'{path.name}: missing required columns')
+        date_column = date_columns.pop()
         for row in reader:
-            day = date.fromisoformat(row['date__day']).isoformat()
+            if date_column == 'date__day':
+                day = date.fromisoformat(row[date_column]).isoformat()
+                timestamp = day
+            else:
+                parsed = datetime.fromisoformat(row[date_column])
+                day = parsed.date().isoformat()
+                timestamp = parsed.isoformat()
+            source_key = (timestamp, row['model'])
+            if source_key in seen:
+                raise ValueError(f'{path.name}: duplicate timestamp/model key {source_key}')
+            seen.add(source_key)
             key = (day, row['model'])
-            if key in result:
-                raise ValueError(f'{path.name}: duplicate date/model key {key}')
             value = Decimal(row[field])
             if not value.is_finite() or value < 0:
                 raise ValueError(f'{path.name}: invalid {field} for {key}')
             if field == 'tokens_total' and value != value.to_integral_value():
                 raise ValueError(f'{path.name}: noninteger token count for {key}')
-            result[key] = value
+            result[key] = result.get(key, Decimal(0)) + value
     if not result:
         raise ValueError(f'{path.name}: empty export')
     return result
@@ -68,9 +81,10 @@ def exchange_for_date(rates, day):
 
 
 def main():
+    sources = json.loads((ROOT / 'data' / 'usage-sources.json').read_text(encoding='utf-8'))
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--tokens', type=Path, default=ROOT / 'data' / 'raw' / f'explorer_tokens_total_{DEFAULT_PERIOD}.csv')
-    parser.add_argument('--usage', type=Path, default=ROOT / 'data' / 'raw' / f'explorer_total_usage_{DEFAULT_PERIOD}.csv')
+    parser.add_argument('--tokens', type=Path, default=ROOT / 'data' / 'raw' / sources['tokens'])
+    parser.add_argument('--usage', type=Path, default=ROOT / 'data' / 'raw' / sources['usage'])
     args = parser.parse_args()
     tokens = read_metric(args.tokens, 'tokens_total')
     usage = read_metric(args.usage, 'total_usage')

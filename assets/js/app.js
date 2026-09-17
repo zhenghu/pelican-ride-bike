@@ -6,13 +6,15 @@
   const valid = file => models.some(model => model.file === file);
   const resolveFile = (file, fallback) => {
     if (valid(file)) return file;
-    // Keep previously copied preview URLs working after moving the artworks.
+    // Resolve old preview links after file moves and naming changes.
     const relocated = 'animations/' + file;
-    return valid(relocated) ? relocated : fallback;
+    if (valid(relocated)) return relocated;
+    const previous = models.find(model => model.aliases?.includes(file) || model.aliases?.includes(relocated));
+    return previous ? previous.file : fallback;
   };
   const state = {
-    a: resolveFile(params.get('a'), 'animations/fable5.1.html'),
-    b: resolveFile(params.get('b'), 'animations/opus5.html'),
+    a: resolveFile(params.get('a'), 'animations/Anthropic-ClaudeFable-5.1.html'),
+    b: resolveFile(params.get('b'), 'animations/Anthropic-ClaudeOpus-5.html'),
     mode: params.get('mode') === 'single' ? 'single' : 'compare',
     target: 'a', query: ''
   };
@@ -25,7 +27,8 @@
   }
 
   function renderList() {
-    const filtered = models.filter(model => model.name.toLowerCase().includes(state.query.toLowerCase().trim()));
+    const query = state.query.toLowerCase().trim();
+    const filtered = models.filter(model => [model.name, ...(model.aliases || [])].some(name => name.toLowerCase().includes(query)));
     const list = document.createDocumentFragment();
     filtered.forEach(model => {
       const slots = ['a', 'b'].filter(slot => state[slot] === model.file && (slot === 'a' || state.mode === 'compare'));
