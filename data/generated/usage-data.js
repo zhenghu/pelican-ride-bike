@@ -16,33 +16,11 @@ window.PELICAN_USAGE = {
     }
   },
   "sources": {
-    "tokens": "explorer_tokens_total_2026-08-18_2026-09-17.csv",
-    "usage": "explorer_total_usage_2026-08-18_2026-09-17.csv"
+    "tokens": "explorer_tokens_total_2026-08-18_2026-09-17 (1).csv",
+    "usage": "explorer_total_usage_2026-08-18_2026-09-17 (1).csv"
   },
   "works": {
-    "animations/DeepSeek4.1.html": {
-      "sourceModel": "DeepSeek V4.1 Flash",
-      "mappingStatus": "confirmed-alias",
-      "createdDate": "2026-09-16",
-      "tokensTotal": 6115399,
-      "totalUsage": "0.319742",
-      "totalUsageRmb": "2.144546759122822224148392130",
-      "fxDate": "2026-09-16",
-      "usdToCny": "6.707116234723064921556730519",
-      "fxFallback": false
-    },
-    "animations/GLM5.3.html": {
-      "sourceModel": "GLM 5.3",
-      "mappingStatus": "matched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": 68382,
-      "totalUsage": "0.048821",
-      "totalUsageRmb": "0.3274481216954147525353211407",
-      "fxDate": "2026-09-16",
-      "usdToCny": "6.707116234723064921556730519",
-      "fxFallback": true
-    },
-    "animations/Google-gemini3.8.html": {
+    "animations/Alibaba-QwenMax-3.7.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",
       "createdDate": "2026-09-17",
@@ -53,7 +31,7 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
-    "animations/IBM-Granite.html": {
+    "animations/Alibaba-QwenMax-3.8.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",
       "createdDate": "2026-09-17",
@@ -64,7 +42,7 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
-    "animations/Nvidia-Nemotron.html": {
+    "animations/Amazon-Unknown-Unknown.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",
       "createdDate": "2026-09-17",
@@ -75,84 +53,7 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
-    "animations/Poolside.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/Qwen3.7max.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/Qwen3.8max.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/Tencent-hy3.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/Tencent-hy4.html": {
-      "sourceModel": "Hy4 preview",
-      "mappingStatus": "confirmed-alias",
-      "createdDate": "2026-09-17",
-      "tokensTotal": 1434465,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/amazon.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/bytedance-seed.html": {
-      "sourceModel": "Seed 2.1 Turbo",
-      "mappingStatus": "confirmed-alias",
-      "createdDate": "2026-09-17",
-      "tokensTotal": 77989,
-      "totalUsage": "0.052144",
-      "totalUsageRmb": "0.3497358689433994972696541562",
-      "fxDate": "2026-09-16",
-      "usdToCny": "6.707116234723064921556730519",
-      "fxFallback": true
-    },
-    "animations/fable5.1.html": {
+    "animations/Anthropic-ClaudeFable-5.1.html": {
       "sourceModel": "Claude Fable 5.1",
       "mappingStatus": "matched",
       "createdDate": "2026-09-16",
@@ -163,7 +64,7 @@ window.PELICAN_USAGE = {
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
     },
-    "animations/fable5.html": {
+    "animations/Anthropic-ClaudeFable-5.html": {
       "sourceModel": "Claude Fable 5",
       "mappingStatus": "matched",
       "createdDate": "2026-09-16",
@@ -174,73 +75,7 @@ window.PELICAN_USAGE = {
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
     },
-    "animations/grok4.6.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/k3.html": {
-      "sourceModel": "Kimi K3",
-      "mappingStatus": "matched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": 206154,
-      "totalUsage": "0.204779",
-      "totalUsageRmb": "1.373476555430354511571465719",
-      "fxDate": "2026-09-16",
-      "usdToCny": "6.707116234723064921556730519",
-      "fxFallback": true
-    },
-    "animations/meta-muse1.6.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/mimo2.5.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-16",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/mistrial.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-17",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/openpangu2.html": {
-      "sourceModel": null,
-      "mappingStatus": "unmatched",
-      "createdDate": "2026-09-16",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
-    },
-    "animations/opus4.8.html": {
+    "animations/Anthropic-ClaudeOpus-4.8.html": {
       "sourceModel": "Claude Opus 4.8",
       "mappingStatus": "matched",
       "createdDate": "2026-09-16",
@@ -251,7 +86,7 @@ window.PELICAN_USAGE = {
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
     },
-    "animations/opus5.html": {
+    "animations/Anthropic-ClaudeOpus-5.html": {
       "sourceModel": "Claude Opus 5",
       "mappingStatus": "matched",
       "createdDate": "2026-09-16",
@@ -260,6 +95,193 @@ window.PELICAN_USAGE = {
       "totalUsageRmb": "7.016227100632746814596515558",
       "fxDate": "2026-09-16",
       "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": false
+    },
+    "animations/ByteDance-SeedTurbo-2.1.html": {
+      "sourceModel": "Seed 2.1 Turbo",
+      "mappingStatus": "confirmed-alias",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 77989,
+      "totalUsage": "0.052144",
+      "totalUsageRmb": "0.3497358689433994972696541562",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": true
+    },
+    "animations/DeepSeek-DeepSeekFlash-4.1.html": {
+      "sourceModel": "DeepSeek V4.1 Flash",
+      "mappingStatus": "confirmed-alias",
+      "createdDate": "2026-09-16",
+      "tokensTotal": 6115399,
+      "totalUsage": "0.319742",
+      "totalUsageRmb": "2.144546759122822224148392130",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": false
+    },
+    "animations/Google-Gemini-3.8.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/Huawei-OpenPangu-2.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-16",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/IBM-Granite-Unknown.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/Meta-Muse-1.6.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/MistralAI-Unknown-Unknown.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/MoonshotAI-Kimi-K3.html": {
+      "sourceModel": "Kimi K3",
+      "mappingStatus": "matched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 206154,
+      "totalUsage": "0.204779",
+      "totalUsageRmb": "1.373476555430354511571465719",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": true
+    },
+    "animations/NVIDIA-Nemotron-Unknown.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/OpenAI-GPTAstra-6.html": {
+      "sourceModel": "GPT-6 Astra",
+      "mappingStatus": "confirmed-alias",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 526884,
+      "totalUsage": "1.710342",
+      "totalUsageRmb": "11.47146259512871630406518159",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": true
+    },
+    "animations/OpenAI-GPTSolPro-5.6.html": {
+      "sourceModel": "GPT-5.6 Sol Pro",
+      "mappingStatus": "confirmed-alias",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 186460,
+      "totalUsage": "0.182739",
+      "totalUsageRmb": "1.225651713617058160700355378",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": true
+    },
+    "animations/Poolside-Unknown-Unknown.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/Tencent-Hunyuan-3.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/Tencent-HunyuanPreview-4.html": {
+      "sourceModel": "Hy4 preview",
+      "mappingStatus": "confirmed-alias",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 1434465,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/Xiaomi-MiMo-2.5.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-16",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/ZhipuAI-GLM-5.3.html": {
+      "sourceModel": "GLM 5.3",
+      "mappingStatus": "matched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": 68382,
+      "totalUsage": "0.048821",
+      "totalUsageRmb": "0.3274481216954147525353211407",
+      "fxDate": "2026-09-16",
+      "usdToCny": "6.707116234723064921556730519",
+      "fxFallback": true
+    },
+    "animations/xAI-Grok-4.6.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-17",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
       "fxFallback": false
     }
   }
