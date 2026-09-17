@@ -3,6 +3,11 @@
   const models = window.PELICAN_MODELS;
   const $ = id => document.getElementById(id);
   const params = new URLSearchParams(location.hash.slice(1));
+  const defaultView = {
+    a: 'animations/Anthropic-ClaudeFable-5.1.html',
+    b: 'animations/OpenAI-GPTAstra-6.html',
+    mode: 'compare'
+  };
   const valid = file => models.some(model => model.file === file);
   const resolveFile = (file, fallback) => {
     if (valid(file)) return file;
@@ -13,17 +18,24 @@
     return previous ? previous.file : fallback;
   };
   const state = {
-    a: resolveFile(params.get('a'), 'animations/Anthropic-ClaudeFable-5.1.html'),
-    b: resolveFile(params.get('b'), 'animations/OpenAI-GPTAstra-6.html'),
+    a: resolveFile(params.get('a'), defaultView.a),
+    b: resolveFile(params.get('b'), defaultView.b),
     mode: params.get('mode') === 'single' ? 'single' : 'compare',
     target: 'a', query: ''
   };
+  // Earlier releases wrote the default pair into every homepage URL.
+  // Migrate only that old default; versioned custom choices stay explicit.
+  if (params.get('v') !== '2' && state.mode === 'compare' &&
+      state.a === defaultView.a && state.b === 'animations/Anthropic-ClaudeOpus-5.html') {
+    state.b = defaultView.b;
+  }
   const modelFor = slot => models.find(model => model.file === state[slot]);
   const announce = message => { $('announcement').textContent = message; };
 
   function saveView() {
-    const hash = new URLSearchParams({ a: state.a, b: state.b, mode: state.mode });
-    try { history.replaceState(null, '', '#' + hash.toString()); } catch { /* File previews may restrict history. */ }
+    const isDefault = state.a === defaultView.a && state.b === defaultView.b && state.mode === defaultView.mode;
+    const hash = isDefault ? '' : '#' + new URLSearchParams({ a: state.a, b: state.b, mode: state.mode, v: '2' }).toString();
+    try { history.replaceState(null, '', location.pathname + location.search + hash); } catch { /* File previews may restrict history. */ }
   }
 
   function renderList() {
@@ -128,6 +140,13 @@
   }
   $('single-mode').addEventListener('click', () => setMode('single'));
   $('compare-mode').addEventListener('click', () => setMode('compare'));
+  $('reset-view').addEventListener('click', () => {
+    Object.assign(state, defaultView, { target: 'a', query: '' });
+    $('search').value = '';
+    renderPanel('a');
+    setMode(defaultView.mode);
+    announce('已恢复默认对比：Fable 5.1 与 GPT6');
+  });
   $('restart').addEventListener('click', () => { renderPanel('a'); renderPanel('b'); announce('已重新载入预览'); });
   $('swap').addEventListener('click', () => {
     [state.a, state.b] = [state.b, state.a];

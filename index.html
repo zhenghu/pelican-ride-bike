@@ -9,7 +9,7 @@
   <script src="data/generated/models.js" defer></script>
   <script src="data/generated/usage-data.js" defer></script>
   <script src="assets/js/usage.js" defer></script>
-  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/app.js?v=default-view-2" defer></script>
 </head>
 <body>
   <header class="topbar topbar-nav">
@@ -28,7 +28,7 @@
     </aside>
     <main>
       <div class="workspace-heading"><div><p class="eyebrow">ONE PROMPT, MANY PERSPECTIVES</p><h2>一只鹈鹕，<span>不同的演绎。</span></h2></div><div class="view-switch segmented" role="group" aria-label="预览模式"><button id="single-mode" type="button" aria-pressed="false">单版预览</button><button id="compare-mode" type="button" aria-pressed="true">双版对比</button></div></div>
-      <div class="toolbar"><p id="mode-hint">选择 A 或 B，再从左侧挑选版本。</p><div class="toolbar-actions"><button id="swap" class="quiet-button" type="button">⇄ 交换位置</button><button id="restart" class="quiet-button" type="button">↻ 同时重播</button></div></div>
+      <div class="toolbar"><p id="mode-hint">选择 A 或 B，再从左侧挑选版本。</p><div class="toolbar-actions"><button id="reset-view" class="quiet-button" type="button">恢复默认</button><button id="swap" class="quiet-button" type="button">⇄ 交换位置</button><button id="restart" class="quiet-button" type="button">↻ 同时重播</button></div></div>
       <section id="previews" class="previews" aria-label="动画预览">
         <article id="panel-a" class="preview-panel active-slot" aria-label="画面 A">
           <header class="panel-header"><button class="slot-badge" type="button" data-slot="a" aria-label="选择画面 A" aria-pressed="true">A</button><div class="panel-heading"><h3 id="name-a"></h3><p id="tech-a"></p></div><a id="original-a" class="original-link" target="_blank" rel="noopener">原页 ↗</a></header>
