@@ -73,6 +73,7 @@
     const model = modelFor(slot);
     $('name-' + slot).textContent = model.name;
     $('tech-' + slot).textContent = model.tech.join(' · ');
+    $('usage-' + slot).replaceChildren(window.PelicanUsage.createSummary(model.file));
     $('original-' + slot).href = model.file;
     $('position-' + slot).textContent = `${models.indexOf(model) + 1} / ${models.length}`;
     const stage = $('stage-' + slot);

@@ -31,7 +31,7 @@
     heading.append(title, tech);
     const original = document.createElement('a');
     original.className = 'original-link';
-    original.href = model.file;
+    original.href = '../' + model.file;
     original.target = '_blank';
     original.rel = 'noopener';
     original.textContent = '原页 ↗';
@@ -47,7 +47,7 @@
     frame.title = `${model.name} 动画`;
     frame.setAttribute('sandbox', 'allow-scripts');
     frame.loading = 'eager';
-    frame.src = model.file;
+    frame.src = '../' + model.file;
     frame.addEventListener('load', () => { loading.hidden = true; });
     stage.append(loading, frame);
 
@@ -56,11 +56,11 @@
     const size = document.createElement('span');
     size.textContent = '1000 × 650 · 等比缩放';
     const preview = document.createElement('a');
-    preview.href = 'index.html#' + new URLSearchParams({ a: model.file, mode: 'single' }).toString();
+    preview.href = '../index.html#' + new URLSearchParams({ a: model.file, mode: 'single' }).toString();
     preview.textContent = '放大查看 ↗';
     preview.setAttribute('aria-label', `放大查看 ${model.name}`);
     footer.append(size, preview);
-    card.append(header, stage, footer);
+    card.append(header, stage, window.PelicanUsage.createSummary(model.file), footer);
     cards.append(card);
     resizeObserver.observe(stage);
   });
