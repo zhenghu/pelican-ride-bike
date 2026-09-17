@@ -14,7 +14,7 @@
   };
   const state = {
     a: resolveFile(params.get('a'), 'animations/Anthropic-ClaudeFable-5.1.html'),
-    b: resolveFile(params.get('b'), 'animations/Anthropic-ClaudeOpus-5.html'),
+    b: resolveFile(params.get('b'), 'animations/OpenAI-GPTAstra-6.html'),
     mode: params.get('mode') === 'single' ? 'single' : 'compare',
     target: 'a', query: ''
   };
