@@ -7,11 +7,15 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-09-17T10:49:36.064624+00:00",
+    "retrievedAt": "2026-09-23T09:53:29.810986+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
         "cnyPerEur": "7.738"
+      },
+      "2026-09-22": {
+        "usdPerEur": "1.1463",
+        "cnyPerEur": "7.6803"
       }
     }
   },
@@ -88,14 +92,14 @@ window.PELICAN_USAGE = {
     },
     "animations/Anthropic-ClaudeOpus-5.5.html": {
       "sourceModel": null,
-      "mappingStatus": "unmatched",
+      "mappingStatus": "user-provided",
       "createdDate": "2026-09-23",
-      "tokensTotal": null,
-      "totalUsage": null,
-      "totalUsageRmb": null,
-      "fxDate": null,
-      "usdToCny": null,
-      "fxFallback": false
+      "tokensTotal": 67810,
+      "totalUsage": "1.29",
+      "totalUsageRmb": "8.643101282386809735671290238",
+      "fxDate": "2026-09-22",
+      "usdToCny": "6.700078513478147081915728867",
+      "fxFallback": true
     },
     "animations/Anthropic-ClaudeOpus-5.html": {
       "sourceModel": "Claude Opus 5",

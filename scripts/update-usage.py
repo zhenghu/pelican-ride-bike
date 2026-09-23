@@ -90,6 +90,7 @@ def main():
     usage = read_metric(args.usage, 'total_usage')
     dates = json.loads((ROOT / 'data' / 'animation-dates.json').read_text(encoding='utf-8'))
     fx = json.loads((ROOT / 'data' / 'fx-rates.json').read_text(encoding='utf-8'))
+    overrides = json.loads((ROOT / 'data' / 'usage-overrides.json').read_text(encoding='utf-8'))
     works = {}
     for path in sorted((ROOT / 'animations').glob('*.html')):
         file = path.relative_to(ROOT).as_posix()
@@ -103,12 +104,22 @@ def main():
         if status in ('matched', 'confirmed-alias'):
             entry['tokensTotal'] = daily_value(tokens, source_model, created_date, True)
             entry['totalUsage'] = daily_value(usage, source_model, created_date)
-            if entry['totalUsage'] is not None:
-                rate_date, rate = exchange_for_date(fx['rates'], created_date)
-                entry['totalUsageRmb'] = format(Decimal(entry['totalUsage']) * rate, 'f')
-                entry['fxDate'] = rate_date
-                entry['usdToCny'] = format(rate, 'f')
-                entry['fxFallback'] = rate_date != created_date
+        if file in overrides:
+            override = overrides[file]
+            if override['createdDate'] != created_date:
+                raise ValueError(f'Override creation date mismatch: {file}')
+            count = override['tokensTotal']
+            cost = Decimal(override['totalUsage'])
+            if type(count) is not int or count < 0 or not cost.is_finite() or cost < 0:
+                raise ValueError(f'Invalid manual usage: {file}')
+            entry.update(tokensTotal=count, totalUsage=format(cost, 'f'),
+                         mappingStatus='user-provided', sourceModel=None)
+        if entry['totalUsage'] is not None:
+            rate_date, rate = exchange_for_date(fx['rates'], created_date)
+            entry['totalUsageRmb'] = format(Decimal(entry['totalUsage']) * rate, 'f')
+            entry['fxDate'] = rate_date
+            entry['usdToCny'] = format(rate, 'f')
+            entry['fxFallback'] = rate_date != created_date
         works[file] = entry
     data = {'dateBasis': 'animation-creation-date', 'timezone': dates['timezone'],
             'currency': 'CNY', 'sourceCurrency': 'USD', 'exchangeRateSource': fx,

@@ -30,7 +30,9 @@
     day.textContent = `创建日期：${entry?.createdDate || '未记录'}`;
     const source = document.createElement('p');
     source.className = 'usage-source';
-    if (!entry?.sourceModel) {
+    if (entry?.mappingStatus === 'user-provided') {
+      source.textContent = '来源：用户提供的本动画用量';
+    } else if (!entry?.sourceModel) {
       source.textContent = 'CSV 中没有对应模型记录';
     } else {
       source.textContent = `CSV 模型：${entry.sourceModel}`;
@@ -54,7 +56,7 @@
   }
 
   document.querySelectorAll('[data-usage-period]').forEach(element => {
-    element.textContent = '按各动画创建日期匹配模型当天的 CSV 用量；1 K = 1,000 tokens。美元费用按 ECB 参考汇率折算人民币，当日汇率未公布时采用此前最近汇率。当天用量可能包含其他请求；缺失记录显示“暂无数据”。';
+    element.textContent = '用量优先采用用户提供的本动画数据，否则按创建日期匹配模型当天的 CSV 用量；1 K = 1,000 tokens。美元费用按 ECB 参考汇率折算人民币，当日汇率未公布时采用此前最近汇率。CSV 当天用量可能包含其他请求；缺失记录显示“暂无数据”。';
     element.title = `来源：${data.sources.tokens}\n${data.sources.usage}`;
   });
   window.PelicanUsage = { createSummary };

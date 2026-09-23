@@ -61,11 +61,11 @@ python3 scripts/update-catalog.py
 
 ## Token 与费用标注
 
-预览页和全部动画页按各作品的原始创建日期，从本地两份 CSV 匹配该模型当天的 Token 和 Usage。Token 使用 K（1 K = 1,000 tokens），保留最多两位小数。页面同时显示创建日期。这是模型当天的用量，可能包含当天其他请求。
+预览页和全部动画页按各作品的原始创建日期，从本地两份 CSV 匹配该模型当天的 Token 和 Usage。Token 使用 K（1 K = 1,000 tokens），保留最多两位小数。页面同时显示创建日期。CSV 记录是模型当天的用量，可能包含当天其他请求。用户直接提供的本动画用量保存在 `data/usage-overrides.json`，按文件名和创建日期覆盖 CSV 值，页面单独注明来源，重新生成时也会保留。金额字段 `totalUsage` 的单位为 USD。
 
 原始文件创建日期按 Europe/Berlin 时区从 macOS `st_birthtime` 提取并固定在 `data/animation-dates.json`。重新克隆、复制或修改文件不会改变统计日期。导入兼容 `date__day` 和 `date__hour`：小时记录先按 CSV 中的自然日期、模型求和，再与创建日期匹配；不混合新旧导出。源文件未提供时区转换信息，因此沿用源时间戳中的日期。添加作品时需将其原始创建日期补入该文件，不能用克隆日期代替。
 
-已确认 CSV 的 Usage 原始币种是 USD。费用根据 `data/fx-rates.json` 保存的 ECB 汇率换算为人民币：`RMB = USD × (每欧元人民币 / 每欧元美元)`。优先使用创建当天的汇率；当天尚未公布或休市时使用此前最近的汇率，超过七天则要求更新汇率快照。当前快照为 2026-09-16（1 EUR = 1.1537 USD = 7.738 CNY），因此 9 月 17 日作品暂用该日汇率，页面明确标注。参考来源：https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 。
+已确认 CSV 的 Usage 原始币种是 USD。费用根据 `data/fx-rates.json` 保存的 ECB 汇率换算为人民币：`RMB = USD × (每欧元人民币 / 每欧元美元)`。优先使用创建当天的汇率；当天尚未公布或休市时使用此前最近的汇率，超过七天则要求更新汇率快照。快照保留 2026-09-16 汇率供原有作品使用，并新增 2026-09-22 汇率（1 EUR = 1.1463 USD = 7.6803 CNY）供 9 月 23 日作品使用；当日汇率尚未公布，页面标注采用最近已公布汇率。参考来源：https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 。
 
 ```sh
 python3 scripts/update-usage.py
