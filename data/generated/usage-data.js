@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-09-23T09:53:29.810986+00:00",
+    "retrievedAt": "2026-09-23T23:54:37.903044+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -16,6 +16,10 @@ window.PELICAN_USAGE = {
       "2026-09-22": {
         "usdPerEur": "1.1463",
         "cnyPerEur": "7.6803"
+      },
+      "2026-09-23": {
+        "usdPerEur": "1.1411",
+        "cnyPerEur": "7.6538"
       }
     }
   },
@@ -96,10 +100,10 @@ window.PELICAN_USAGE = {
       "createdDate": "2026-09-23",
       "tokensTotal": 67810,
       "totalUsage": "1.29",
-      "totalUsageRmb": "8.643101282386809735671290238",
-      "fxDate": "2026-09-22",
-      "usdToCny": "6.700078513478147081915728867",
-      "fxFallback": true
+      "totalUsageRmb": "8.652530014897905529751993690",
+      "fxDate": "2026-09-23",
+      "usdToCny": "6.707387608447988782753483481",
+      "fxFallback": false
     },
     "animations/Anthropic-ClaudeOpus-5.html": {
       "sourceModel": "Claude Opus 5",
@@ -221,6 +225,17 @@ window.PELICAN_USAGE = {
       "fxDate": "2026-09-16",
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": true
+    },
+    "animations/OpenAI-GPTSol-6.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-09-23",
+      "tokensTotal": 70000,
+      "totalUsage": "0.20",
+      "totalUsageRmb": "1.341477521689597756550696696",
+      "fxDate": "2026-09-23",
+      "usdToCny": "6.707387608447988782753483481",
+      "fxFallback": false
     },
     "animations/OpenAI-GPTSolPro-5.6.html": {
       "sourceModel": "GPT-5.6 Sol Pro",

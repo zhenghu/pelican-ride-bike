@@ -223,6 +223,15 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "OpenAI-GPTSol-6",
+    "file": "animations/OpenAI-GPTSol-6.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ]
+  },
+  {
     "name": "OpenAI-GPTSolPro-5.6",
     "file": "animations/OpenAI-GPTSolPro-5.6.html",
     "aliases": [
