@@ -1,6 +1,6 @@
 # Pelican Bicycle
 
-24 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
+25 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
 
 直接打开 `index.html` 即可使用，不需要安装依赖。也可以在目录中运行：
 
@@ -10,7 +10,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 
 访问 <http://127.0.0.1:18777>。
 
-“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 24 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
+“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 25 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
 
 - 左侧选择目标画面 A / B，然后点击版本进行替换。
 - 支持单版预览、双版对比、交换位置、同时重新载入，以及前后切换。
@@ -27,7 +27,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 ```text
 index.html                  预览与对比入口
 README.md                   项目说明
-animations/                 24 个原始动画
+animations/                 25 个原始动画
 pages/                      全部动画页面
 assets/css/                 页面样式
 assets/js/                  页面交互与用量展示脚本

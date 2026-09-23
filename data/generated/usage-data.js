@@ -86,6 +86,17 @@ window.PELICAN_USAGE = {
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
     },
+    "animations/Anthropic-ClaudeOpus-5.5.html": {
+      "sourceModel": null,
+      "mappingStatus": "unmatched",
+      "createdDate": "2026-09-23",
+      "tokensTotal": null,
+      "totalUsage": null,
+      "totalUsageRmb": null,
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false
+    },
     "animations/Anthropic-ClaudeOpus-5.html": {
       "sourceModel": "Claude Opus 5",
       "mappingStatus": "matched",
