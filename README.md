@@ -1,6 +1,6 @@
 # Pelican Bicycle
 
-25 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
+26 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
 
 直接打开 `index.html` 即可使用，不需要安装依赖。也可以在目录中运行：
 
@@ -10,7 +10,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 
 访问 <http://127.0.0.1:18777>。
 
-“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 25 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
+“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 26 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
 
 - 左侧选择目标画面 A / B，然后点击版本进行替换。
 - 支持单版预览、双版对比、交换位置、同时重新载入，以及前后切换。
@@ -27,7 +27,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 ```text
 index.html                  预览与对比入口
 README.md                   项目说明
-animations/                 25 个原始动画
+animations/                 26 个原始动画
 pages/                      全部动画页面
 assets/css/                 页面样式
 assets/js/                  页面交互与用量展示脚本
@@ -65,7 +65,7 @@ python3 scripts/update-catalog.py
 
 原始文件创建日期按 Europe/Berlin 时区从 macOS `st_birthtime` 提取并固定在 `data/animation-dates.json`。重新克隆、复制或修改文件不会改变统计日期。导入兼容 `date__day` 和 `date__hour`：小时记录先按 CSV 中的自然日期、模型求和，再与创建日期匹配；不混合新旧导出。源文件未提供时区转换信息，因此沿用源时间戳中的日期。添加作品时需将其原始创建日期补入该文件，不能用克隆日期代替。
 
-已确认 CSV 的 Usage 原始币种是 USD。费用根据 `data/fx-rates.json` 保存的 ECB 汇率换算为人民币：`RMB = USD × (每欧元人民币 / 每欧元美元)`。优先使用创建当天的汇率；当天尚未公布或休市时使用此前最近的汇率，超过七天则要求更新汇率快照。快照保留 2026-09-16 汇率供原有作品使用，并新增 2026-09-22 汇率（1 EUR = 1.1463 USD = 7.6803 CNY）供 9 月 23 日作品使用；当日汇率尚未公布，页面标注采用最近已公布汇率。参考来源：https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 。
+已确认 CSV 的 Usage 原始币种是 USD。费用根据 `data/fx-rates.json` 保存的 ECB 汇率换算为人民币：`RMB = USD × (每欧元人民币 / 每欧元美元)`。优先使用创建当天的汇率；当天尚未公布或休市时使用此前最近的汇率，超过七天则要求更新汇率快照。快照保留 2026-09-16 汇率供原有作品使用，现已补入 2026-09-23 当日汇率（1 EUR = 1.1411 USD = 7.6538 CNY），供 9 月 23 日作品使用。参考来源：https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml 。
 
 ```sh
 python3 scripts/update-usage.py
