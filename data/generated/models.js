@@ -74,6 +74,16 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Anthropic-ClaudeOpus-5.5",
+    "file": "animations/Anthropic-ClaudeOpus-5.5.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "JavaScript 动画"
+    ]
+  },
+  {
     "name": "Anthropic-ClaudeOpus-5",
     "file": "animations/Anthropic-ClaudeOpus-5.html",
     "aliases": [
