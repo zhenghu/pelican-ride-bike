@@ -304,6 +304,19 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Xiaomi-MiMoPro-2.6",
+    "file": "animations/Xiaomi-MiMoPro-2.6.html",
+    "aliases": [
+      "animations/Xiaomi-MiMoPro-2.5.html",
+      "Xiaomi-MiMoPro-2.5.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
+    ]
+  },
+  {
     "name": "ZhipuAI-GLM-5.3",
     "file": "animations/ZhipuAI-GLM-5.3.html",
     "aliases": [

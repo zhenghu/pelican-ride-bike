@@ -22,5 +22,6 @@
   "animations/mistrial.html": "animations/MistralAI-Unknown-Unknown.html",
   "animations/openpangu2.html": "animations/Huawei-OpenPangu-2.html",
   "animations/opus4.8.html": "animations/Anthropic-ClaudeOpus-4.8.html",
-  "animations/opus5.html": "animations/Anthropic-ClaudeOpus-5.html"
+  "animations/opus5.html": "animations/Anthropic-ClaudeOpus-5.html",
+  "animations/Xiaomi-MiMoPro-2.5.html": "animations/Xiaomi-MiMoPro-2.6.html"
 }

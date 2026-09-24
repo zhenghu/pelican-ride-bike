@@ -292,6 +292,17 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
+    "animations/Xiaomi-MiMoPro-2.6.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-09-24",
+      "tokensTotal": 214600,
+      "totalUsage": "0.28",
+      "totalUsageRmb": "1.878068530365436859170975375",
+      "fxDate": "2026-09-23",
+      "usdToCny": "6.707387608447988782753483481",
+      "fxFallback": true
+    },
     "animations/ZhipuAI-GLM-5.3.html": {
       "sourceModel": "GLM 5.3",
       "mappingStatus": "matched",
