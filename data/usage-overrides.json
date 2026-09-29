@@ -13,5 +13,10 @@
     "createdDate": "2026-09-24",
     "tokensTotal": 214600,
     "totalUsage": "0.28"
+  },
+  "animations/Anthropic-ClaudeSonnet-5.5.html": {
+    "createdDate": "2026-09-29",
+    "tokensTotal": 120000,
+    "totalUsage": "0.20"
   }
 }
