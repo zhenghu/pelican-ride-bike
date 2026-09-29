@@ -97,6 +97,16 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Anthropic-ClaudeSonnet-5.5",
+    "file": "animations/Anthropic-ClaudeSonnet-5.5.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
+    ]
+  },
+  {
     "name": "ByteDance-SeedTurbo-2.1",
     "file": "animations/ByteDance-SeedTurbo-2.1.html",
     "aliases": [
