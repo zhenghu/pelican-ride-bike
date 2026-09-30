@@ -329,6 +329,15 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "xAI-Grok-4.7",
+    "file": "animations/xAI-Grok-4.7.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ]
+  },
+  {
     "name": "Xiaomi-MiMo-2.5",
     "file": "animations/Xiaomi-MiMo-2.5.html",
     "aliases": [

@@ -28,5 +28,10 @@
     "createdDate": "2026-09-30",
     "tokensTotal": 128000,
     "totalUsage": "0.00"
+  },
+  "animations/xAI-Grok-4.7.html": {
+    "createdDate": "2026-09-30",
+    "tokensTotal": 303000,
+    "totalUsage": "0.30"
   }
 }

@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-09-30T13:39:30.495220+00:00",
+    "retrievedAt": "2026-09-30T14:13:10.022853+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -24,6 +24,10 @@ window.PELICAN_USAGE = {
       "2026-09-29": {
         "usdPerEur": "1.1355",
         "cnyPerEur": "7.6117"
+      },
+      "2026-09-30": {
+        "usdPerEur": "1.1355",
+        "cnyPerEur": "7.613"
       }
     }
   },
@@ -192,10 +196,10 @@ window.PELICAN_USAGE = {
       "createdDate": "2026-09-30",
       "tokensTotal": 72000,
       "totalUsage": "0.02",
-      "totalUsageRmb": "0.1340678115367679436371642448",
-      "fxDate": "2026-09-29",
-      "usdToCny": "6.703390576838397181858212241",
-      "fxFallback": true
+      "totalUsageRmb": "0.1340907089387934830471158080",
+      "fxDate": "2026-09-30",
+      "usdToCny": "6.704535446939674152355790401",
+      "fxFallback": false
     },
     "animations/Meta-Muse-1.6.html": {
       "sourceModel": null,
@@ -314,9 +318,9 @@ window.PELICAN_USAGE = {
       "tokensTotal": 128000,
       "totalUsage": "0.00",
       "totalUsageRmb": "0.00000000000000000000000000000",
-      "fxDate": "2026-09-29",
-      "usdToCny": "6.703390576838397181858212241",
-      "fxFallback": true
+      "fxDate": "2026-09-30",
+      "usdToCny": "6.704535446939674152355790401",
+      "fxFallback": false
     },
     "animations/Xiaomi-MiMo-2.5.html": {
       "sourceModel": null,
@@ -360,6 +364,17 @@ window.PELICAN_USAGE = {
       "totalUsageRmb": null,
       "fxDate": null,
       "usdToCny": null,
+      "fxFallback": false
+    },
+    "animations/xAI-Grok-4.7.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-09-30",
+      "tokensTotal": 303000,
+      "totalUsage": "0.30",
+      "totalUsageRmb": "2.011360634081902245706737120",
+      "fxDate": "2026-09-30",
+      "usdToCny": "6.704535446939674152355790401",
       "fxFallback": false
     }
   }
