@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-09-29T14:47:32.592696+00:00",
+    "retrievedAt": "2026-09-30T13:39:30.495220+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -186,6 +186,17 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
+    "animations/Meituan-LongCat-2.0.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-09-30",
+      "tokensTotal": 72000,
+      "totalUsage": "0.02",
+      "totalUsageRmb": "0.1340678115367679436371642448",
+      "fxDate": "2026-09-29",
+      "usdToCny": "6.703390576838397181858212241",
+      "fxFallback": true
+    },
     "animations/Meta-Muse-1.6.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",
@@ -295,6 +306,17 @@ window.PELICAN_USAGE = {
       "fxDate": null,
       "usdToCny": null,
       "fxFallback": false
+    },
+    "animations/Unknown-SpaceBunny-Unknown.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-09-30",
+      "tokensTotal": 128000,
+      "totalUsage": "0.00",
+      "totalUsageRmb": "0.00000000000000000000000000000",
+      "fxDate": "2026-09-29",
+      "usdToCny": "6.703390576838397181858212241",
+      "fxFallback": true
     },
     "animations/Xiaomi-MiMo-2.5.html": {
       "sourceModel": null,
