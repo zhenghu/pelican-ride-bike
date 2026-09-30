@@ -23,5 +23,8 @@
   "animations/openpangu2.html": "animations/Huawei-OpenPangu-2.html",
   "animations/opus4.8.html": "animations/Anthropic-ClaudeOpus-4.8.html",
   "animations/opus5.html": "animations/Anthropic-ClaudeOpus-5.html",
-  "animations/Xiaomi-MiMoPro-2.5.html": "animations/Xiaomi-MiMoPro-2.6.html"
+  "animations/Xiaomi-MiMoPro-2.5.html": "animations/Xiaomi-MiMoPro-2.6.html",
+  "animations/MeituanLongCat-2.0.html": "animations/Meituan-LongCat-2.0.html",
+  "animations/SpaceBunny.html": "animations/Unknown-SpaceBunny-Unknown.html",
+  "animations/Superbunny.html": "animations/Unknown-SpaceBunny-Unknown.html"
 }

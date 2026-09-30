@@ -1,6 +1,6 @@
 # Pelican Bicycle
 
-28 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
+30 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
 
 直接打开 `index.html` 即可使用，不需要安装依赖。也可以在目录中运行：
 
@@ -10,7 +10,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 
 访问 <http://127.0.0.1:18777>。
 
-“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 28 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
+“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 30 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
 
 - 左侧选择目标画面 A / B，然后点击版本进行替换。
 - 支持单版预览、双版对比、交换位置、同时重新载入，以及前后切换。
@@ -27,7 +27,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 ```text
 index.html                  预览与对比入口
 README.md                   项目说明
-animations/                 28 个原始动画
+animations/                 30 个原始动画
 pages/                      全部动画页面
 assets/css/                 页面样式
 assets/js/                  页面交互与用量展示脚本
@@ -43,7 +43,7 @@ Git 元数据仍在隐藏的 `.git/` 目录。根目录仅保留 `index.html` �
 
 文件名与页面显示名称统一为 `公司名-模型名-版本号.html`，例如 `OpenAI-GPTSolPro-5.6.html`、`Anthropic-ClaudeFable-5.1.html`。页面显示文件名去掉 `.html` 后的名称；原页浏览器标题也使用同一名称。型号中的系列和变体保留在模型名中，Kimi 的版本沿用 K3。
 
-Amazon、Poolside、Mistral 的具体模型和版本，以及 IBM Granite、NVIDIA Nemotron 的版本未在原始资料中注明，暂用 `Unknown`，不根据当前产品列表推断作品使用的版本。补全后需同步创建日期、用量映射和别名。
+Amazon、Poolside、Mistral 的具体模型和版本，以及 IBM Granite、NVIDIA Nemotron 的版本未在原始资料中注明，暂用 `Unknown`，不根据当前产品列表推断作品使用的版本。SpaceBunny 的公司和版本同样未注明，使用 `Unknown-SpaceBunny-Unknown.html`。补全后需同步创建日期、用量映射和别名。
 
 `data/animation-aliases.json` 保存旧文件名到新文件名的映射，供旧预览链接和旧名称搜索使用。直接指向原始 HTML 文件的链接需采用新路径。
 
@@ -75,4 +75,4 @@ python3 scripts/update-usage.py
 
 脚本按“创建日期＋CSV 模型名称”精确取值，通过 `MODEL_MAP` 显式对应作品。已确认的别名也计入统计：DeepSeek-DeepSeekFlash-4.1 → DeepSeek V4.1 Flash、ByteDance-SeedTurbo-2.1 → Seed 2.1 Turbo、Tencent-HunyuanPreview-4 → Hy4 preview、OpenAI-GPTSolPro-5.6 → GPT-5.6 Sol Pro、OpenAI-GPTAstra-6 → GPT-6 Astra。Sol Pro 的记录不与普通 Sol 混合。
 
-缺失的 Token 或 Usage 分别保留为空，页面显示“暂无数据”；不使用 `Other` 补足，也不把缺失记录当作 0。汇率和费用以十进制计算；人民币显示为参考折算值，最多四位小数。卡片保留原始美元金额、实际采用的汇率和汇率日期，悬停数字可查看精确值。数据快照 `data/generated/usage-data.js` 包含对应作品的统计、来源、创建日期和换算依据；原始 CSV 保存在 `data/raw/`，继续留在本机并由该目录的 `.gitignore` 排除。新作品、CSV 或汇率快照更新后，请重新运行该脚本。
+缺失的 Token 或 Usage 分别保留为空，页面显示“暂无数据”；不使用 `Other` 补足，也不把缺失记录当作 0；明确为零的费用显示“免费（¥0.00）”。汇率和费用以十进制计算；人民币显示为参考折算值，最多四位小数。卡片保留原始美元金额、实际采用的汇率和汇率日期，悬停数字可查看精确值。数据快照 `data/generated/usage-data.js` 包含对应作品的统计、来源、创建日期和换算依据；原始 CSV 保存在 `data/raw/`，继续留在本机并由该目录的 `.gitignore` 排除。新作品、CSV 或汇率快照更新后，请重新运行该脚本。

@@ -12,7 +12,7 @@
     metrics.className = 'usage-metrics';
     for (const [label, value, format, title] of [
       ['Token（K）', entry?.tokensTotal, value => `${countFormat.format(Number(value) / 1000)} K`, `${entry?.tokensTotal} tokens`],
-      ['费用（RMB）', entry?.totalUsageRmb, value => `≈ ${usageFormat.format(Number(value))}`, `${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`]
+      ['费用（RMB）', entry?.totalUsageRmb, value => Number(value) === 0 ? `免费（${usageFormat.format(0)}）` : `≈ ${usageFormat.format(Number(value))}`, `${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`]
     ]) {
       const group = document.createElement('div');
       const term = document.createElement('dt');

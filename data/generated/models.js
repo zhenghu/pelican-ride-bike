@@ -169,6 +169,19 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Meituan-LongCat-2.0",
+    "file": "animations/Meituan-LongCat-2.0.html",
+    "aliases": [
+      "animations/MeituanLongCat-2.0.html",
+      "MeituanLongCat-2.0.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
+    ]
+  },
+  {
     "name": "Meta-Muse-1.6",
     "file": "animations/Meta-Muse-1.6.html",
     "aliases": [
@@ -287,6 +300,20 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画",
       "SMIL"
+    ]
+  },
+  {
+    "name": "Unknown-SpaceBunny-Unknown",
+    "file": "animations/Unknown-SpaceBunny-Unknown.html",
+    "aliases": [
+      "animations/SpaceBunny.html",
+      "animations/Superbunny.html",
+      "SpaceBunny.html",
+      "Superbunny.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画"
     ]
   },
   {
