@@ -114,6 +114,10 @@ def main():
                 raise ValueError(f'Invalid manual usage: {file}')
             entry.update(tokensTotal=count, totalUsage=format(cost, 'f'),
                          mappingStatus='user-provided', sourceModel=None)
+            if override.get('estimated'):
+                entry['estimated'] = True
+            if override.get('note'):
+                entry['note'] = override['note']
         if entry['totalUsage'] is not None:
             rate_date, rate = exchange_for_date(fx['rates'], created_date)
             entry['totalUsageRmb'] = format(Decimal(entry['totalUsage']) * rate, 'f')

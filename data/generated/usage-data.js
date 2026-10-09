@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-09-30T14:13:10.022853+00:00",
+    "retrievedAt": "2026-10-09T08:25:36+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -28,6 +28,10 @@ window.PELICAN_USAGE = {
       "2026-09-30": {
         "usdPerEur": "1.1355",
         "cnyPerEur": "7.613"
+      },
+      "2026-10-08": {
+        "usdPerEur": "1.1186",
+        "cnyPerEur": "7.4972"
       }
     }
   },
@@ -90,6 +94,19 @@ window.PELICAN_USAGE = {
       "fxDate": "2026-09-16",
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
+    },
+    "animations/Anthropic-ClaudeHaiku-5.5.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-10-09",
+      "tokensTotal": 4210000,
+      "totalUsage": "0.16",
+      "totalUsageRmb": "1.072369032719470767030216342",
+      "fxDate": "2026-10-08",
+      "usdToCny": "6.702306454496692293938852137",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至记录时共 25 轮 LLM 调用）：输入为聊天日志采样的上下文均值×轮次数，输出为日志累计 completionTokens；费用按 Copilot 价格表 Haiku 5.5 单价（含缓存读写）折算，非实际账单。"
     },
     "animations/Anthropic-ClaudeOpus-4.8.html": {
       "sourceModel": "Claude Opus 4.8",
@@ -211,6 +228,19 @@ window.PELICAN_USAGE = {
       "fxDate": null,
       "usdToCny": null,
       "fxFallback": false
+    },
+    "animations/MistralAI-MistralLarge-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-10-09",
+      "tokensTotal": 442000,
+      "totalUsage": "0.97",
+      "totalUsageRmb": "6.501237260861791525120686573",
+      "fxDate": "2026-10-08",
+      "usdToCny": "6.702306454496692293938852137",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（28轮LLM调用）：输入约420,000（28轮×平均15k上下文），输出约22,000（HTML+工具调用+文本）；模型Mistral Large 4经OpenRouter路由，按公开价格$2/M输入+$6/M输出估算，非实际账单。"
     },
     "animations/MistralAI-Unknown-Unknown.html": {
       "sourceModel": null,
