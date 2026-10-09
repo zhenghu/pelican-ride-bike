@@ -16,7 +16,7 @@
     ]) {
       const group = document.createElement('div');
       const term = document.createElement('dt');
-      term.textContent = label;
+      term.textContent = entry?.estimated ? `${label} · 估算` : label;
       const amount = document.createElement('dd');
       const missing = value === null || value === undefined;
       amount.textContent = missing ? '暂无数据' : format(value);
@@ -31,7 +31,8 @@
     const source = document.createElement('p');
     source.className = 'usage-source';
     if (entry?.mappingStatus === 'user-provided') {
-      source.textContent = '来源：用户提供的本动画用量';
+      source.textContent = entry.estimated ? '来源：本动画用量估算，非实际账单' : '来源：用户提供的本动画用量';
+      if (entry.note) source.textContent += `；${entry.note}`;
     } else if (!entry?.sourceModel) {
       source.textContent = 'CSV 中没有对应模型记录';
     } else {

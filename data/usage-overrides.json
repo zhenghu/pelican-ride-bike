@@ -33,5 +33,19 @@
     "createdDate": "2026-09-30",
     "tokensTotal": 303000,
     "totalUsage": "0.30"
+  },
+  "animations/Anthropic-ClaudeHaiku-5.5.html": {
+    "createdDate": "2026-10-09",
+    "tokensTotal": 4210000,
+    "totalUsage": "0.16",
+    "note": "估算值（截至记录时共 25 轮 LLM 调用）：输入为聊天日志采样的上下文均值×轮次数，输出为日志累计 completionTokens；费用按 Copilot 价格表 Haiku 5.5 单价（含缓存读写）折算，非实际账单。",
+    "estimated": true
+  },
+  "animations/MistralAI-MistralLarge-4.html": {
+    "createdDate": "2026-10-09",
+    "tokensTotal": 442000,
+    "totalUsage": "0.97",
+    "note": "估算值（28轮LLM调用）：输入约420,000（28轮×平均15k上下文），输出约22,000（HTML+工具调用+文本）；模型Mistral Large 4经OpenRouter路由，按公开价格$2/M输入+$6/M输出估算，非实际账单。",
+    "estimated": true
   }
 }

@@ -62,6 +62,16 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Anthropic-ClaudeHaiku-5.5",
+    "file": "animations/Anthropic-ClaudeHaiku-5.5.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "JavaScript 动画"
+    ]
+  },
+  {
     "name": "Anthropic-ClaudeOpus-4.8",
     "file": "animations/Anthropic-ClaudeOpus-4.8.html",
     "aliases": [
@@ -193,6 +203,16 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL",
       "JavaScript 动画"
+    ]
+  },
+  {
+    "name": "MistralAI-MistralLarge-4",
+    "file": "animations/MistralAI-MistralLarge-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
     ]
   },
   {
