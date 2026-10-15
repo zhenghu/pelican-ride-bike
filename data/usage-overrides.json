@@ -19,6 +19,13 @@
     "tokensTotal": 120000,
     "totalUsage": "0.20"
   },
+  "animations/Google-GeminiArgon-4.html": {
+    "createdDate": "2026-10-16",
+    "tokensTotal": 1468500,
+    "totalUsage": "0.42",
+    "estimated": true,
+    "note": "估算值（截至记录时共 24 轮 LLM 调用）：输入约 1,454,500（聊天日志采样上下文均值约 60.6k × 24 轮），输出约 14,000（累计生成 HTML 与工具调用）；模型 Gemini 4 Argon 经 OpenRouter 路由，按本地 Copilot 价格表（输入 $2/M、缓存读取 $0.10/M、输出 $10/M，含缓存命中折算）估算，非实际账单。"
+  },
   "animations/Meituan-LongCat-2.0.html": {
     "createdDate": "2026-09-30",
     "tokensTotal": 72000,

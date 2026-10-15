@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-10-09T08:25:36+00:00",
+    "retrievedAt": "2026-10-15T22:55:00+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -32,6 +32,10 @@ window.PELICAN_USAGE = {
       "2026-10-08": {
         "usdPerEur": "1.1186",
         "cnyPerEur": "7.4972"
+      },
+      "2026-10-15": {
+        "usdPerEur": "1.1208",
+        "cnyPerEur": "7.4993"
       }
     }
   },
@@ -184,6 +188,19 @@ window.PELICAN_USAGE = {
       "fxDate": null,
       "usdToCny": null,
       "fxFallback": false
+    },
+    "animations/Google-GeminiArgon-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-10-16",
+      "tokensTotal": 1468500,
+      "totalUsage": "0.42",
+      "totalUsageRmb": "2.810230192719486081370449679",
+      "fxDate": "2026-10-15",
+      "usdToCny": "6.691024268379728765167737330",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至记录时共 24 轮 LLM 调用）：输入约 1,454,500（聊天日志采样上下文均值约 60.6k × 24 轮），输出约 14,000（累计生成 HTML 与工具调用）；模型 Gemini 4 Argon 经 OpenRouter 路由，按本地 Copilot 价格表（输入 $2/M、缓存读取 $0.10/M、输出 $10/M，含缓存命中折算）估算，非实际账单。"
     },
     "animations/Huawei-OpenPangu-2.html": {
       "sourceModel": null,

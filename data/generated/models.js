@@ -155,6 +155,16 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "Google-GeminiArgon-4",
+    "file": "animations/Google-GeminiArgon-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "JavaScript 动画"
+    ]
+  },
+  {
     "name": "Huawei-OpenPangu-2",
     "file": "animations/Huawei-OpenPangu-2.html",
     "aliases": [
