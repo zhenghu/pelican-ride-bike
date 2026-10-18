@@ -3,6 +3,8 @@
   const data = window.PELICAN_USAGE;
   const countFormat = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
   const usageFormat = new Intl.NumberFormat('zh-CN', { style: 'currency', currency: 'CNY', minimumFractionDigits: 2, maximumFractionDigits: 4 });
+  const formatTokens = value => value == null ? '暂无数据' : `${countFormat.format(Number(value) / 1000)} K`;
+  const formatCost = value => value == null ? '暂无数据' : Number(value) === 0 ? `免费（${usageFormat.format(0)}）` : `≈ ${usageFormat.format(Number(value))}`;
 
   function createSummary(file) {
     const entry = data.works[file];
@@ -11,8 +13,8 @@
     const metrics = document.createElement('dl');
     metrics.className = 'usage-metrics';
     for (const [label, value, format, title] of [
-      ['Token（K）', entry?.tokensTotal, value => `${countFormat.format(Number(value) / 1000)} K`, `${entry?.tokensTotal} tokens`],
-      ['费用（RMB）', entry?.totalUsageRmb, value => Number(value) === 0 ? `免费（${usageFormat.format(0)}）` : `≈ ${usageFormat.format(Number(value))}`, `${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`]
+      ['Token（K）', entry?.tokensTotal, formatTokens, `${entry?.tokensTotal} tokens`],
+      ['费用（RMB）', entry?.totalUsageRmb, formatCost, `${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`]
     ]) {
       const group = document.createElement('div');
       const term = document.createElement('dt');
@@ -60,5 +62,5 @@
     element.textContent = '用量优先采用用户提供的本动画数据，否则按创建日期匹配模型当天的 CSV 用量；1 K = 1,000 tokens。美元费用按 ECB 参考汇率折算人民币，当日汇率未公布时采用此前最近汇率。CSV 当天用量可能包含其他请求；缺失记录显示“暂无数据”。';
     element.title = `来源：${data.sources.tokens}\n${data.sources.usage}`;
   });
-  window.PelicanUsage = { createSummary };
+  window.PelicanUsage = { createSummary, formatTokens, formatCost };
 })();

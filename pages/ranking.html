@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="鹈鹕骑自行车动画质量排行榜，按画面表现、动作自然度和细节完成度排列，查看评语与用量。">
+  <title>Pelican Bicycle · 质量排名</title>
+  <link rel="stylesheet" href="../assets/css/styles.css?v=quality-ranking-1">
+  <link rel="stylesheet" href="../assets/css/ranking.css?v=ranking-page-1">
+  <script src="../data/generated/models.js?v=quality-ranking-1" defer></script>
+  <script src="../data/generated/usage-data.js?v=deepseek-flash-1017" defer></script>
+  <script src="../assets/js/usage.js?v=ranking-page-1" defer></script>
+  <script src="../assets/js/ranking.js?v=ranking-page-1" defer></script>
+</head>
+<body>
+  <header class="topbar topbar-nav">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">P<span>↗</span></span><span>PELICAN <strong>BICYCLE</strong></span></a>
+    <span class="top-caption">动画观察室 <span class="divider">/</span> 质量排名</span>
+    <nav class="page-nav" aria-label="页面导航"><a href="../index.html">预览与对比</a><a href="gallery.html">全部动画</a><a href="ranking.html" aria-current="page">质量排名</a></nav>
+  </header>
+  <main class="ranking-main">
+    <header class="ranking-heading">
+      <div><p class="eyebrow">THE LEADERBOARD</p><h1>动画质量排名</h1></div>
+      <p id="review-date" class="review-date"></p>
+    </header>
+    <p id="ranking-method" class="ranking-summary"></p>
+    <div class="ranking-toolbar">
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="ranking-search" type="search" placeholder="搜索公司或模型…" aria-label="搜索排名" autocomplete="off"></label>
+      <p id="ranking-count" role="status" aria-live="polite"></p>
+    </div>
+    <ol id="ranking-list" class="ranking-list" aria-label="动画质量排名"></ol>
+    <div id="ranking-empty" class="ranking-empty" hidden><p>没有匹配的动画。</p><button id="ranking-clear" class="quiet-button" type="button">清除搜索</button></div>
+    <noscript><p>请启用 JavaScript 以展示完整排名。</p></noscript>
+    <p class="usage-period" data-usage-period></p>
+    <footer class="workspace-footer"><p>点击作品名称查看动画。每次作品更新后重新评审，三页同步展示最新排名。</p><span>PELICAN / RANKING</span></footer>
+  </main>
+</body>
+</html>
