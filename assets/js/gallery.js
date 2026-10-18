@@ -1,6 +1,8 @@
 (() => {
   'use strict';
   const models = window.PELICAN_MODELS;
+  const ranking = window.PELICAN_RANKING;
+  document.getElementById('ranking-summary').textContent = `质量排名 · 评审于 ${ranking.reviewedAt}。${ranking.method} ${ranking.scope}`;
   const gallery = document.getElementById('gallery');
   document.getElementById('gallery-count').textContent = `${models.length} 个版本`;
 
@@ -20,7 +22,8 @@
     header.className = 'panel-header';
     const number = document.createElement('span');
     number.className = 'gallery-number';
-    number.textContent = String(index + 1).padStart(2, '0');
+    number.setAttribute('aria-label', `质量排名第 ${model.rank} 名`);
+    number.textContent = '#' + String(model.rank).padStart(2, '0');
     const heading = document.createElement('div');
     heading.className = 'panel-heading';
     const title = document.createElement('h2');
@@ -37,6 +40,10 @@
     original.textContent = '原页 ↗';
     original.setAttribute('aria-label', `${model.name}：在新标签打开原页`);
     header.append(number, heading, original);
+
+    const review = document.createElement('p');
+    review.className = 'quality-review';
+    review.textContent = model.review;
 
     const stage = document.createElement('div');
     stage.className = 'stage';
@@ -60,7 +67,7 @@
     preview.textContent = '放大查看 ↗';
     preview.setAttribute('aria-label', `放大查看 ${model.name}`);
     footer.append(size, preview);
-    card.append(header, stage, window.PelicanUsage.createSummary(model.file), footer);
+    card.append(header, stage, review, window.PelicanUsage.createSummary(model.file), footer);
     cards.append(card);
     resizeObserver.observe(stage);
   });
