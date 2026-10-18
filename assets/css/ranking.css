@@ -1,0 +1,32 @@
+.ranking-main{max-width:1400px;margin:0 auto;padding:40px 32px}
+.ranking-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:20px}
+.ranking-heading h1{font-size:32px;line-height:1.4}
+.review-date{margin:0 0 6px;color:var(--accent);font-size:13px;white-space:nowrap}
+.ranking-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:28px 0 18px}
+.ranking-toolbar .search-box{width:min(100%,380px)}
+.ranking-toolbar>p{margin:0;color:var(--muted);font-size:13px}
+.ranking-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.ranking-row{display:grid;grid-template-columns:54px minmax(0,1fr) 250px 92px;gap:20px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.ranking-top{border-color:#52633b;background:linear-gradient(105deg,#242e1c,var(--surface) 44%)}
+.rank-number{color:var(--muted);font-size:22px;font-variant-numeric:tabular-nums;line-height:1.4}
+.ranking-top .rank-number{color:var(--accent);font-weight:700}
+.rank-work h2{font-size:16px;font-weight:600;letter-spacing:normal;line-height:1.5;overflow-wrap:anywhere}
+.rank-work a:hover{text-decoration:underline;color:var(--accent)}
+.rank-reason{font-size:14px;line-height:1.8;margin:8px 0;color:var(--text)}
+.rank-created{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.rank-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0}
+.rank-metrics dt{font-size:12px;color:var(--muted);line-height:1.5;margin:0 0 7px}
+.rank-metrics dd{font-size:16px;color:var(--accent);font-variant-numeric:tabular-nums;margin:0;overflow-wrap:anywhere}
+.rank-metrics .usage-missing{font-size:14px;color:var(--muted)}
+.rank-usage details{margin-top:12px;font-size:12px;color:var(--muted)}
+.rank-usage summary{cursor:pointer;width:fit-content;padding:3px 0}
+.rank-usage summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.rank-usage .usage-summary{padding:12px 0 0;border:0}
+.rank-usage .usage-metrics{display:none}
+.rank-actions{display:flex;flex-direction:column;gap:16px;padding-top:4px;font-size:13px}
+.rank-actions a:first-child{color:var(--accent)}
+.rank-actions a:last-child{color:var(--muted)}
+.rank-actions a:hover{text-decoration:underline}
+.ranking-empty{text-align:center;padding:40px;color:var(--muted)}
+@media(max-width:1000px){.ranking-row{grid-template-columns:48px minmax(0,1fr) 220px;gap:16px}.rank-actions{grid-column:2/-1;flex-direction:row;padding:0}.ranking-main{padding:28px 22px}}
+@media(max-width:600px){.ranking-main{padding:28px 16px}.ranking-heading{flex-direction:column;align-items:flex-start;gap:12px}.ranking-heading h1{font-size:28px}.ranking-toolbar{flex-direction:column;align-items:stretch;gap:12px}.ranking-toolbar .search-box{width:100%}.ranking-row{grid-template-columns:38px minmax(0,1fr);padding:18px 14px;gap:12px}.rank-number{font-size:19px}.rank-usage{grid-column:2}.rank-actions{grid-column:2}.rank-metrics{gap:8px}.rank-metrics dd{font-size:15px}}
