@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-10-15T22:55:00+00:00",
+    "retrievedAt": "2026-10-18T09:43:23.991917+00:00",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -36,6 +36,10 @@ window.PELICAN_USAGE = {
       "2026-10-15": {
         "usdPerEur": "1.1208",
         "cnyPerEur": "7.4993"
+      },
+      "2026-10-16": {
+        "usdPerEur": "1.1253",
+        "cnyPerEur": "7.524"
       }
     }
   },
@@ -167,6 +171,19 @@ window.PELICAN_USAGE = {
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": true
     },
+    "animations/DeepSeek-DeepSeekFlash-4.1-1017.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-10-18",
+      "tokensTotal": 6530128,
+      "totalUsage": "0.3414",
+      "totalUsageRmb": "2.282674486803519061583577713",
+      "fxDate": "2026-10-16",
+      "usdToCny": "6.686217008797653958944281525",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至记录时共 52 轮 LLM 调用）：输入约 6,437,000（首轮实测 promptTokens 49,028，其后按每轮新增上下文累加），输出约 93,000（HTML、工具调用与推理文本）；模型 DeepSeek V4.1 Flash 1017 经 OpenRouter 路由，按本地 DeepSeek V4.1 Flash 记录折算的混合单价（约 $0.0523/M tokens）估算，非实际账单。"
+    },
     "animations/DeepSeek-DeepSeekFlash-4.1.html": {
       "sourceModel": "DeepSeek V4.1 Flash",
       "mappingStatus": "confirmed-alias",
@@ -195,10 +212,10 @@ window.PELICAN_USAGE = {
       "createdDate": "2026-10-16",
       "tokensTotal": 1468500,
       "totalUsage": "0.42",
-      "totalUsageRmb": "2.810230192719486081370449679",
-      "fxDate": "2026-10-15",
-      "usdToCny": "6.691024268379728765167737330",
-      "fxFallback": true,
+      "totalUsageRmb": "2.808211143695014662756598240",
+      "fxDate": "2026-10-16",
+      "usdToCny": "6.686217008797653958944281525",
+      "fxFallback": false,
       "estimated": true,
       "note": "估算值（截至记录时共 24 轮 LLM 调用）：输入约 1,454,500（聊天日志采样上下文均值约 60.6k × 24 轮），输出约 14,000（累计生成 HTML 与工具调用）；模型 Gemini 4 Argon 经 OpenRouter 路由，按本地 Copilot 价格表（输入 $2/M、缓存读取 $0.10/M、输出 $10/M，含缓存命中折算）估算，非实际账单。"
     },

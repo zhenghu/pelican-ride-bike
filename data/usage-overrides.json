@@ -54,5 +54,12 @@
     "totalUsage": "0.97",
     "note": "估算值（28轮LLM调用）：输入约420,000（28轮×平均15k上下文），输出约22,000（HTML+工具调用+文本）；模型Mistral Large 4经OpenRouter路由，按公开价格$2/M输入+$6/M输出估算，非实际账单。",
     "estimated": true
+  },
+  "animations/DeepSeek-DeepSeekFlash-4.1-1017.html": {
+    "createdDate": "2026-10-18",
+    "tokensTotal": 6530128,
+    "totalUsage": "0.3414",
+    "estimated": true,
+    "note": "估算值（截至记录时共 52 轮 LLM 调用）：输入约 6,437,000（首轮实测 promptTokens 49,028，其后按每轮新增上下文累加），输出约 93,000（HTML、工具调用与推理文本）；模型 DeepSeek V4.1 Flash 1017 经 OpenRouter 路由，按本地 DeepSeek V4.1 Flash 记录折算的混合单价（约 $0.0523/M tokens）估算，非实际账单。"
   }
 }
