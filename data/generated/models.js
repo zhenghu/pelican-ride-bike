@@ -129,6 +129,17 @@ window.PELICAN_MODELS = [
     ]
   },
   {
+    "name": "DeepSeek-DeepSeekFlash-4.1-1017",
+    "file": "animations/DeepSeek-DeepSeekFlash-4.1-1017.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL",
+      "JavaScript 动画"
+    ]
+  },
+  {
     "name": "DeepSeek-DeepSeekFlash-4.1",
     "file": "animations/DeepSeek-DeepSeekFlash-4.1.html",
     "aliases": [
