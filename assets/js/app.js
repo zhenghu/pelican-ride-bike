@@ -4,8 +4,8 @@
   const $ = id => document.getElementById(id);
   const params = new URLSearchParams(location.hash.slice(1));
   const defaultView = {
-    a: 'animations/Anthropic-ClaudeFable-5.1.html',
-    b: 'animations/OpenAI-GPTAstra-6.html',
+    a: models[0].file,
+    b: (models[1] || models[0]).file,
     mode: 'compare'
   };
   const valid = file => models.some(model => model.file === file);
@@ -26,8 +26,8 @@
   // Earlier releases wrote the default pair into every homepage URL.
   // Migrate only that old default; versioned custom choices stay explicit.
   if (params.get('v') !== '2' && state.mode === 'compare' &&
-      state.a === defaultView.a && state.b === 'animations/Anthropic-ClaudeOpus-5.html') {
-    state.b = defaultView.b;
+      state.a === 'animations/Anthropic-ClaudeFable-5.1.html' && state.b === 'animations/Anthropic-ClaudeOpus-5.html') {
+    Object.assign(state, defaultView);
   }
   const modelFor = slot => models.find(model => model.file === state[slot]);
   const announce = message => { $('announcement').textContent = message; };
@@ -47,11 +47,11 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'model-item' + (slots.length ? ' selected' : '');
-      button.setAttribute('aria-label', `${model.name}，放入画面 ${state.target.toUpperCase()}`);
+      button.setAttribute('aria-label', `第 ${model.rank} 名，${model.name}，放入画面 ${state.target.toUpperCase()}`);
       button.setAttribute('aria-pressed', String(state[state.target] === model.file));
       const number = document.createElement('span');
       number.className = 'model-index';
-      number.textContent = String(models.indexOf(model) + 1).padStart(2, '0');
+      number.textContent = '#' + String(model.rank).padStart(2, '0');
       const name = document.createElement('span');
       name.className = 'model-name';
       name.textContent = model.name;
@@ -87,10 +87,11 @@
   function renderPanel(slot) {
     const model = modelFor(slot);
     $('name-' + slot).textContent = model.name;
-    $('tech-' + slot).textContent = model.tech.join(' · ');
+    $('tech-' + slot).textContent = `质量排名 #${model.rank} · ${model.tech.join(' · ')}`;
+    $('review-' + slot).textContent = model.review;
     $('usage-' + slot).replaceChildren(window.PelicanUsage.createSummary(model.file));
     $('original-' + slot).href = model.file;
-    $('position-' + slot).textContent = `${models.indexOf(model) + 1} / ${models.length}`;
+    $('position-' + slot).textContent = `${model.rank} / ${models.length}`;
     const stage = $('stage-' + slot);
     stage.querySelector('iframe')?.remove();
     if (slot === 'b' && state.mode === 'single') return;
@@ -145,7 +146,7 @@
     $('search').value = '';
     renderPanel('a');
     setMode(defaultView.mode);
-    announce('已恢复默认对比：Fable 5.1 与 GPT6');
+    announce('已恢复默认对比：质量排名前两名');
   });
   $('restart').addEventListener('click', () => { renderPanel('a'); renderPanel('b'); announce('已重新载入预览'); });
   $('swap').addEventListener('click', () => {
@@ -169,6 +170,8 @@
   const observer = new ResizeObserver(() => { scaleFrame('a'); scaleFrame('b'); });
   observer.observe($('stage-a')); observer.observe($('stage-b'));
   $('total-count').textContent = models.length;
+  const ranking = window.PELICAN_RANKING;
+  $('ranking-summary').textContent = `质量排名 · 评审于 ${ranking.reviewedAt}。${ranking.method} ${ranking.scope}`;
   renderPanel('a');
   setMode(state.mode);
 })();

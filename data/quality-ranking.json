@@ -1,0 +1,217 @@
+{
+  "reviewedAt": "2026-10-18",
+  "method": "画面表现、动作自然度与细节完成度综合评审；优先考虑骑行结构和动作完整性。费用与 Token 不参与排名。",
+  "scope": "当前作品的主观质量排名，相邻名次差距可能较小，不代表模型整体能力。",
+  "entries": [
+    {
+      "rank": 1,
+      "file": "animations/DeepSeek-DeepSeekFlash-4.1-1017.html",
+      "reason": "暮色配色、车体细节和踩踏联动综合突出",
+      "sha256": "8c51961e72bf399c99a84d49d91ac69a0a1c2b3f90a3fd88d2191a94b4faccb3"
+    },
+    {
+      "rank": 2,
+      "file": "animations/Google-GeminiArgon-4.html",
+      "reason": "场景层次丰富，角色鲜明，整体完成度高",
+      "sha256": "b55c1e6fd3dd4433a4604e4221ee6650ee315a0a4372b7e0c23387540c063490"
+    },
+    {
+      "rank": 3,
+      "file": "animations/Anthropic-ClaudeFable-5.1.html",
+      "reason": "骑行动作清楚，主体比例与构图均衡",
+      "sha256": "2546d44289f72ddae051aeb549a16f73c007695e56ec256fe3be65113e071702"
+    },
+    {
+      "rank": 4,
+      "file": "animations/Anthropic-ClaudeOpus-5.5.html",
+      "reason": "腿部联动完整，鸟与车的结合自然",
+      "sha256": "c33e0b6c59444d651186da4461e2ffa4b7c4621be998fa54d62e1fc7b03ec0f5"
+    },
+    {
+      "rank": 5,
+      "file": "animations/OpenAI-GPTAstra-6.html",
+      "reason": "配色、线条和版式协调，美术风格统一",
+      "sha256": "2ab3c73d31553fe0ed6665a96cd8a6dedee3d678e244542ecaf0964a73ec7658"
+    },
+    {
+      "rank": 6,
+      "file": "animations/Anthropic-ClaudeHaiku-5.5.html",
+      "reason": "画面完整，角色、围巾与背景细节丰富",
+      "sha256": "4afca08b51f51100e6abf71a0b6ee1b197488883630ca292bda5fbd59be33974"
+    },
+    {
+      "rank": 7,
+      "file": "animations/Meta-Muse-1.6.html",
+      "reason": "骑行姿态清晰，主体完整，画面有活力",
+      "sha256": "bd09c36bda820d750912f33c5664a77e294a1b047ecfe14d2cdfb72a3bfd7b33"
+    },
+    {
+      "rank": 8,
+      "file": "animations/Google-Gemini-3.8.html",
+      "reason": "细节丰富、辨识度高，视觉略显拥挤",
+      "sha256": "074b58c1f46a2a4abb9deff418e08b8b39b2fe948ea63c687cca013c632bd5e7"
+    },
+    {
+      "rank": 9,
+      "file": "animations/Anthropic-ClaudeOpus-5.html",
+      "reason": "人物与自行车关系完整，场景完成度较好",
+      "sha256": "5a6d074fc009fb7cda6ee70f80ea855b089a47cbb51eca935b997add21c404c8"
+    },
+    {
+      "rank": 10,
+      "file": "animations/DeepSeek-DeepSeekFlash-4.1.html",
+      "reason": "角色辨识度高，画面柔和，姿态略僵",
+      "sha256": "7df2b8cbc453dd29090ed7191940136ceee9b9b2536445e30259da6278efb9d6"
+    },
+    {
+      "rank": 11,
+      "file": "animations/Xiaomi-MiMoPro-2.6.html",
+      "reason": "骑行结构较完整，画面清爽",
+      "sha256": "2c8de04c15560ebbc4d21d7be282dd5cf32cf13ca7f5467302b1894695d666d6"
+    },
+    {
+      "rank": 12,
+      "file": "animations/Anthropic-ClaudeFable-5.html",
+      "reason": "构图稳定、表达清楚，细节相对简单",
+      "sha256": "373b426ef311653a6cfd702bf69720be15fc0e16d0133a24a31b48e5ab760b51"
+    },
+    {
+      "rank": 13,
+      "file": "animations/OpenAI-GPTSolPro-5.6.html",
+      "reason": "插画风格鲜明，车轮填色较生硬",
+      "sha256": "c54c419a95c25e8f74258de66402956b219b297e85c8dd79f10a8f68167284b8"
+    },
+    {
+      "rank": 14,
+      "file": "animations/Tencent-HunyuanPreview-4.html",
+      "reason": "车体细节丰富，但角色朝向与骑行姿态别扭",
+      "sha256": "dc42652f86f80dc2c890ed8cb465e9502bcce2b9c0f67909eb7f143f72e20c20"
+    },
+    {
+      "rank": 15,
+      "file": "animations/Anthropic-ClaudeSonnet-5.5.html",
+      "reason": "基本完成度较好，画面与动作比较朴素",
+      "sha256": "5b225d689baf1b2f94d82a8033d2b1f8f32377dcff5d449f065947034f6206fe"
+    },
+    {
+      "rank": 16,
+      "file": "animations/Alibaba-QwenMax-3.8.html",
+      "reason": "主体完整，较 3.7 明显改善",
+      "sha256": "62188f2eb6d5898655e2f8d03bd9e5d9458e6b9106e018c12fcc5b119b010dd3"
+    },
+    {
+      "rank": 17,
+      "file": "animations/OpenAI-GPTSol-6.html",
+      "reason": "美术风格舒服，但总览中的主体存在裁切",
+      "sha256": "2d8b51684922ce2dd0c643007b04044cbcf6f7f2cd345e8dea15d20903ad19e9"
+    },
+    {
+      "rank": 18,
+      "file": "animations/Unknown-SpaceBunny-Unknown.html",
+      "reason": "夜景和车灯有特色，角色与动作较简化",
+      "sha256": "f7e574759651f6eaec14d0b98bfdde15732a8bd340006a41a6baebd951aa903c"
+    },
+    {
+      "rank": 19,
+      "file": "animations/MistralAI-MistralLarge-4.html",
+      "reason": "场景完整，但主体偏小、装饰占比偏大",
+      "sha256": "91d4553e2e91d0157f3bed215430b54a9dcc7efc663c5d9c14244d0ff380ad61"
+    },
+    {
+      "rank": 20,
+      "file": "animations/Meituan-LongCat-2.0.html",
+      "reason": "表达清楚，但鸟、车比例及踩踏感较弱",
+      "sha256": "b93e7a2dde2025eb83ec3cfb0a4344510667b3f8b710acda80279e08867daae6"
+    },
+    {
+      "rank": 21,
+      "file": "animations/xAI-Grok-4.7.html",
+      "reason": "背景协调，主体偏小、结构细节不足",
+      "sha256": "718bed24d3e4c8323baf0cb61e750074f4b2fb381e12adf4a46d8400e341785d"
+    },
+    {
+      "rank": 22,
+      "file": "animations/Xiaomi-MiMo-2.5.html",
+      "reason": "基本元素齐全，构图留白过多",
+      "sha256": "2a10b5f4af3fe7a3229a0a56fd3e12b612f7bf6d1e36f0a3397be0d1a3aed6e2"
+    },
+    {
+      "rank": 23,
+      "file": "animations/ByteDance-SeedTurbo-2.1.html",
+      "reason": "能表达骑行主题，但主体小、层次较简单",
+      "sha256": "b3f3a243798d2aa41b0fa599488ff4abbaa5229cbf6bc20b4ec4559cd256f633"
+    },
+    {
+      "rank": 24,
+      "file": "animations/Anthropic-ClaudeOpus-4.8.html",
+      "reason": "鸟的形象明确，自行车和骑行姿态较简陋",
+      "sha256": "be925774297fe9b2f3596904a2f471f189fbecb204f82f10f7de366b78e6f86a"
+    },
+    {
+      "rank": 25,
+      "file": "animations/Huawei-OpenPangu-2.html",
+      "reason": "有完整场景，但轮辐与车体出现错位",
+      "sha256": "507cb26b934d32b8f177668cca6401e8d1b48820df951272b79e2e343f525160"
+    },
+    {
+      "rank": 26,
+      "file": "animations/xAI-Grok-4.6.html",
+      "reason": "角色有特点，车轮和骑行结构表现不完整",
+      "sha256": "d990e45f86e5ee92d54bc52e8f7c3f69e4a74abd51f40188a77946c879d1c5bf"
+    },
+    {
+      "rank": 27,
+      "file": "animations/ZhipuAI-GLM-5.3.html",
+      "reason": "主体悬空，鸟与自行车的关系不够稳定",
+      "sha256": "a11166a5f9a6f7c26d1919e37759f169c336e90777efa18ace707cbcc63372f0"
+    },
+    {
+      "rank": 28,
+      "file": "animations/Tencent-Hunyuan-3.html",
+      "reason": "鸟与车漂浮在道路上方，场景关系失衡",
+      "sha256": "750523e4dd3858fe9f6efdb4ef5a031af289c50972fc03838afe4c8732a12946"
+    },
+    {
+      "rank": 29,
+      "file": "animations/NVIDIA-Nemotron-Unknown.html",
+      "reason": "主体会移出画面，观看连续性较差",
+      "sha256": "df6b49fa72c7c0f55335770e73d5dfd1d6a002c5c5667a9dc9380ebf663a06d5"
+    },
+    {
+      "rank": 30,
+      "file": "animations/MoonshotAI-Kimi-K3.html",
+      "reason": "复查可见车轮偏离车架，整体悬空",
+      "sha256": "bb10526c3974a1cb76d2eef60f770fe08d6397733fddd8a03a365f33025abe68"
+    },
+    {
+      "rank": 31,
+      "file": "animations/Alibaba-QwenMax-3.7.html",
+      "reason": "鸟、车架和车轮明显分离",
+      "sha256": "1f63032b2c986d8c236ca3aa7500d390244c0a70b4e657047ba70e997da44493"
+    },
+    {
+      "rank": 32,
+      "file": "animations/MistralAI-Unknown-Unknown.html",
+      "reason": "有线描元素，但没有形成完整骑行画面",
+      "sha256": "6deb8e9837662a3c93e687bb675954e2392cd08b6fd2f3f396a3cd39b68b459b"
+    },
+    {
+      "rank": 33,
+      "file": "animations/IBM-Granite-Unknown.html",
+      "reason": "主要呈现零散图形，主体结构不足",
+      "sha256": "bcc722121c0c2a6ef16ea09540c9331fc41f39c20a6397e64b719550f695e186"
+    },
+    {
+      "rank": 34,
+      "file": "animations/Amazon-Unknown-Unknown.html",
+      "reason": "当前显示为简单散落图形，主题表达很弱",
+      "sha256": "1fc6e43601332117e1df6f1e4a0f652a276f06985245f777ba0d109768f613f8"
+    },
+    {
+      "rank": 35,
+      "file": "animations/Poolside-Unknown-Unknown.html",
+      "reason": "多次查看仍只有背景，未看到骑行主体",
+      "sha256": "fed2b99e26816f29e94952be610d9569798b1c7d87837237a35ff311ee33c79f"
+    }
+  ]
+}
