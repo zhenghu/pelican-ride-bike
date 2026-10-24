@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-10-18T09:43:23.991917+00:00",
+    "retrievedAt": "2026-10-24T22:20:21Z",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -40,6 +40,10 @@ window.PELICAN_USAGE = {
       "2026-10-16": {
         "usdPerEur": "1.1253",
         "cnyPerEur": "7.524"
+      },
+      "2026-10-23": {
+        "usdPerEur": "1.1193",
+        "cnyPerEur": "7.466"
       }
     }
   },
@@ -286,6 +290,18 @@ window.PELICAN_USAGE = {
       "fxDate": null,
       "usdToCny": null,
       "fxFallback": false
+    },
+    "animations/MoonshotAI-Kimi-K3.1Pro.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-10-25",
+      "tokensTotal": 2436599,
+      "totalUsage": "0.73",
+      "totalUsageRmb": "4.869275440007147324220494952",
+      "fxDate": "2026-10-23",
+      "usdToCny": "6.670240328776914142767801304",
+      "fxFallback": true,
+      "note": "Token 快照截至记录时共 31 轮 LLM 调用：Copilot 会话日志累计输入 2,413,093、输出 23,506（含推理 6,751），缓存读写为 0；MoonshotAI Kimi K3.1 Pro 经 OpenRouter BYOK 路由，费用由用户确认为 $0.73。"
     },
     "animations/MoonshotAI-Kimi-K3.html": {
       "sourceModel": "Kimi K3",

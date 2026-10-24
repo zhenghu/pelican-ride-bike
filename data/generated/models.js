@@ -68,6 +68,18 @@ window.PELICAN_MODELS = [
     "review": "配色、线条和版式协调，美术风格统一"
   },
   {
+    "name": "MoonshotAI-Kimi-K3.1Pro",
+    "file": "animations/MoonshotAI-Kimi-K3.1Pro.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "JavaScript 动画"
+    ],
+    "rank": 6,
+    "review": "旅行海报配色协调，双腿随曲柄交替踩踏，围巾与车轮细节丰富"
+  },
+  {
     "name": "Anthropic-ClaudeHaiku-5.5",
     "file": "animations/Anthropic-ClaudeHaiku-5.5.html",
     "aliases": [],
@@ -76,7 +88,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 6,
+    "rank": 7,
     "review": "画面完整，角色、围巾与背景细节丰富"
   },
   {
@@ -92,7 +104,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 7,
+    "rank": 8,
     "review": "骑行姿态清晰，主体完整，画面有活力"
   },
   {
@@ -107,7 +119,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 8,
+    "rank": 9,
     "review": "细节丰富、辨识度高，视觉略显拥挤"
   },
   {
@@ -122,7 +134,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 9,
+    "rank": 10,
     "review": "人物与自行车关系完整，场景完成度较好"
   },
   {
@@ -137,7 +149,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 10,
+    "rank": 11,
     "review": "角色辨识度高，画面柔和，姿态略僵"
   },
   {
@@ -152,7 +164,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 11,
+    "rank": 12,
     "review": "骑行结构较完整，画面清爽"
   },
   {
@@ -166,7 +178,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 12,
+    "rank": 13,
     "review": "构图稳定、表达清楚，细节相对简单"
   },
   {
@@ -180,7 +192,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 13,
+    "rank": 14,
     "review": "插画风格鲜明，车轮填色较生硬"
   },
   {
@@ -195,7 +207,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 14,
+    "rank": 15,
     "review": "车体细节丰富，但角色朝向与骑行姿态别扭"
   },
   {
@@ -207,7 +219,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 15,
+    "rank": 16,
     "review": "基本完成度较好，画面与动作比较朴素"
   },
   {
@@ -221,7 +233,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 16,
+    "rank": 17,
     "review": "主体完整，较 3.7 明显改善"
   },
   {
@@ -232,7 +244,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 17,
+    "rank": 18,
     "review": "美术风格舒服，但总览中的主体存在裁切"
   },
   {
@@ -248,20 +260,19 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 18,
+    "rank": 19,
     "review": "夜景和车灯有特色，角色与动作较简化"
   },
   {
-    "name": "MistralAI-MistralLarge-4",
-    "file": "animations/MistralAI-MistralLarge-4.html",
+    "name": "xAI-Grok-4.7",
+    "file": "animations/xAI-Grok-4.7.html",
     "aliases": [],
     "tech": [
       "SVG",
-      "CSS 动画",
-      "SMIL"
+      "CSS 动画"
     ],
-    "rank": 19,
-    "review": "场景完整，但主体偏小、装饰占比偏大"
+    "rank": 20,
+    "review": "海岸配色协调，骑行主体完整；车体偏小、细节较少"
   },
   {
     "name": "Meituan-LongCat-2.0",
@@ -275,19 +286,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 20,
-    "review": "表达清楚，但鸟、车比例及踩踏感较弱"
-  },
-  {
-    "name": "xAI-Grok-4.7",
-    "file": "animations/xAI-Grok-4.7.html",
-    "aliases": [],
-    "tech": [
-      "SVG",
-      "CSS 动画"
-    ],
     "rank": 21,
-    "review": "背景协调，主体偏小、结构细节不足"
+    "review": "表达清楚，但鸟、车比例及踩踏感较弱"
   },
   {
     "name": "Xiaomi-MiMo-2.5",
@@ -403,6 +403,18 @@ window.PELICAN_MODELS = [
     "review": "主体会移出画面，观看连续性较差"
   },
   {
+    "name": "MistralAI-MistralLarge-4",
+    "file": "animations/MistralAI-MistralLarge-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
+    ],
+    "rank": 30,
+    "review": "多帧复查可见双轮绕车架漂移、反复分离，骑行结构不稳定"
+  },
+  {
     "name": "MoonshotAI-Kimi-K3",
     "file": "animations/MoonshotAI-Kimi-K3.html",
     "aliases": [
@@ -414,7 +426,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 30,
+    "rank": 31,
     "review": "复查可见车轮偏离车架，整体悬空"
   },
   {
@@ -428,7 +440,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 31,
+    "rank": 32,
     "review": "鸟、车架和车轮明显分离"
   },
   {
@@ -442,7 +454,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 32,
+    "rank": 33,
     "review": "有线描元素，但没有形成完整骑行画面"
   },
   {
@@ -456,7 +468,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 33,
+    "rank": 34,
     "review": "主要呈现零散图形，主体结构不足"
   },
   {
@@ -470,7 +482,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 34,
+    "rank": 35,
     "review": "当前显示为简单散落图形，主题表达很弱"
   },
   {
@@ -483,12 +495,12 @@ window.PELICAN_MODELS = [
     "tech": [
       "CSS 动画"
     ],
-    "rank": 35,
+    "rank": 36,
     "review": "多次查看仍只有背景，未看到骑行主体"
   }
 ];
 window.PELICAN_RANKING = {
-  "reviewedAt": "2026-10-18",
+  "reviewedAt": "2026-10-25",
   "method": "画面表现、动作自然度与细节完成度综合评审；优先考虑骑行结构和动作完整性。费用与 Token 不参与排名。",
   "scope": "当前作品的主观质量排名，相邻名次差距可能较小，不代表模型整体能力。"
 };
