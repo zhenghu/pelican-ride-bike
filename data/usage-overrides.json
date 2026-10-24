@@ -61,5 +61,11 @@
     "totalUsage": "0.3414",
     "estimated": true,
     "note": "估算值（截至记录时共 52 轮 LLM 调用）：输入约 6,437,000（首轮实测 promptTokens 49,028，其后按每轮新增上下文累加），输出约 93,000（HTML、工具调用与推理文本）；模型 DeepSeek V4.1 Flash 1017 经 OpenRouter 路由，按本地 DeepSeek V4.1 Flash 记录折算的混合单价（约 $0.0523/M tokens）估算，非实际账单。"
+  },
+  "animations/MoonshotAI-Kimi-K3.1Pro.html": {
+    "createdDate": "2026-10-25",
+    "tokensTotal": 2436599,
+    "totalUsage": "0.73",
+    "note": "Token 快照截至记录时共 31 轮 LLM 调用：Copilot 会话日志累计输入 2,413,093、输出 23,506（含推理 6,751），缓存读写为 0；MoonshotAI Kimi K3.1 Pro 经 OpenRouter BYOK 路由，费用由用户确认为 $0.73。"
   }
 }
