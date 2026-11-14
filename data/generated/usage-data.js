@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-10-24T22:20:21Z",
+    "retrievedAt": "2026-11-14T16:55:00Z",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -44,6 +44,10 @@ window.PELICAN_USAGE = {
       "2026-10-23": {
         "usdPerEur": "1.1193",
         "cnyPerEur": "7.466"
+      },
+      "2026-11-13": {
+        "usdPerEur": "1.1052",
+        "cnyPerEur": "7.3738"
       }
     }
   },
@@ -222,6 +226,31 @@ window.PELICAN_USAGE = {
       "fxFallback": false,
       "estimated": true,
       "note": "估算值（截至记录时共 24 轮 LLM 调用）：输入约 1,454,500（聊天日志采样上下文均值约 60.6k × 24 轮），输出约 14,000（累计生成 HTML 与工具调用）；模型 Gemini 4 Argon 经 OpenRouter 路由，按本地 Copilot 价格表（输入 $2/M、缓存读取 $0.10/M、输出 $10/M，含缓存命中折算）估算，非实际账单。"
+    },
+    "animations/Google-GeminiCarbon-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-14",
+      "tokensTotal": 4285863,
+      "totalUsage": "8.80",
+      "totalUsageRmb": "58.71284835323923271806007962",
+      "fxDate": "2026-11-13",
+      "usdToCny": "6.671914585595367354325009048",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至记录快照共 37 轮 LLM 调用）：Copilot 会话日志实测累计输入 4,257,645、输出 28,218（含推理 1,244），上报缓存读写为 0；模型 Google Gemini 4 Carbon 经 OpenRouter BYOK 路由，按 OpenRouter 公开单价（输入 $2/M、输出 $10/M）折算无缓存上限约 $8.80，若上游命中隐式缓存则实际账单更低，非实际账单。"
+    },
+    "animations/Google-GeminiHydrogen-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-14",
+      "tokensTotal": 13700000,
+      "totalUsage": "3.71",
+      "totalUsageRmb": "24.75280311255881288454578357",
+      "fxDate": "2026-11-13",
+      "usdToCny": "6.671914585595367354325009048",
+      "fxFallback": true,
+      "note": "用户提供本动画实际用量：13.7M tokens（13,700,000），费用 3.71 美元。"
     },
     "animations/Huawei-OpenPangu-2.html": {
       "sourceModel": null,

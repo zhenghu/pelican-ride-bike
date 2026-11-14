@@ -14,6 +14,28 @@ window.PELICAN_MODELS = [
     "review": "暮色配色、车体细节和踩踏联动综合突出"
   },
   {
+    "name": "Google-GeminiHydrogen-4",
+    "file": "animations/Google-GeminiHydrogen-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "JavaScript 动画"
+    ],
+    "rank": 2,
+    "review": "晨曦海岸层次清晰，双腿与曲柄衔接稳定，草帽、车灯和行李细节丰富"
+  },
+  {
+    "name": "Google-GeminiCarbon-4",
+    "file": "animations/Google-GeminiCarbon-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "JavaScript 动画"
+    ],
+    "rank": 3,
+    "review": "暮色海堤层次丰富，曲柄双腿逆运动学衔接严谨，喉囊、围巾与车筐小鱼细节生动"
+  },
+  {
     "name": "Google-GeminiArgon-4",
     "file": "animations/Google-GeminiArgon-4.html",
     "aliases": [],
@@ -22,7 +44,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 2,
+    "rank": 4,
     "review": "场景层次丰富，角色鲜明，整体完成度高"
   },
   {
@@ -37,7 +59,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 3,
+    "rank": 5,
     "review": "骑行动作清楚，主体比例与构图均衡"
   },
   {
@@ -49,7 +71,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 4,
+    "rank": 6,
     "review": "腿部联动完整，鸟与车的结合自然"
   },
   {
@@ -64,7 +86,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 5,
+    "rank": 7,
     "review": "配色、线条和版式协调，美术风格统一"
   },
   {
@@ -76,7 +98,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 6,
+    "rank": 8,
     "review": "旅行海报配色协调，双腿随曲柄交替踩踏，围巾与车轮细节丰富"
   },
   {
@@ -88,7 +110,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 7,
+    "rank": 9,
     "review": "画面完整，角色、围巾与背景细节丰富"
   },
   {
@@ -104,7 +126,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 8,
+    "rank": 10,
     "review": "骑行姿态清晰，主体完整，画面有活力"
   },
   {
@@ -119,7 +141,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 9,
+    "rank": 11,
     "review": "细节丰富、辨识度高，视觉略显拥挤"
   },
   {
@@ -134,7 +156,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 10,
+    "rank": 12,
     "review": "人物与自行车关系完整，场景完成度较好"
   },
   {
@@ -149,7 +171,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 11,
+    "rank": 13,
     "review": "角色辨识度高，画面柔和，姿态略僵"
   },
   {
@@ -164,7 +186,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 12,
+    "rank": 14,
     "review": "骑行结构较完整，画面清爽"
   },
   {
@@ -178,7 +200,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 13,
+    "rank": 15,
     "review": "构图稳定、表达清楚，细节相对简单"
   },
   {
@@ -192,7 +214,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 14,
+    "rank": 16,
     "review": "插画风格鲜明，车轮填色较生硬"
   },
   {
@@ -207,7 +229,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 15,
+    "rank": 17,
     "review": "车体细节丰富，但角色朝向与骑行姿态别扭"
   },
   {
@@ -219,7 +241,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 16,
+    "rank": 18,
     "review": "基本完成度较好，画面与动作比较朴素"
   },
   {
@@ -233,7 +255,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 17,
+    "rank": 19,
     "review": "主体完整，较 3.7 明显改善"
   },
   {
@@ -244,7 +266,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 18,
+    "rank": 20,
     "review": "美术风格舒服，但总览中的主体存在裁切"
   },
   {
@@ -260,7 +282,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 19,
+    "rank": 21,
     "review": "夜景和车灯有特色，角色与动作较简化"
   },
   {
@@ -271,7 +293,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 20,
+    "rank": 22,
     "review": "海岸配色协调，骑行主体完整；车体偏小、细节较少"
   },
   {
@@ -286,7 +308,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 21,
+    "rank": 23,
     "review": "表达清楚，但鸟、车比例及踩踏感较弱"
   },
   {
@@ -300,7 +322,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 22,
+    "rank": 24,
     "review": "基本元素齐全，构图留白过多"
   },
   {
@@ -314,7 +336,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 23,
+    "rank": 25,
     "review": "能表达骑行主题，但主体小、层次较简单"
   },
   {
@@ -328,7 +350,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 24,
+    "rank": 26,
     "review": "鸟的形象明确，自行车和骑行姿态较简陋"
   },
   {
@@ -342,7 +364,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 25,
+    "rank": 27,
     "review": "有完整场景，但轮辐与车体出现错位"
   },
   {
@@ -356,7 +378,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 26,
+    "rank": 28,
     "review": "角色有特点，车轮和骑行结构表现不完整"
   },
   {
@@ -371,7 +393,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 27,
+    "rank": 29,
     "review": "主体悬空，鸟与自行车的关系不够稳定"
   },
   {
@@ -385,7 +407,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 28,
+    "rank": 30,
     "review": "鸟与车漂浮在道路上方，场景关系失衡"
   },
   {
@@ -399,7 +421,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 29,
+    "rank": 31,
     "review": "主体会移出画面，观看连续性较差"
   },
   {
@@ -411,7 +433,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 30,
+    "rank": 32,
     "review": "多帧复查可见双轮绕车架漂移、反复分离，骑行结构不稳定"
   },
   {
@@ -426,7 +448,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 31,
+    "rank": 33,
     "review": "复查可见车轮偏离车架，整体悬空"
   },
   {
@@ -440,7 +462,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 32,
+    "rank": 34,
     "review": "鸟、车架和车轮明显分离"
   },
   {
@@ -454,7 +476,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 33,
+    "rank": 35,
     "review": "有线描元素，但没有形成完整骑行画面"
   },
   {
@@ -468,7 +490,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 34,
+    "rank": 36,
     "review": "主要呈现零散图形，主体结构不足"
   },
   {
@@ -482,7 +504,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 35,
+    "rank": 37,
     "review": "当前显示为简单散落图形，主题表达很弱"
   },
   {
@@ -495,12 +517,12 @@ window.PELICAN_MODELS = [
     "tech": [
       "CSS 动画"
     ],
-    "rank": 36,
+    "rank": 38,
     "review": "多次查看仍只有背景，未看到骑行主体"
   }
 ];
 window.PELICAN_RANKING = {
-  "reviewedAt": "2026-10-25",
+  "reviewedAt": "2026-11-14",
   "method": "画面表现、动作自然度与细节完成度综合评审；优先考虑骑行结构和动作完整性。费用与 Token 不参与排名。",
   "scope": "当前作品的主观质量排名，相邻名次差距可能较小，不代表模型整体能力。"
 };
