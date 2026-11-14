@@ -67,5 +67,18 @@
     "tokensTotal": 2436599,
     "totalUsage": "0.73",
     "note": "Token 快照截至记录时共 31 轮 LLM 调用：Copilot 会话日志累计输入 2,413,093、输出 23,506（含推理 6,751），缓存读写为 0；MoonshotAI Kimi K3.1 Pro 经 OpenRouter BYOK 路由，费用由用户确认为 $0.73。"
+  },
+  "animations/Google-GeminiCarbon-4.html": {
+    "createdDate": "2026-11-14",
+    "tokensTotal": 4285863,
+    "totalUsage": "8.80",
+    "estimated": true,
+    "note": "估算值（截至记录快照共 37 轮 LLM 调用）：Copilot 会话日志实测累计输入 4,257,645、输出 28,218（含推理 1,244），上报缓存读写为 0；模型 Google Gemini 4 Carbon 经 OpenRouter BYOK 路由，按 OpenRouter 公开单价（输入 $2/M、输出 $10/M）折算无缓存上限约 $8.80，若上游命中隐式缓存则实际账单更低，非实际账单。"
+  },
+  "animations/Google-GeminiHydrogen-4.html": {
+    "createdDate": "2026-11-14",
+    "tokensTotal": 13700000,
+    "totalUsage": "3.71",
+    "note": "用户提供本动画实际用量：13.7M tokens（13,700,000），费用 3.71 美元。"
   }
 }
