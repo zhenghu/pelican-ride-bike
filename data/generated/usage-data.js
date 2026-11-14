@@ -409,6 +409,19 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
+    "animations/Tencent-Hunyuan-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-14",
+      "tokensTotal": 25862959,
+      "totalUsage": "10.87",
+      "totalUsageRmb": "72.52371154542164314151284835",
+      "fxDate": "2026-11-13",
+      "usdToCny": "6.671914585595367354325009048",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至记录快照共 197 轮 LLM 调用）：Copilot 会话日志累计输入 25,761,766、输出 101,193（含推理 49,101），缓存读写为 0；模型 Tencent Hy4 经 OpenRouter BYOK 路由，按 OpenRouter 公开单价（输入 $0.417/M、输出 $1.2505/M）折算约 $10.87，非实际账单。"
+    },
     "animations/Tencent-HunyuanPreview-4.html": {
       "sourceModel": "Hy4 preview",
       "mappingStatus": "confirmed-alias",

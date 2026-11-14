@@ -11,7 +11,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 1,
-    "review": "暮色配色、车体细节和踩踏联动综合突出"
+    "review": "暮色配色与主体构图均衡，双腿踩踏衔接稳定，车架、链条和轮辐细节完整"
   },
   {
     "name": "Google-GeminiHydrogen-4",
@@ -33,7 +33,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 3,
-    "review": "暮色海堤层次丰富，曲柄双腿逆运动学衔接严谨，喉囊、围巾与车筐小鱼细节生动"
+    "review": "暮色海堤与夕阳层次丰富，踩踏连续，围巾、护目镜和车筐小鱼细节生动"
   },
   {
     "name": "Google-GeminiArgon-4",
@@ -45,7 +45,30 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 4,
-    "review": "场景层次丰富，角色鲜明，整体完成度高"
+    "review": "海湾场景层次丰富，骑行结构完整，围巾与车轮运动清晰，整体完成度高"
+  },
+  {
+    "name": "Tencent-Hunyuan-4",
+    "file": "animations/Tencent-Hunyuan-4.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "JavaScript 动画"
+    ],
+    "rank": 5,
+    "review": "秋日林荫配色统一，双腿随曲柄交替踩踏，贝雷帽、围巾、车筐与落叶细节丰富"
+  },
+  {
+    "name": "MoonshotAI-Kimi-K3.1Pro",
+    "file": "animations/MoonshotAI-Kimi-K3.1Pro.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "JavaScript 动画"
+    ],
+    "rank": 6,
+    "review": "旅行海报配色与构图协调，双腿交替踩踏清晰，围巾、链条和轮辐细节完整"
   },
   {
     "name": "Anthropic-ClaudeFable-5.1",
@@ -59,8 +82,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 5,
-    "review": "骑行动作清楚，主体比例与构图均衡"
+    "rank": 7,
+    "review": "骑行姿态清晰，双腿与车架关系完整，主体比例和构图均衡，场景较简洁"
   },
   {
     "name": "Anthropic-ClaudeOpus-5.5",
@@ -71,35 +94,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 6,
-    "review": "腿部联动完整，鸟与车的结合自然"
-  },
-  {
-    "name": "OpenAI-GPTAstra-6",
-    "file": "animations/OpenAI-GPTAstra-6.html",
-    "aliases": [
-      "animations/GPT6.html",
-      "GPT6.html"
-    ],
-    "tech": [
-      "SVG",
-      "SMIL",
-      "JavaScript 动画"
-    ],
-    "rank": 7,
-    "review": "配色、线条和版式协调，美术风格统一"
-  },
-  {
-    "name": "MoonshotAI-Kimi-K3.1Pro",
-    "file": "animations/MoonshotAI-Kimi-K3.1Pro.html",
-    "aliases": [],
-    "tech": [
-      "SVG",
-      "CSS 动画",
-      "JavaScript 动画"
-    ],
     "rank": 8,
-    "review": "旅行海报配色协调，双腿随曲柄交替踩踏，围巾与车轮细节丰富"
+    "review": "双腿与踏板联动清楚，鸟与车的结合自然，场景完整，层次较简单"
   },
   {
     "name": "Anthropic-ClaudeHaiku-5.5",
@@ -111,7 +107,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 9,
-    "review": "画面完整，角色、围巾与背景细节丰富"
+    "review": "柔和配色与围巾增强角色表现，踩踏和车轮保持稳定，背景层次清楚"
   },
   {
     "name": "Meta-Muse-1.6",
@@ -127,7 +123,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 10,
-    "review": "骑行姿态清晰，主体完整，画面有活力"
+    "review": "角色表情鲜明，双腿交替动作清楚，主体完整，线条与配色略显粗重"
   },
   {
     "name": "Google-Gemini-3.8",
@@ -142,7 +138,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 11,
-    "review": "细节丰富、辨识度高，视觉略显拥挤"
+    "review": "护目镜、小鱼与山景细节丰富，骑行动作可辨，角色和车架局部较拥挤"
   },
   {
     "name": "Anthropic-ClaudeOpus-5",
@@ -157,22 +153,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 12,
-    "review": "人物与自行车关系完整，场景完成度较好"
-  },
-  {
-    "name": "DeepSeek-DeepSeekFlash-4.1",
-    "file": "animations/DeepSeek-DeepSeekFlash-4.1.html",
-    "aliases": [
-      "animations/DeepSeek4.1.html",
-      "DeepSeek4.1.html"
-    ],
-    "tech": [
-      "SVG",
-      "CSS 动画",
-      "SMIL"
-    ],
-    "rank": 13,
-    "review": "角色辨识度高，画面柔和，姿态略僵"
+    "review": "头盔与小鱼增添角色细节，腿部踩踏连续，骑行结构完整，主体偏小"
   },
   {
     "name": "Xiaomi-MiMoPro-2.6",
@@ -186,8 +167,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 14,
-    "review": "骑行结构较完整，画面清爽"
+    "rank": 13,
+    "review": "双腿随踏板交替运动，鸟、车与道路关系完整，画面清爽但细节较少"
   },
   {
     "name": "Anthropic-ClaudeFable-5",
@@ -200,22 +181,50 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 15,
-    "review": "构图稳定、表达清楚，细节相对简单"
+    "rank": 14,
+    "review": "骑行主体完整，腿部动作可辨，构图稳定，场景与角色细节较简单"
   },
   {
-    "name": "OpenAI-GPTSolPro-5.6",
-    "file": "animations/OpenAI-GPTSolPro-5.6.html",
+    "name": "Anthropic-ClaudeSonnet-5.5",
+    "file": "animations/Anthropic-ClaudeSonnet-5.5.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画",
+      "SMIL"
+    ],
+    "rank": 15,
+    "review": "车架和双轮位置稳定，基础踩踏表达清楚，角色、背景与配件比较朴素"
+  },
+  {
+    "name": "DeepSeek-DeepSeekFlash-4.1",
+    "file": "animations/DeepSeek-DeepSeekFlash-4.1.html",
     "aliases": [
-      "animations/GPT5.6sol.html",
-      "GPT5.6sol.html"
+      "animations/DeepSeek4.1.html",
+      "DeepSeek4.1.html"
     ],
     "tech": [
       "SVG",
-      "CSS 动画"
+      "CSS 动画",
+      "SMIL"
     ],
     "rank": 16,
-    "review": "插画风格鲜明，车轮填色较生硬"
+    "review": "柔和配色与喉囊细节鲜明，但未呈现扶把动作，腿部姿态偏僵硬"
+  },
+  {
+    "name": "OpenAI-GPTAstra-6",
+    "file": "animations/OpenAI-GPTAstra-6.html",
+    "aliases": [
+      "animations/GPT6.html",
+      "GPT6.html"
+    ],
+    "tech": [
+      "SVG",
+      "SMIL",
+      "JavaScript 动画"
+    ],
+    "rank": 17,
+    "review": "插画配色和踩踏动作协调，但统一预览尺寸下双轮下缘持续被裁切"
   },
   {
     "name": "Tencent-HunyuanPreview-4",
@@ -229,20 +238,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 17,
-    "review": "车体细节丰富，但角色朝向与骑行姿态别扭"
-  },
-  {
-    "name": "Anthropic-ClaudeSonnet-5.5",
-    "file": "animations/Anthropic-ClaudeSonnet-5.5.html",
-    "aliases": [],
-    "tech": [
-      "SVG",
-      "CSS 动画",
-      "SMIL"
-    ],
     "rank": 18,
-    "review": "基本完成度较好，画面与动作比较朴素"
+    "review": "双轮与踩踏结构完整，车体细节丰富，但鸟头朝后，骑行姿态别扭"
   },
   {
     "name": "Alibaba-QwenMax-3.8",
@@ -256,7 +253,32 @@ window.PELICAN_MODELS = [
       "CSS 动画"
     ],
     "rank": 19,
-    "review": "主体完整，较 3.7 明显改善"
+    "review": "车架与双轮完整，背景清楚，扶把衔接与腿部动作较弱"
+  },
+  {
+    "name": "OpenAI-GPTSolPro-5.6",
+    "file": "animations/OpenAI-GPTSolPro-5.6.html",
+    "aliases": [
+      "animations/GPT5.6sol.html",
+      "GPT5.6sol.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ],
+    "rank": 20,
+    "review": "粗线插画风格鲜明，但多帧可见脚掌未随曲柄对齐，白色实心车轮较生硬"
+  },
+  {
+    "name": "xAI-Grok-4.7",
+    "file": "animations/xAI-Grok-4.7.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ],
+    "rank": 21,
+    "review": "海岸配色协调，双腿交替动作可辨，主体完整但偏小，车体与细节较简化"
   },
   {
     "name": "OpenAI-GPTSol-6",
@@ -266,8 +288,22 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 20,
-    "review": "美术风格舒服，但总览中的主体存在裁切"
+    "rank": 22,
+    "review": "海岸插画风格柔和，但统一预览中车轮被明显裁切，缺少扶把动作"
+  },
+  {
+    "name": "ByteDance-SeedTurbo-2.1",
+    "file": "animations/ByteDance-SeedTurbo-2.1.html",
+    "aliases": [
+      "animations/bytedance-seed.html",
+      "bytedance-seed.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ],
+    "rank": 23,
+    "review": "双轮与车架保持完整，腿部有交替动作，但主体偏小、留白较多，层次简单"
   },
   {
     "name": "Unknown-SpaceBunny-Unknown",
@@ -282,19 +318,22 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 21,
-    "review": "夜景和车灯有特色，角色与动作较简化"
+    "rank": 24,
+    "review": "夜景、车灯与月光有特色，但脚掌与旋转踏板衔接较弱，角色和车架比例失衡"
   },
   {
-    "name": "xAI-Grok-4.7",
-    "file": "animations/xAI-Grok-4.7.html",
-    "aliases": [],
+    "name": "Xiaomi-MiMo-2.5",
+    "file": "animations/Xiaomi-MiMo-2.5.html",
+    "aliases": [
+      "animations/mimo2.5.html",
+      "mimo2.5.html"
+    ],
     "tech": [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 22,
-    "review": "海岸配色协调，骑行主体完整；车体偏小、细节较少"
+    "rank": 25,
+    "review": "帽子、车筐和道路元素齐全，但主体过小，鸟与车的比例和骑行姿态较弱"
   },
   {
     "name": "Meituan-LongCat-2.0",
@@ -308,36 +347,8 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 23,
-    "review": "表达清楚，但鸟、车比例及踩踏感较弱"
-  },
-  {
-    "name": "Xiaomi-MiMo-2.5",
-    "file": "animations/Xiaomi-MiMo-2.5.html",
-    "aliases": [
-      "animations/mimo2.5.html",
-      "mimo2.5.html"
-    ],
-    "tech": [
-      "SVG",
-      "CSS 动画"
-    ],
-    "rank": 24,
-    "review": "基本元素齐全，构图留白过多"
-  },
-  {
-    "name": "ByteDance-SeedTurbo-2.1",
-    "file": "animations/ByteDance-SeedTurbo-2.1.html",
-    "aliases": [
-      "animations/bytedance-seed.html",
-      "bytedance-seed.html"
-    ],
-    "tech": [
-      "SVG",
-      "CSS 动画"
-    ],
-    "rank": 25,
-    "review": "能表达骑行主题，但主体小、层次较简单"
+    "rank": 26,
+    "review": "主题可辨，但鸟与车比例失衡，腿部远离曲柄，踩踏感不足，背景较简单"
   },
   {
     "name": "Anthropic-ClaudeOpus-4.8",
@@ -350,8 +361,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 26,
-    "review": "鸟的形象明确，自行车和骑行姿态较简陋"
+    "rank": 27,
+    "review": "鸟的形象清楚，但多帧可见轮辐和腿部脱离主体，骑行结构不完整"
   },
   {
     "name": "Huawei-OpenPangu-2",
@@ -364,22 +375,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 27,
-    "review": "有完整场景，但轮辐与车体出现错位"
-  },
-  {
-    "name": "xAI-Grok-4.6",
-    "file": "animations/xAI-Grok-4.6.html",
-    "aliases": [
-      "animations/grok4.6.html",
-      "grok4.6.html"
-    ],
-    "tech": [
-      "SVG",
-      "CSS 动画"
-    ],
     "rank": 28,
-    "review": "角色有特点，车轮和骑行结构表现不完整"
+    "review": "有完整场景和车架，但前轮轮辐漂移至空中，腿部与曲柄关系不清"
   },
   {
     "name": "ZhipuAI-GLM-5.3",
@@ -394,7 +391,7 @@ window.PELICAN_MODELS = [
       "SMIL"
     ],
     "rank": 29,
-    "review": "主体悬空，鸟与自行车的关系不够稳定"
+    "review": "车架与双轮可辨，但主体悬在道路上方，腿部及围巾与身体衔接不稳定"
   },
   {
     "name": "Tencent-Hunyuan-3",
@@ -408,21 +405,21 @@ window.PELICAN_MODELS = [
       "CSS 动画"
     ],
     "rank": 30,
-    "review": "鸟与车漂浮在道路上方，场景关系失衡"
+    "review": "鸟与车漂浮在道路上方并贴近画面边缘，腿部脱离主体，场景关系失衡"
   },
   {
-    "name": "NVIDIA-Nemotron-Unknown",
-    "file": "animations/NVIDIA-Nemotron-Unknown.html",
+    "name": "xAI-Grok-4.6",
+    "file": "animations/xAI-Grok-4.6.html",
     "aliases": [
-      "animations/Nvidia-Nemotron.html",
-      "Nvidia-Nemotron.html"
+      "animations/grok4.6.html",
+      "grok4.6.html"
     ],
     "tech": [
       "SVG",
       "CSS 动画"
     ],
     "rank": 31,
-    "review": "主体会移出画面，观看连续性较差"
+    "review": "角色与背景有辨识度，但双轮反复漂移到车架上方或消失，骑行结构严重分离"
   },
   {
     "name": "MistralAI-MistralLarge-4",
@@ -434,7 +431,7 @@ window.PELICAN_MODELS = [
       "SMIL"
     ],
     "rank": 32,
-    "review": "多帧复查可见双轮绕车架漂移、反复分离，骑行结构不稳定"
+    "review": "有完整场景，但多帧可见双轮绕车架漂移，时而归位、时而分离，骑行不稳定"
   },
   {
     "name": "MoonshotAI-Kimi-K3",
@@ -449,7 +446,21 @@ window.PELICAN_MODELS = [
       "SMIL"
     ],
     "rank": 33,
-    "review": "复查可见车轮偏离车架，整体悬空"
+    "review": "鸟与车架可辨，但双轮周期性离开车架，整体悬空，骑行结构不稳定"
+  },
+  {
+    "name": "NVIDIA-Nemotron-Unknown",
+    "file": "animations/NVIDIA-Nemotron-Unknown.html",
+    "aliases": [
+      "animations/Nvidia-Nemotron.html",
+      "Nvidia-Nemotron.html"
+    ],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ],
+    "rank": 34,
+    "review": "主体横移并反复出画，轮辐与肢体零散分离，连续观看和结构完整性较差"
   },
   {
     "name": "Alibaba-QwenMax-3.7",
@@ -462,8 +473,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 34,
-    "review": "鸟、车架和车轮明显分离"
+    "rank": 35,
+    "review": "鸟远离车架，车轮与道路关系混乱，多个主体元素明显分离"
   },
   {
     "name": "MistralAI-Unknown-Unknown",
@@ -476,8 +487,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 35,
-    "review": "有线描元素，但没有形成完整骑行画面"
+    "rank": 36,
+    "review": "线描鸟和车轮可辨，但多帧中彼此分离，未形成完整骑行画面"
   },
   {
     "name": "IBM-Granite-Unknown",
@@ -490,8 +501,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 36,
-    "review": "主要呈现零散图形，主体结构不足"
+    "rank": 37,
+    "review": "只呈现零散几何图形，鸟、车架和车轮关系不完整"
   },
   {
     "name": "Amazon-Unknown-Unknown",
@@ -504,8 +515,8 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 37,
-    "review": "当前显示为简单散落图形，主题表达很弱"
+    "rank": 38,
+    "review": "只显示简单散落图形，主体辨识度与骑行主题表达很弱"
   },
   {
     "name": "Poolside-Unknown-Unknown",
@@ -517,8 +528,8 @@ window.PELICAN_MODELS = [
     "tech": [
       "CSS 动画"
     ],
-    "rank": 38,
-    "review": "多次查看仍只有背景，未看到骑行主体"
+    "rank": 39,
+    "review": "多帧查看仍只有天空和道路背景，未看到骑行主体"
   }
 ];
 window.PELICAN_RANKING = {
