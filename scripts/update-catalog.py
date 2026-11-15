@@ -4,6 +4,7 @@ import json
 import re
 import argparse
 import hashlib
+import math
 from datetime import date
 from pathlib import Path
 
@@ -25,6 +26,28 @@ if len(set(ranked_files)) != len(ranked_files) or set(ranked_files) != files:
     raise ValueError('Ranking must cover every animation exactly once; visually review and update data/quality-ranking.json')
 if any(type(entry['rank']) is not int for entry in entries) or sorted(entry['rank'] for entry in entries) != list(range(1, len(entries) + 1)):
     raise ValueError('Quality ranks must be unique and consecutive, starting at 1')
+score_fields = ('motion', 'visual', 'detail')
+score_weights = (4, 4, 2)
+score_totals = {}
+if any('scores' in entry for entry in entries):
+    if not all('scores' in entry for entry in entries):
+        raise ValueError('Scores must be provided for every animation when scoring is enabled')
+    for entry in entries:
+        scores = entry['scores']
+        if not isinstance(scores, dict) or set(scores) != set(score_fields):
+            raise ValueError(f'Scores must contain exactly motion, visual and detail: {entry["file"]}')
+        for field in score_fields:
+            value = scores[field]
+            if (type(value) not in (int, float) or not math.isfinite(value)
+                    or not 0 <= value <= 10 or value * 2 != int(value * 2)):
+                raise ValueError(f'Invalid {field} score: {entry["file"]}; use 0 to 10 in 0.5 steps')
+        score_totals[entry['file']] = int(sum(scores[field] * weight for field, weight in zip(score_fields, score_weights)))
+    ordered_scores = [
+        (score_totals[entry['file']], *(entry['scores'][field] for field in score_fields))
+        for entry in sorted(entries, key=lambda entry: entry['rank'])
+    ]
+    if ordered_scores != sorted(ordered_scores, reverse=True):
+        raise ValueError('Quality ranks must follow descending weighted score, then motion, visual and detail')
 for entry in entries:
     if not isinstance(entry.get('reason'), str) or not entry['reason'].strip():
         raise ValueError(f'Missing review reason: {entry["file"]}')
@@ -49,8 +72,12 @@ for path in sorted((root / 'animations').glob('*.html'), key=lambda path: path.n
     previous_names = [old for old, current in aliases.items() if current == file]
     legacy_aliases = list(dict.fromkeys(previous_names + [Path(old).name for old in previous_names]))
     review = reviews[file]
-    models.append({'name': path.stem, 'file': file, 'aliases': legacy_aliases, 'tech': tech or ['HTML'],
-                   'rank': review['rank'], 'review': review['reason']})
+    model = {'name': path.stem, 'file': file, 'aliases': legacy_aliases, 'tech': tech or ['HTML'],
+             'rank': review['rank'], 'review': review['reason']}
+    if 'scores' in review:
+        model['scores'] = {field: review['scores'][field] for field in score_fields}
+        model['score'] = score_totals[file]
+    models.append(model)
 models.sort(key=lambda model: model['rank'])
 output = root / 'data' / 'generated' / 'models.js'
 content = (

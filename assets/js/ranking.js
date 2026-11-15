@@ -33,7 +33,24 @@
       const created = document.createElement('p');
       created.className = 'rank-created';
       created.textContent = `创建于 ${entry?.createdDate || '未记录'} · ${model.tech.join(' / ')}`;
-      work.append(heading, reason, created);
+      work.append(heading, reason);
+      if (model.scores && [model.score, model.scores.motion, model.scores.visual, model.scores.detail].every(Number.isFinite)) {
+        const scores = document.createElement('p');
+        scores.className = 'rank-scores';
+        scores.title = '分项满分 10 分；动作占 40%，画面占 40%，细节占 20%。';
+        for (const [label, value, suffix] of [
+          ['综合', model.score, ' / 100'],
+          ['动作', model.scores.motion, ''],
+          ['画面', model.scores.visual, ''],
+          ['细节', model.scores.detail, '']
+        ]) {
+          const item = document.createElement('span');
+          item.textContent = `${label} ${value.toLocaleString('zh-CN', { maximumFractionDigits: 2 })}${suffix}`;
+          scores.append(item);
+        }
+        work.append(scores);
+      }
+      work.append(created);
 
       const metrics = document.createElement('div');
       metrics.className = 'rank-usage';
