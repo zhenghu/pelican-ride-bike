@@ -79,9 +79,7 @@
   }
 
   function scaleFrame(slot) {
-    const stage = $('stage-' + slot);
-    const frame = stage.querySelector('iframe');
-    if (frame) frame.style.transform = `scale(${stage.clientWidth / 1000})`;
+    window.PelicanPreview.fit($('stage-' + slot), state[slot]);
   }
 
   function renderPanel(slot) {

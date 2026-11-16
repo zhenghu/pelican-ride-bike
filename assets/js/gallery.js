@@ -8,8 +8,7 @@
 
   const resizeObserver = new ResizeObserver(entries => {
     entries.forEach(entry => {
-      const frame = entry.target.querySelector('iframe');
-      frame.style.transform = `scale(${entry.contentRect.width / 1000})`;
+      window.PelicanPreview.fit(entry.target, entry.target.dataset.file);
     });
   });
 
@@ -47,6 +46,7 @@
 
     const stage = document.createElement('div');
     stage.className = 'stage';
+    stage.dataset.file = model.file;
     const loading = document.createElement('div');
     loading.className = 'loading-note';
     loading.textContent = '正在载入画面…';
@@ -61,7 +61,7 @@
     const footer = document.createElement('footer');
     footer.className = 'panel-footer';
     const size = document.createElement('span');
-    size.textContent = '1000 × 650 · 等比缩放';
+    size.textContent = '画面等比缩放';
     const preview = document.createElement('a');
     preview.href = '../index.html#' + new URLSearchParams({ a: model.file, mode: 'single' }).toString();
     preview.textContent = '放大查看 ↗';
