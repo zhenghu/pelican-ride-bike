@@ -87,5 +87,13 @@
     "totalUsage": "10.87",
     "estimated": true,
     "note": "估算值（截至记录快照共 197 轮 LLM 调用）：Copilot 会话日志累计输入 25,761,766、输出 101,193（含推理 49,101），缓存读写为 0；模型 Tencent Hy4 经 OpenRouter BYOK 路由，按 OpenRouter 公开单价（输入 $0.417/M、输出 $1.2505/M）折算约 $10.87，非实际账单。"
+  },
+  "animations/Anthropic-ClaudeFable-5.2.html": {
+    "createdDate": "2026-11-16",
+    "tokensTotal": null,
+    "tokensApproximation": "million-scale",
+    "totalUsage": "10.00",
+    "estimated": true,
+    "note": "用户提供本动画用量为百万级 Token、费用约 10 美元；未提供确切 Token 数量或上下限，费用为概数，非精确账单。"
   }
 }

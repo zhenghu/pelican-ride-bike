@@ -6,24 +6,42 @@
   const formatTokens = value => value == null ? '暂无数据' : `${countFormat.format(Number(value) / 1000)} K`;
   const formatCost = value => value == null ? '暂无数据' : Number(value) === 0 ? `免费（${usageFormat.format(0)}）` : `≈ ${usageFormat.format(Number(value))}`;
 
+  function tokenDisplay(entry) {
+    if (entry?.tokensTotal == null && entry?.tokensApproximation === 'million-scale') {
+      return {
+        text: '千 K 级',
+        title: '用户仅提供“百万级” Token；“千 K 级”为数量级描述，确切数量及上下限均未提供。',
+        missing: false
+      };
+    }
+    return {
+      text: formatTokens(entry?.tokensTotal),
+      title: entry?.tokensTotal == null ? '' : `${entry.tokensTotal} tokens`,
+      missing: entry?.tokensTotal == null
+    };
+  }
+
   function createSummary(file) {
     const entry = data.works[file];
     const section = document.createElement('div');
     section.className = 'usage-summary';
     const metrics = document.createElement('dl');
     metrics.className = 'usage-metrics';
-    for (const [label, value, format, title] of [
-      ['Token（K）', entry?.tokensTotal, formatTokens, `${entry?.tokensTotal} tokens`],
-      ['费用（RMB）', entry?.totalUsageRmb, formatCost, `${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`]
+    for (const [label, display] of [
+      ['Token（K）', tokenDisplay(entry)],
+      ['费用（RMB）', {
+        text: formatCost(entry?.totalUsageRmb),
+        missing: entry?.totalUsageRmb == null,
+        title: `${entry?.estimated ? '估算：约 ' : ''}${entry?.totalUsage} USD × ${entry?.usdToCny} = ${entry?.totalUsageRmb} RMB；汇率日期 ${entry?.fxDate}`
+      }]
     ]) {
       const group = document.createElement('div');
       const term = document.createElement('dt');
       term.textContent = entry?.estimated ? `${label} · 估算` : label;
       const amount = document.createElement('dd');
-      const missing = value === null || value === undefined;
-      amount.textContent = missing ? '暂无数据' : format(value);
-      if (missing) amount.className = 'usage-missing';
-      else amount.title = title;
+      amount.textContent = display.text;
+      if (display.missing) amount.className = 'usage-missing';
+      else amount.title = display.title;
       group.append(term, amount);
       metrics.append(group);
     }
@@ -46,7 +64,7 @@
     if (entry?.totalUsageRmb !== null && entry?.totalUsageRmb !== undefined) {
       const conversion = document.createElement('p');
       conversion.className = 'usage-source';
-      conversion.textContent = `${entry.totalUsage} USD · 1 USD = ${Number(entry.usdToCny).toFixed(6)} RMB`;
+      conversion.textContent = `${entry.estimated ? '约 ' : ''}${entry.totalUsage} USD · 1 USD = ${Number(entry.usdToCny).toFixed(6)} RMB`;
       const rateDate = document.createElement('a');
       rateDate.href = data.exchangeRateSource.sourceUrl;
       rateDate.target = '_blank';
@@ -59,8 +77,8 @@
   }
 
   document.querySelectorAll('[data-usage-period]').forEach(element => {
-    element.textContent = '用量优先采用用户提供的本动画数据，否则按创建日期匹配模型当天的 CSV 用量；1 K = 1,000 tokens。美元费用按 ECB 参考汇率折算人民币，当日汇率未公布时采用此前最近汇率。CSV 当天用量可能包含其他请求；缺失记录显示“暂无数据”。';
+    element.textContent = '用量优先采用用户提供的本动画数据，否则按创建日期匹配模型当天的 CSV 用量；1 K = 1,000 tokens。“千 K 级”仅表示用户提供的百万级数量级，未提供确切数量或范围。美元费用按 ECB 参考汇率折算人民币，当日汇率未公布时采用此前最近汇率。CSV 当天用量可能包含其他请求；缺失记录显示“暂无数据”。';
     element.title = `来源：${data.sources.tokens}\n${data.sources.usage}`;
   });
-  window.PelicanUsage = { createSummary, formatTokens, formatCost };
+  window.PelicanUsage = { createSummary, formatTokens, formatCost, tokenDisplay };
 })();

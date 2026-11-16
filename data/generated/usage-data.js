@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-11-14T16:55:00Z",
+    "retrievedAt": "2026-11-16T15:44:56Z",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -48,6 +48,10 @@ window.PELICAN_USAGE = {
       "2026-11-13": {
         "usdPerEur": "1.1052",
         "cnyPerEur": "7.3738"
+      },
+      "2026-11-16": {
+        "usdPerEur": "1.1014",
+        "cnyPerEur": "7.3425"
       }
     }
   },
@@ -99,6 +103,20 @@ window.PELICAN_USAGE = {
       "fxDate": "2026-09-16",
       "usdToCny": "6.707116234723064921556730519",
       "fxFallback": false
+    },
+    "animations/Anthropic-ClaudeFable-5.2.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-16",
+      "tokensTotal": null,
+      "totalUsage": "10.00",
+      "totalUsageRmb": "66.66515344107499546032322499",
+      "fxDate": "2026-11-16",
+      "usdToCny": "6.666515344107499546032322499",
+      "fxFallback": false,
+      "tokensApproximation": "million-scale",
+      "estimated": true,
+      "note": "用户提供本动画用量为百万级 Token、费用约 10 美元；未提供确切 Token 数量或上下限，费用为概数，非精确账单。"
     },
     "animations/Anthropic-ClaudeFable-5.html": {
       "sourceModel": "Claude Fable 5",
