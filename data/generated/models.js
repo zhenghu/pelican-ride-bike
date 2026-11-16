@@ -31,7 +31,7 @@ window.PELICAN_MODELS = [
       "JavaScript 动画"
     ],
     "rank": 2,
-    "review": "海岸插画的配色、线条和留白协调，双腿与脚踏联动清楚；完整原页车轮齐全，固定高度预览需向下查看",
+    "review": "海岸插画的配色、线条和留白协调，双腿与脚踏联动清楚，车轮、车架与骑姿完整稳定",
     "scores": {
       "motion": 9,
       "visual": 9,
