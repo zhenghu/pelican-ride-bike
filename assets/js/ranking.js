@@ -56,16 +56,17 @@
       metrics.className = 'rank-usage';
       const list = document.createElement('dl');
       list.className = 'rank-metrics';
-      for (const [label, value, format] of [
-        ['Token（K）', entry?.tokensTotal, usage.formatTokens],
-        ['费用（RMB）', entry?.totalUsageRmb, usage.formatCost]
+      for (const [label, display] of [
+        ['Token（K）', usage.tokenDisplay(entry)],
+        ['费用（RMB）', { text: usage.formatCost(entry?.totalUsageRmb), missing: entry?.totalUsageRmb == null }]
       ]) {
         const group = document.createElement('div');
         const term = document.createElement('dt');
         term.textContent = label + (entry?.estimated ? ' · 估算' : '');
         const amount = document.createElement('dd');
-        amount.textContent = format(value);
-        if (value == null) amount.className = 'usage-missing';
+        amount.textContent = display.text;
+        if (display.missing) amount.className = 'usage-missing';
+        if (display.title) amount.title = display.title;
         group.append(term, amount);
         list.append(group);
       }
