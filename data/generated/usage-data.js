@@ -82,6 +82,19 @@ window.PELICAN_USAGE = {
       "usdToCny": null,
       "fxFallback": false
     },
+    "animations/Alibaba-QwenMax-4.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-17",
+      "tokensTotal": 6605003,
+      "totalUsage": "9.51",
+      "totalUsageRmb": "63.39856092246232068276738697",
+      "fxDate": "2026-11-16",
+      "usdToCny": "6.666515344107499546032322499",
+      "fxFallback": true,
+      "estimated": true,
+      "note": "估算值（截至任务完成快照共 67 轮 LLM 调用）：Copilot 会话日志实测累计输入 6,571,357、输出 33,646（含推理 9,151），缓存读写为 0；模型 Alibaba Qwen4 Max 经 OpenRouter 路由，按 OpenRouter 公开单价（输入 $1.425/M、输出 $4.275/M）折算约 $9.51，非实际账单。"
+    },
     "animations/Amazon-Unknown-Unknown.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",
