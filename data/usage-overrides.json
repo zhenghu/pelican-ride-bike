@@ -2,9 +2,8 @@
   "animations/Alibaba-QwenMax-4.html": {
     "createdDate": "2026-11-17",
     "tokensTotal": 6605003,
-    "totalUsage": "9.51",
-    "estimated": true,
-    "note": "估算值（截至任务完成快照共 67 轮 LLM 调用）：Copilot 会话日志实测累计输入 6,571,357、输出 33,646（含推理 9,151），缓存读写为 0；模型 Alibaba Qwen4 Max 经 OpenRouter 路由，按 OpenRouter 公开单价（输入 $1.425/M、输出 $4.275/M）折算约 $9.51，非实际账单。"
+    "totalUsage": "0.99",
+    "note": "Token 快照截至任务完成时共 67 轮 LLM 调用：Copilot 会话日志实测累计输入 6,571,357、输出 33,646（含推理 9,151），缓存读写为 0；模型 Alibaba Qwen4 Max 经 OpenRouter 路由，费用由用户确认为 $0.99。"
   },
   "animations/Anthropic-ClaudeOpus-5.5.html": {
     "createdDate": "2026-09-23",
