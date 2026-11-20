@@ -5,17 +5,6 @@
   "entries": [
     {
       "rank": 1,
-      "file": "animations/MoonshotAI-Kimi-K3.1Pro.html",
-      "reason": "旅行海报的配色、纹理和构图统一，双腿屈伸与脚踏衔接清楚，围巾、车篮、链条和花草细节协调",
-      "sha256": "2300d1060322180eb1f986e5a923a76db416e55a7f69c3352d194a992850a3bc",
-      "scores": {
-        "motion": 9,
-        "visual": 9.5,
-        "detail": 9
-      }
-    },
-    {
-      "rank": 2,
       "file": "animations/OpenAI-GPTAstra-6.2.html",
       "reason": "复古海岸速写的线条、纸纹和配色统一，双腿屈伸与脚踏持续衔接，轮组和车架稳定；羽毛、挡泥板、刹车线与灯塔细节协调",
       "sha256": "39fee471aad3885ee8ebe38c7361e58d9e85d37eb598d4e5bb04860481ae118a",
@@ -26,7 +15,29 @@
       }
     },
     {
+      "rank": 2,
+      "file": "animations/MoonshotAI-Kimi-K3.1Pro.html",
+      "reason": "纸纹、群山和单车构成完整的旅行海报，膝部随曲柄屈伸，双脚落点清楚。车把前的小筐与车架之间留有空隙，支撑关系略弱。",
+      "sha256": "2300d1060322180eb1f986e5a923a76db416e55a7f69c3352d194a992850a3bc",
+      "scores": {
+        "motion": 9,
+        "visual": 9.5,
+        "detail": 8.5
+      }
+    },
+    {
       "rank": 3,
+      "file": "animations/Anthropic-ClaudeFable-5.2.html",
+      "reason": "白鸟、红车与蓝色海面轮廓分明，扶把、前后脚和曲柄在重叠时仍容易辨认。近景棕榈与远处帆船的移动拉开了景深，腿部折线略硬。",
+      "sha256": "25c10f484c11761c5a56b6fafa6b08efa5f1958cf5d6a16c38d0f0410280a0b8",
+      "scores": {
+        "motion": 9,
+        "visual": 9,
+        "detail": 9
+      }
+    },
+    {
+      "rank": 4,
       "file": "animations/OpenAI-GPTAstra-6.html",
       "reason": "海岸插画的配色、线条和留白协调，双腿与脚踏联动清楚，车轮、车架与骑姿完整稳定",
       "sha256": "2ab3c73d31553fe0ed6665a96cd8a6dedee3d678e244542ecaf0964a73ec7658",
@@ -37,24 +48,13 @@
       }
     },
     {
-      "rank": 4,
+      "rank": 5,
       "file": "animations/Google-GeminiHydrogen-4.html",
-      "reason": "晨曦海岸层次丰富，草帽、围巾、行李和车筐完成度高；脚踏衔接稳定，但长腿屈伸略显机械",
+      "reason": "晨光、帆船与栏杆交代了海岸纵深，轮辐、挡泥板和车灯都清楚。下踩时长腿略直，车筐支架与车头之间可见空隙。",
       "sha256": "5f623053e9916d478940a4379cd82b7f629ec61a1c2935b9f4a34b4593c4cfad",
       "scores": {
         "motion": 8.5,
         "visual": 9,
-        "detail": 9.5
-      }
-    },
-    {
-      "rank": 5,
-      "file": "animations/Anthropic-ClaudeFable-5.2.html",
-      "reason": "双腿屈伸与水平脚踏衔接清楚，车轮与路面运动协调；海岸视差、鱼筐和链条细节完整，腿部折线略硬",
-      "sha256": "25c10f484c11761c5a56b6fafa6b08efa5f1958cf5d6a16c38d0f0410280a0b8",
-      "scores": {
-        "motion": 9,
-        "visual": 8.5,
         "detail": 9
       }
     },
@@ -71,17 +71,6 @@
     },
     {
       "rank": 7,
-      "file": "animations/DeepSeek-DeepSeekFlash-4.1-1017.html",
-      "reason": "月夜海岸构图完整，屈膝、脚踏与车轮配合清楚；车架和轮辐细致，左上信息块略抢画面",
-      "sha256": "8c51961e72bf399c99a84d49d91ac69a0a1c2b3f90a3fd88d2191a94b4faccb3",
-      "scores": {
-        "motion": 9,
-        "visual": 8.5,
-        "detail": 8.5
-      }
-    },
-    {
-      "rank": 8,
       "file": "animations/Google-GeminiArgon-4.html",
       "reason": "夕阳海湾、灯塔和车篮层次丰富，双腿屈伸与脚踏配合清楚；高饱和配色较热闹，扶把轮廓略含糊",
       "sha256": "b55c1e6fd3dd4433a4604e4221ee6650ee315a0a4372b7e0c23387540c063490",
@@ -89,6 +78,17 @@
         "motion": 8.5,
         "visual": 8.5,
         "detail": 9
+      }
+    },
+    {
+      "rank": 8,
+      "file": "animations/DeepSeek-DeepSeekFlash-4.1-1017.html",
+      "reason": "屈膝和曲柄的对应清楚，薄轮辐衬出夜景。左上深色信息框占去大块天空，亮色车架和月面也争夺视线。",
+      "sha256": "8c51961e72bf399c99a84d49d91ac69a0a1c2b3f90a3fd88d2191a94b4faccb3",
+      "scores": {
+        "motion": 9,
+        "visual": 8,
+        "detail": 8.5
       }
     },
     {
@@ -137,6 +137,17 @@
     },
     {
       "rank": 13,
+      "file": "animations/Anthropic-ClaudeOpus-5.html",
+      "reason": "头盔、围巾和喉囊里的小鱼让侧面角色容易辨认，双脚交替踩踏。山脊托出车身轮廓，但双翅收在身侧，车把空着。",
+      "sha256": "5a6d074fc009fb7cda6ee70f80ea855b089a47cbb51eca935b997add21c404c8",
+      "scores": {
+        "motion": 8,
+        "visual": 7.5,
+        "detail": 7.5
+      }
+    },
+    {
+      "rank": 14,
       "file": "animations/Anthropic-ClaudeHaiku-5.5.html",
       "reason": "紫粉天空配色统一，双腿与曲柄配合清楚；车身相对鸟偏小，背景和角色细节较简单",
       "sha256": "4afca08b51f51100e6abf71a0b6ee1b197488883630ca292bda5fbd59be33974",
@@ -144,17 +155,6 @@
         "motion": 8,
         "visual": 7.5,
         "detail": 6.5
-      }
-    },
-    {
-      "rank": 14,
-      "file": "animations/Anthropic-ClaudeOpus-5.html",
-      "reason": "双腿踩踏清楚，头盔、围巾和喉囊小鱼丰富；主体偏小，翅膀未呈现扶把动作",
-      "sha256": "5a6d074fc009fb7cda6ee70f80ea855b089a47cbb51eca935b997add21c404c8",
-      "scores": {
-        "motion": 8,
-        "visual": 7,
-        "detail": 7.5
       }
     },
     {
@@ -170,23 +170,23 @@
     },
     {
       "rank": 16,
+      "file": "animations/Tencent-HunyuanPreview-4.html",
+      "reason": "能辨出两腿交替屈伸，轮胎始终围绕车轴转动。头颈朝后而手扶前把，近侧腿转折生硬，削弱了骑行姿态。",
+      "sha256": "dc42652f86f80dc2c890ed8cb465e9502bcce2b9c0f67909eb7f143f72e20c20",
+      "scores": {
+        "motion": 6.5,
+        "visual": 7,
+        "detail": 7.5
+      }
+    },
+    {
+      "rank": 17,
       "file": "animations/Google-Gemini-3.8.html",
       "reason": "护目镜、围巾和小鱼细节丰富，山景有层次；车架偏长、轮子偏小，腿脚与踏板在部分相位错开",
       "sha256": "074b58c1f46a2a4abb9deff418e08b8b39b2fe948ea63c687cca013c632bd5e7",
       "scores": {
         "motion": 6,
         "visual": 7.5,
-        "detail": 7.5
-      }
-    },
-    {
-      "rank": 17,
-      "file": "animations/Tencent-HunyuanPreview-4.html",
-      "reason": "双轮和车体细节完整，腿部有屈伸；鸟头朝后、骑姿别扭，脚下踏板的连接不够清楚",
-      "sha256": "dc42652f86f80dc2c890ed8cb465e9502bcce2b9c0f67909eb7f143f72e20c20",
-      "scores": {
-        "motion": 5.5,
-        "visual": 7,
         "detail": 7.5
       }
     },
@@ -214,6 +214,17 @@
     },
     {
       "rank": 20,
+      "file": "animations/Meta-Muse-1.6.html",
+      "reason": "车把、车轴与身体的位置稳定，脚掌随曲柄交替升降。两条腿像直杆摆动，膝部屈伸弱，部分位置脚掌偏离踏板。",
+      "sha256": "bd09c36bda820d750912f33c5664a77e294a1b047ecfe14d2cdfb72a3bfd7b33",
+      "scores": {
+        "motion": 5.5,
+        "visual": 6.5,
+        "detail": 6
+      }
+    },
+    {
+      "rank": 21,
       "file": "animations/Anthropic-ClaudeSonnet-5.5.html",
       "reason": "头盔、围巾和双轮完整；可见腿形较直硬，脚掌、腿末端与曲柄在部分相位错开",
       "sha256": "5b225d689baf1b2f94d82a8033d2b1f8f32377dcff5d449f065947034f6206fe",
@@ -224,7 +235,7 @@
       }
     },
     {
-      "rank": 21,
+      "rank": 22,
       "file": "animations/OpenAI-GPTSol-6.html",
       "reason": "完整原页配色柔和、车轮齐全；双腿保持近似固定姿势，曲柄在脚下独立旋转，缺少实际踩踏",
       "sha256": "2d8b51684922ce2dd0c643007b04044cbcf6f7f2cd345e8dea15d20903ad19e9",
@@ -235,24 +246,13 @@
       }
     },
     {
-      "rank": 22,
+      "rank": 23,
       "file": "animations/Anthropic-ClaudeFable-5.html",
       "reason": "头盔、扶把和车架清楚；长腿整段摆动，脚未持续贴住踏板，角色与背景较简洁",
       "sha256": "373b426ef311653a6cfd702bf69720be15fc0e16d0133a24a31b48e5ab760b51",
       "scores": {
         "motion": 5.5,
         "visual": 6,
-        "detail": 6
-      }
-    },
-    {
-      "rank": 23,
-      "file": "animations/Meta-Muse-1.6.html",
-      "reason": "表情与扶把清楚、画面色彩鲜明；直杆腿偏僵硬，脚下踏板与曲柄端点在部分相位错开",
-      "sha256": "bd09c36bda820d750912f33c5664a77e294a1b047ecfe14d2cdfb72a3bfd7b33",
-      "scores": {
-        "motion": 5,
-        "visual": 6.5,
         "detail": 6
       }
     },
@@ -302,6 +302,17 @@
     },
     {
       "rank": 28,
+      "file": "animations/Xiaomi-MiMo-2.5.html",
+      "reason": "礼帽、车铃和车筐在放大后清楚可辨，轮轴与车架保持连接。主体在整幅场景中偏小，脚部几乎保持同一姿势。",
+      "sha256": "2a10b5f4af3fe7a3229a0a56fd3e12b612f7bf6d1e36f0a3397be0d1a3aed6e2",
+      "scores": {
+        "motion": 2.5,
+        "visual": 5,
+        "detail": 4.5
+      }
+    },
+    {
+      "rank": 29,
       "file": "animations/Huawei-OpenPangu-2.html",
       "reason": "双轮轮胎和场景可辨，但前轮轮辐反复偏离轮心，腿部只有零散小点，踩踏关系不清楚",
       "sha256": "507cb26b934d32b8f177668cca6401e8d1b48820df951272b79e2e343f525160",
@@ -309,17 +320,6 @@
         "motion": 3,
         "visual": 4.5,
         "detail": 4
-      }
-    },
-    {
-      "rank": 29,
-      "file": "animations/Xiaomi-MiMo-2.5.html",
-      "reason": "礼帽和车筐有细节，但鸟大车小、主体过小；双腿姿势基本不变，曲柄独立转动",
-      "sha256": "2a10b5f4af3fe7a3229a0a56fd3e12b612f7bf6d1e36f0a3397be0d1a3aed6e2",
-      "scores": {
-        "motion": 2.5,
-        "visual": 4.5,
-        "detail": 4.5
       }
     },
     {
@@ -412,20 +412,20 @@
     },
     {
       "rank": 38,
-      "file": "animations/Alibaba-QwenMax-3.7.html",
-      "reason": "鸟长期偏在左上角并远离车架，车轮只剩淡弱轮廓与零散部件，骑行主体严重分离",
-      "sha256": "1f63032b2c986d8c236ca3aa7500d390244c0a70b4e657047ba70e997da44493",
+      "file": "animations/MistralAI-Unknown-Unknown.html",
+      "reason": "黑白线描能辨认长嘴小鸟、车轮与起伏路面，但自行车整体翻转，鸟停留在车旁，两个主体各自运动。",
+      "sha256": "6deb8e9837662a3c93e687bb675954e2392cd08b6fd2f3f396a3cd39b68b459b",
       "scores": {
         "motion": 1.5,
-        "visual": 2.5,
+        "visual": 3,
         "detail": 2
       }
     },
     {
       "rank": 39,
-      "file": "animations/MistralAI-Unknown-Unknown.html",
-      "reason": "线描小鸟和车轮可辨，但整辆车竖起旋转、与鸟分离，主体偏小，未形成稳定骑行画面",
-      "sha256": "6deb8e9837662a3c93e687bb675954e2392cd08b6fd2f3f396a3cd39b68b459b",
+      "file": "animations/Alibaba-QwenMax-3.7.html",
+      "reason": "鸟长期偏在左上角并远离车架，车轮只剩淡弱轮廓与零散部件，骑行主体严重分离",
+      "sha256": "1f63032b2c986d8c236ca3aa7500d390244c0a70b4e657047ba70e997da44493",
       "scores": {
         "motion": 1.5,
         "visual": 2.5,
