@@ -3,7 +3,8 @@
 
   // Give taller original pages enough room before fitting them into the shared frame.
   const viewports = {
-    'animations/OpenAI-GPTAstra-6.html': { width: 1000, height: 900, background: '#f6f3e9' }
+    'animations/OpenAI-GPTAstra-6.html': { width: 1000, height: 900, background: '#f6f3e9' },
+    'animations/OpenAI-GPTAstra-6.2.html': { width: 1000, height: 760, background: '#f6f2e8' }
   };
   const defaultViewport = { width: 1000, height: 650, background: '' };
 

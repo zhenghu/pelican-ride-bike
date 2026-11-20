@@ -101,5 +101,11 @@
     "totalUsage": "10.00",
     "estimated": true,
     "note": "用户提供本动画用量为百万级 Token、费用约 10 美元；未提供确切 Token 数量或上下限，费用为概数，非精确账单。"
+  },
+  "animations/OpenAI-GPTAstra-6.2.html": {
+    "createdDate": "2026-11-20",
+    "tokensTotal": 686000,
+    "totalUsage": "7.21",
+    "note": "用户提供本动画实际用量：686K tokens（686,000），费用 7.21 美元。"
   }
 }

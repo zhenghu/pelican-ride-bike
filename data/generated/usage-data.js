@@ -7,7 +7,7 @@ window.PELICAN_USAGE = {
   "exchangeRateSource": {
     "source": "European Central Bank reference exchange rates",
     "sourceUrl": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
-    "retrievedAt": "2026-11-16T15:44:56Z",
+    "retrievedAt": "2026-11-20T10:58:57Z",
     "rates": {
       "2026-09-16": {
         "usdPerEur": "1.1537",
@@ -52,6 +52,10 @@ window.PELICAN_USAGE = {
       "2026-11-16": {
         "usdPerEur": "1.1014",
         "cnyPerEur": "7.3425"
+      },
+      "2026-11-19": {
+        "usdPerEur": "1.0992",
+        "cnyPerEur": "7.328"
       }
     }
   },
@@ -383,6 +387,18 @@ window.PELICAN_USAGE = {
       "fxDate": null,
       "usdToCny": null,
       "fxFallback": false
+    },
+    "animations/OpenAI-GPTAstra-6.2.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-20",
+      "tokensTotal": 686000,
+      "totalUsage": "7.21",
+      "totalUsageRmb": "48.06666666666666666666666667",
+      "fxDate": "2026-11-19",
+      "usdToCny": "6.666666666666666666666666667",
+      "fxFallback": true,
+      "note": "用户提供本动画实际用量：686K tokens（686,000），费用 7.21 美元。"
     },
     "animations/OpenAI-GPTAstra-6.html": {
       "sourceModel": "GPT-6 Astra",
