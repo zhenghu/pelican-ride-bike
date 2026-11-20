@@ -19,6 +19,23 @@ window.PELICAN_MODELS = [
     "score": 92
   },
   {
+    "name": "OpenAI-GPTAstra-6.2",
+    "file": "animations/OpenAI-GPTAstra-6.2.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "SMIL"
+    ],
+    "rank": 2,
+    "review": "复古海岸速写的线条、纸纹和配色统一，双腿屈伸与脚踏持续衔接，轮组和车架稳定；羽毛、挡泥板、刹车线与灯塔细节协调",
+    "scores": {
+      "motion": 9,
+      "visual": 9.5,
+      "detail": 9
+    },
+    "score": 92
+  },
+  {
     "name": "OpenAI-GPTAstra-6",
     "file": "animations/OpenAI-GPTAstra-6.html",
     "aliases": [
@@ -30,7 +47,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 2,
+    "rank": 3,
     "review": "海岸插画的配色、线条和留白协调，双腿与脚踏联动清楚，车轮、车架与骑姿完整稳定",
     "scores": {
       "motion": 9,
@@ -47,7 +64,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "JavaScript 动画"
     ],
-    "rank": 3,
+    "rank": 4,
     "review": "晨曦海岸层次丰富，草帽、围巾、行李和车筐完成度高；脚踏衔接稳定，但长腿屈伸略显机械",
     "scores": {
       "motion": 8.5,
@@ -65,7 +82,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 4,
+    "rank": 5,
     "review": "双腿屈伸与水平脚踏衔接清楚，车轮与路面运动协调；海岸视差、鱼筐和链条细节完整，腿部折线略硬",
     "scores": {
       "motion": 9,
@@ -82,7 +99,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "JavaScript 动画"
     ],
-    "rank": 5,
+    "rank": 6,
     "review": "清晨海岸层次分明，双腿逆运动学踩踏、脚掌贴踏板、车轮同步滚动；头盔、围巾、车筐小鱼与海鸥细节协调，翅膀扶把轮廓略简",
     "scores": {
       "motion": 9,
@@ -101,7 +118,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 6,
+    "rank": 7,
     "review": "月夜海岸构图完整，屈膝、脚踏与车轮配合清楚；车架和轮辐细致，左上信息块略抢画面",
     "scores": {
       "motion": 9,
@@ -119,7 +136,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 7,
+    "rank": 8,
     "review": "夕阳海湾、灯塔和车篮层次丰富，双腿屈伸与脚踏配合清楚；高饱和配色较热闹，扶把轮廓略含糊",
     "scores": {
       "motion": 8.5,
@@ -136,7 +153,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "JavaScript 动画"
     ],
-    "rank": 8,
+    "rank": 9,
     "review": "秋日配色、落叶与法棍车筐协调，腿脚随曲柄联动；鸟身较宽、骑姿显得厚重",
     "scores": {
       "motion": 8.5,
@@ -153,7 +170,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "JavaScript 动画"
     ],
-    "rank": 9,
+    "rank": 10,
     "review": "暮色海堤、护目镜和车筐细节丰富，脚随曲柄转动；下踩时小腿拉长、膝部较直，动作略显机械",
     "scores": {
       "motion": 8,
@@ -174,7 +191,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 10,
+    "rank": 11,
     "review": "双腿屈伸与踩踏衔接清楚，扶把、鸟车比例稳定；画面清爽，场景与角色细节相对简洁",
     "scores": {
       "motion": 9,
@@ -192,7 +209,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 11,
+    "rank": 12,
     "review": "双腿屈伸、脚踏和车轮配合清楚，鸟车比例稳定；大翅膀略抢主体，场景层次较简单",
     "scores": {
       "motion": 8.5,
@@ -210,7 +227,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 12,
+    "rank": 13,
     "review": "紫粉天空配色统一，双腿与曲柄配合清楚；车身相对鸟偏小，背景和角色细节较简单",
     "scores": {
       "motion": 8,
@@ -231,7 +248,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 13,
+    "rank": 14,
     "review": "双腿踩踏清楚，头盔、围巾和喉囊小鱼丰富；主体偏小，翅膀未呈现扶把动作",
     "scores": {
       "motion": 8,
@@ -252,7 +269,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 14,
+    "rank": 15,
     "review": "大喉囊和柔和配色有辨识度，双脚跟随曲柄运动；粗白腿较僵硬，翅膀没有扶把",
     "scores": {
       "motion": 7.5,
@@ -273,7 +290,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "JavaScript 动画"
     ],
-    "rank": 15,
+    "rank": 16,
     "review": "护目镜、围巾和小鱼细节丰富，山景有层次；车架偏长、轮子偏小，腿脚与踏板在部分相位错开",
     "scores": {
       "motion": 6,
@@ -294,7 +311,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 16,
+    "rank": 17,
     "review": "双轮和车体细节完整，腿部有屈伸；鸟头朝后、骑姿别扭，脚下踏板的连接不够清楚",
     "scores": {
       "motion": 5.5,
@@ -315,7 +332,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 17,
+    "rank": 18,
     "review": "配色清爽、鸟车与道路完整；近侧有踩踏，远侧脚踏位置基本不变，双腿配合不完整",
     "scores": {
       "motion": 5.5,
@@ -335,7 +352,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 18,
+    "rank": 19,
     "review": "粗线海岸插画有辨识度、翅膀扶把；腿只小幅摆动，脚掌多帧离开旋转踏板，车架比例偏生硬",
     "scores": {
       "motion": 4.5,
@@ -353,7 +370,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 19,
+    "rank": 20,
     "review": "头盔、围巾和双轮完整；可见腿形较直硬，脚掌、腿末端与曲柄在部分相位错开",
     "scores": {
       "motion": 5.5,
@@ -370,7 +387,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 20,
+    "rank": 21,
     "review": "完整原页配色柔和、车轮齐全；双腿保持近似固定姿势，曲柄在脚下独立旋转，缺少实际踩踏",
     "scores": {
       "motion": 3.5,
@@ -390,7 +407,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 21,
+    "rank": 22,
     "review": "头盔、扶把和车架清楚；长腿整段摆动，脚未持续贴住踏板，角色与背景较简洁",
     "scores": {
       "motion": 5.5,
@@ -412,7 +429,7 @@ window.PELICAN_MODELS = [
       "SMIL",
       "JavaScript 动画"
     ],
-    "rank": 22,
+    "rank": 23,
     "review": "表情与扶把清楚、画面色彩鲜明；直杆腿偏僵硬，脚下踏板与曲柄端点在部分相位错开",
     "scores": {
       "motion": 5,
@@ -432,7 +449,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 23,
+    "rank": 24,
     "review": "鸟车和背景完整，但腿像弯曲色带来回摆动，脚与踏板未持续贴合，造型与层次较简单",
     "scores": {
       "motion": 4.5,
@@ -449,7 +466,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 24,
+    "rank": 25,
     "review": "海岸背景清爽，但主体偏小，车架几何生硬，摆腿与踏板衔接较弱",
     "scores": {
       "motion": 4.5,
@@ -471,7 +488,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 25,
+    "rank": 26,
     "review": "月光、车灯与夜景有特色；鸟小车长、比例失衡，腿保持静止而踏板独立旋转",
     "scores": {
       "motion": 3,
@@ -491,7 +508,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 26,
+    "rank": 27,
     "review": "双轮、车架与摆腿可见，但主体较小、留白多，矩形场景边界与被截断的云影响完整性",
     "scores": {
       "motion": 5,
@@ -511,7 +528,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 27,
+    "rank": 28,
     "review": "双轮轮胎和场景可辨，但前轮轮辐反复偏离轮心，腿部只有零散小点，踩踏关系不清楚",
     "scores": {
       "motion": 3,
@@ -531,7 +548,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 28,
+    "rank": 29,
     "review": "礼帽和车筐有细节，但鸟大车小、主体过小；双腿姿势基本不变，曲柄独立转动",
     "scores": {
       "motion": 2.5,
@@ -552,7 +569,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 29,
+    "rank": 30,
     "review": "鸟与自行车可辨，但鸟站在车架上方、腿够不到曲柄；矩形草地边界和被截断的云削弱整体画面",
     "scores": {
       "motion": 2.5,
@@ -572,7 +589,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 30,
+    "rank": 31,
     "review": "鸟与车主体可辨，但腿和踏板零件出现在上方，与骑行主体分离；实心车轮和背景较简陋",
     "scores": {
       "motion": 2.5,
@@ -592,7 +609,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 31,
+    "rank": 32,
     "review": "背景和角色有辨识度，但实体双轮反复离开轮轴、飞到头顶，鸟身与车架的结合也不自然",
     "scores": {
       "motion": 2,
@@ -610,7 +627,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 32,
+    "rank": 33,
     "review": "有完整配色与花草场景，但双轮反复绕到鸟头附近或路面之下，轮轴与车架脱离",
     "scores": {
       "motion": 2,
@@ -631,7 +648,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 33,
+    "rank": 34,
     "review": "腿部有运动，但双轮反复飞到左上再返回，车架长期悬于道路上方，骑行结构不稳定",
     "scores": {
       "motion": 2.5,
@@ -652,7 +669,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 34,
+    "rank": 35,
     "review": "车架与双轮可辨，但整车悬于道路上方，头身错位，腿和围巾零件分离",
     "scores": {
       "motion": 2,
@@ -672,7 +689,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 35,
+    "rank": 36,
     "review": "鸟与车偏在左上并悬于道路上方，后轮被边界截断，腿部另悬在上方，空间关系失衡",
     "scores": {
       "motion": 2,
@@ -692,7 +709,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 36,
+    "rank": 37,
     "review": "横穿画面本身是运动设计，但中段仍可见鸟头、肢体和轮辐分离，黑色实心车轮与车架关系混乱",
     "scores": {
       "motion": 1.5,
@@ -712,7 +729,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 37,
+    "rank": 38,
     "review": "鸟长期偏在左上角并远离车架，车轮只剩淡弱轮廓与零散部件，骑行主体严重分离",
     "scores": {
       "motion": 1.5,
@@ -732,7 +749,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 38,
+    "rank": 39,
     "review": "线描小鸟和车轮可辨，但整辆车竖起旋转、与鸟分离，主体偏小，未形成稳定骑行画面",
     "scores": {
       "motion": 1.5,
@@ -752,7 +769,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 39,
+    "rank": 40,
     "review": "只呈现蓝色椭圆、小圆与矩形等分散图形，鸟与自行车的连接关系和骑行主题不清楚",
     "scores": {
       "motion": 1,
@@ -772,7 +789,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 40,
+    "rank": 41,
     "review": "白底原页仍只有黑色圆点、曲线和矩形，图形整体移动，未形成可辨识的鹈鹕骑行姿态",
     "scores": {
       "motion": 0.5,
@@ -791,7 +808,7 @@ window.PELICAN_MODELS = [
     "tech": [
       "CSS 动画"
     ],
-    "rank": 41,
+    "rank": 42,
     "review": "多帧只见天空、草地和道路，骑行主体未正常显示，标题也被场景遮挡",
     "scores": {
       "motion": 0,
@@ -802,7 +819,7 @@ window.PELICAN_MODELS = [
   }
 ];
 window.PELICAN_RANKING = {
-  "reviewedAt": "2026-11-17",
+  "reviewedAt": "2026-11-20",
   "method": "逐项多帧复看全部作品，疑点放大并核验完整原页。动作自然度 40%（腿脚、踏板与车轮配合），画面表现 40%（构图、比例与色彩），细节完成度 20%（角色与场景）。分项满分 10，综合换算为 100 分；同分依次比较动作、画面、细节。不把预览视口截断当成原作缺失，费用与 Token 不参与评分。",
   "scope": "当前作品的主观视觉评分，分项以 0.5 分为档；小分差不代表显著优劣，也不代表模型整体能力。"
 };
