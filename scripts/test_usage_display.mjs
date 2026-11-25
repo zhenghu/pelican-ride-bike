@@ -58,3 +58,15 @@ test('unknown, exact and zero token quantities retain their existing meanings', 
   assert.equal(usage.tokenDisplay({ tokensTotal: null, tokensApproximation: 'unknown' }).text, '暂无数据');
   assert.match(usage.formatCost('0'), /^免费/);
 });
+
+test('native RMB costs are exact on both the summary and ranking row', () => {
+  const { usage, nodes } = load({ tokensTotal: 43000, totalUsageRmb: '0.20',
+    sourceCurrency: 'CNY', mappingStatus: 'user-provided', totalUsage: null, fxDate: null });
+  const summary = usage.createSummary('work.html');
+  assert.equal(summary.children.length, 3);
+  const amount = summary.children[0].children[1].children[1];
+  assert.equal(amount.textContent, '¥0.20');
+  assert.doesNotMatch(amount.title, /USD|ECB|null/);
+  const ranking = nodes.get('ranking-list').children[0].children[2].children[0];
+  assert.equal(ranking.children[1].children[1].textContent, amount.textContent);
+});

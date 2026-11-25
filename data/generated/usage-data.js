@@ -286,6 +286,18 @@ window.PELICAN_USAGE = {
       "fxFallback": true,
       "note": "用户提供本动画实际用量：13.7M tokens（13,700,000），费用 3.71 美元。"
     },
+    "animations/Huawei-OpenPangu-2.1.html": {
+      "sourceModel": null,
+      "mappingStatus": "user-provided",
+      "createdDate": "2026-11-25",
+      "tokensTotal": 43000,
+      "totalUsage": null,
+      "totalUsageRmb": "0.20",
+      "fxDate": null,
+      "usdToCny": null,
+      "fxFallback": false,
+      "sourceCurrency": "CNY"
+    },
     "animations/Huawei-OpenPangu-2.html": {
       "sourceModel": null,
       "mappingStatus": "unmatched",

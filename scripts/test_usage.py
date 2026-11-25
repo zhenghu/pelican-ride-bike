@@ -47,6 +47,16 @@ class UsageApproximationTests(unittest.TestCase):
                 self.assertEqual(entry['totalUsage'], '0.00')
                 self.assertNotIn('tokensApproximation', entry)
 
+    def test_native_rmb_override_replaces_csv_dollars(self):
+        override = {'createdDate': '2026-11-25', 'tokensTotal': 43000, 'totalUsageRmb': '0.20'}
+        entry = {'totalUsage': '1.00'}
+        usage.apply_override(entry, override, 'work.html', '2026-11-25')
+        self.assertIsNone(entry['totalUsage'])
+        self.assertEqual(entry['totalUsageRmb'], '0.20')
+        self.assertEqual(entry['sourceCurrency'], 'CNY')
+        with self.assertRaises(ValueError):
+            usage.apply_override({}, dict(override, totalUsage='0.20'), 'work.html', '2026-11-25')
+
     def test_invalid_manual_counts_still_rejected(self):
         for count in (-1, 1.5, True, '1000'):
             with self.subTest(count=count):

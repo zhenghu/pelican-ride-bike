@@ -84,15 +84,22 @@ def apply_override(entry, override, file, created_date):
     if override['createdDate'] != created_date:
         raise ValueError(f'Override creation date mismatch: {file}')
     count = override['tokensTotal']
-    cost = Decimal(override['totalUsage'])
+    cost_fields = {'totalUsage', 'totalUsageRmb'} & override.keys()
+    if len(cost_fields) != 1:
+        raise ValueError(f'Expected exactly one USD or RMB cost: {file}')
+    cost_field = cost_fields.pop()
+    cost = Decimal(override[cost_field])
     if ((count is not None and (type(count) is not int or count < 0))
             or not cost.is_finite() or cost < 0):
         raise ValueError(f'Invalid manual usage: {file}')
     approximation = override.get('tokensApproximation')
     if 'tokensApproximation' in override and (approximation != 'million-scale' or count is not None):
         raise ValueError(f'Invalid token approximation: {file}; use million-scale with a null token count')
-    entry.update(tokensTotal=count, totalUsage=format(cost, 'f'),
+    entry.update(tokensTotal=count, totalUsage=None,
                  mappingStatus='user-provided', sourceModel=None)
+    entry[cost_field] = format(cost, 'f')
+    if cost_field == 'totalUsageRmb':
+        entry['sourceCurrency'] = 'CNY'
     if approximation:
         entry['tokensApproximation'] = approximation
     if override.get('estimated'):
@@ -144,7 +151,7 @@ def main():
         + 'window.PELICAN_USAGE = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n',
         encoding='utf-8')
     available = sum(item['tokensTotal'] is not None or item.get('tokensApproximation') is not None
-                    or item['totalUsage'] is not None for item in works.values())
+                    or item['totalUsageRmb'] is not None for item in works.values())
     print(f'By animation creation date: {available}/{len(works)} works have usage data')
 
 
