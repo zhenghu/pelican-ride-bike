@@ -58,7 +58,7 @@
       list.className = 'rank-metrics';
       for (const [label, display] of [
         ['Token（K）', usage.tokenDisplay(entry)],
-        ['费用（RMB）', { text: usage.formatCost(entry?.totalUsageRmb), missing: entry?.totalUsageRmb == null }]
+        ['费用（RMB）', usage.costDisplay(entry)]
       ]) {
         const group = document.createElement('div');
         const term = document.createElement('dt');

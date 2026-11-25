@@ -518,6 +518,23 @@ window.PELICAN_MODELS = [
     "score": 47
   },
   {
+    "name": "Huawei-OpenPangu-2.1",
+    "file": "animations/Huawei-OpenPangu-2.1.html",
+    "aliases": [],
+    "tech": [
+      "SVG",
+      "CSS 动画"
+    ],
+    "rank": 28,
+    "review": "鸟喙和双轮辨识清楚，车架随身体轻微起伏。鸟头朝向车尾，双脚挤在曲柄附近，踏板转到下方时明显脱离脚掌。",
+    "scores": {
+      "motion": 3.5,
+      "visual": 5.5,
+      "detail": 4.5
+    },
+    "score": 45
+  },
+  {
     "name": "Xiaomi-MiMo-2.5",
     "file": "animations/Xiaomi-MiMo-2.5.html",
     "aliases": [
@@ -528,7 +545,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 28,
+    "rank": 29,
     "review": "礼帽、车铃和车筐在放大后清楚可辨，轮轴与车架保持连接。主体在整幅场景中偏小，脚部几乎保持同一姿势。",
     "scores": {
       "motion": 2.5,
@@ -548,7 +565,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 29,
+    "rank": 30,
     "review": "双轮轮胎和场景可辨，但前轮轮辐反复偏离轮心，腿部只有零散小点，踩踏关系不清楚",
     "scores": {
       "motion": 3,
@@ -569,7 +586,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 30,
+    "rank": 31,
     "review": "鸟与自行车可辨，但鸟站在车架上方、腿够不到曲柄；矩形草地边界和被截断的云削弱整体画面",
     "scores": {
       "motion": 2.5,
@@ -589,7 +606,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 31,
+    "rank": 32,
     "review": "鸟与车主体可辨，但腿和踏板零件出现在上方，与骑行主体分离；实心车轮和背景较简陋",
     "scores": {
       "motion": 2.5,
@@ -609,7 +626,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 32,
+    "rank": 33,
     "review": "背景和角色有辨识度，但实体双轮反复离开轮轴、飞到头顶，鸟身与车架的结合也不自然",
     "scores": {
       "motion": 2,
@@ -627,7 +644,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 33,
+    "rank": 34,
     "review": "有完整配色与花草场景，但双轮反复绕到鸟头附近或路面之下，轮轴与车架脱离",
     "scores": {
       "motion": 2,
@@ -648,7 +665,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 34,
+    "rank": 35,
     "review": "腿部有运动，但双轮反复飞到左上再返回，车架长期悬于道路上方，骑行结构不稳定",
     "scores": {
       "motion": 2.5,
@@ -669,7 +686,7 @@ window.PELICAN_MODELS = [
       "CSS 动画",
       "SMIL"
     ],
-    "rank": 35,
+    "rank": 36,
     "review": "车架与双轮可辨，但整车悬于道路上方，头身错位，腿和围巾零件分离",
     "scores": {
       "motion": 2,
@@ -689,7 +706,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 36,
+    "rank": 37,
     "review": "鸟与车偏在左上并悬于道路上方，后轮被边界截断，腿部另悬在上方，空间关系失衡",
     "scores": {
       "motion": 2,
@@ -709,7 +726,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 37,
+    "rank": 38,
     "review": "横穿画面本身是运动设计，但中段仍可见鸟头、肢体和轮辐分离，黑色实心车轮与车架关系混乱",
     "scores": {
       "motion": 1.5,
@@ -729,7 +746,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 38,
+    "rank": 39,
     "review": "黑白线描能辨认长嘴小鸟、车轮与起伏路面，但自行车整体翻转，鸟停留在车旁，两个主体各自运动。",
     "scores": {
       "motion": 1.5,
@@ -749,7 +766,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 39,
+    "rank": 40,
     "review": "鸟长期偏在左上角并远离车架，车轮只剩淡弱轮廓与零散部件，骑行主体严重分离",
     "scores": {
       "motion": 1.5,
@@ -769,7 +786,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "SMIL"
     ],
-    "rank": 40,
+    "rank": 41,
     "review": "只呈现蓝色椭圆、小圆与矩形等分散图形，鸟与自行车的连接关系和骑行主题不清楚",
     "scores": {
       "motion": 1,
@@ -789,7 +806,7 @@ window.PELICAN_MODELS = [
       "SVG",
       "CSS 动画"
     ],
-    "rank": 41,
+    "rank": 42,
     "review": "白底原页仍只有黑色圆点、曲线和矩形，图形整体移动，未形成可辨识的鹈鹕骑行姿态",
     "scores": {
       "motion": 0.5,
@@ -808,7 +825,7 @@ window.PELICAN_MODELS = [
     "tech": [
       "CSS 动画"
     ],
-    "rank": 42,
+    "rank": 43,
     "review": "多帧只见天空、草地和道路，骑行主体未正常显示，标题也被场景遮挡",
     "scores": {
       "motion": 0,
@@ -819,7 +836,7 @@ window.PELICAN_MODELS = [
   }
 ];
 window.PELICAN_RANKING = {
-  "reviewedAt": "2026-11-20",
+  "reviewedAt": "2026-11-25",
   "method": "逐项多帧复看全部作品，疑点放大并核验完整原页。动作自然度 40%（腿脚、踏板与车轮配合），画面表现 40%（构图、比例与色彩），细节完成度 20%（角色与场景）。分项满分 10，综合换算为 100 分；同分依次比较动作、画面、细节。不把预览视口截断当成原作缺失，费用与 Token 不参与评分。",
   "scope": "当前作品的主观视觉评分，分项以 0.5 分为档；小分差不代表显著优劣，也不代表模型整体能力。"
 };

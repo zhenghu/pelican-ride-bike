@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-11-20",
+  "reviewedAt": "2026-11-25",
   "method": "逐项多帧复看全部作品，疑点放大并核验完整原页。动作自然度 40%（腿脚、踏板与车轮配合），画面表现 40%（构图、比例与色彩），细节完成度 20%（角色与场景）。分项满分 10，综合换算为 100 分；同分依次比较动作、画面、细节。不把预览视口截断当成原作缺失，费用与 Token 不参与评分。",
   "scope": "当前作品的主观视觉评分，分项以 0.5 分为档；小分差不代表显著优劣，也不代表模型整体能力。",
   "entries": [
@@ -302,6 +302,17 @@
     },
     {
       "rank": 28,
+      "file": "animations/Huawei-OpenPangu-2.1.html",
+      "reason": "鸟喙和双轮辨识清楚，车架随身体轻微起伏。鸟头朝向车尾，双脚挤在曲柄附近，踏板转到下方时明显脱离脚掌。",
+      "sha256": "25b8bf7a43e104316c69d3ad2178debad5b1462abdb465f998c2e03340b31ba3",
+      "scores": {
+        "motion": 3.5,
+        "visual": 5.5,
+        "detail": 4.5
+      }
+    },
+    {
+      "rank": 29,
       "file": "animations/Xiaomi-MiMo-2.5.html",
       "reason": "礼帽、车铃和车筐在放大后清楚可辨，轮轴与车架保持连接。主体在整幅场景中偏小，脚部几乎保持同一姿势。",
       "sha256": "2a10b5f4af3fe7a3229a0a56fd3e12b612f7bf6d1e36f0a3397be0d1a3aed6e2",
@@ -312,7 +323,7 @@
       }
     },
     {
-      "rank": 29,
+      "rank": 30,
       "file": "animations/Huawei-OpenPangu-2.html",
       "reason": "双轮轮胎和场景可辨，但前轮轮辐反复偏离轮心，腿部只有零散小点，踩踏关系不清楚",
       "sha256": "507cb26b934d32b8f177668cca6401e8d1b48820df951272b79e2e343f525160",
@@ -323,7 +334,7 @@
       }
     },
     {
-      "rank": 30,
+      "rank": 31,
       "file": "animations/Meituan-LongCat-2.0.html",
       "reason": "鸟与自行车可辨，但鸟站在车架上方、腿够不到曲柄；矩形草地边界和被截断的云削弱整体画面",
       "sha256": "b93e7a2dde2025eb83ec3cfb0a4344510667b3f8b710acda80279e08867daae6",
@@ -334,7 +345,7 @@
       }
     },
     {
-      "rank": 31,
+      "rank": 32,
       "file": "animations/Anthropic-ClaudeOpus-4.8.html",
       "reason": "鸟与车主体可辨，但腿和踏板零件出现在上方，与骑行主体分离；实心车轮和背景较简陋",
       "sha256": "be925774297fe9b2f3596904a2f471f189fbecb204f82f10f7de366b78e6f86a",
@@ -345,7 +356,7 @@
       }
     },
     {
-      "rank": 32,
+      "rank": 33,
       "file": "animations/xAI-Grok-4.6.html",
       "reason": "背景和角色有辨识度，但实体双轮反复离开轮轴、飞到头顶，鸟身与车架的结合也不自然",
       "sha256": "d990e45f86e5ee92d54bc52e8f7c3f69e4a74abd51f40188a77946c879d1c5bf",
@@ -356,7 +367,7 @@
       }
     },
     {
-      "rank": 33,
+      "rank": 34,
       "file": "animations/MistralAI-MistralLarge-4.html",
       "reason": "有完整配色与花草场景，但双轮反复绕到鸟头附近或路面之下，轮轴与车架脱离",
       "sha256": "91d4553e2e91d0157f3bed215430b54a9dcc7efc663c5d9c14244d0ff380ad61",
@@ -367,7 +378,7 @@
       }
     },
     {
-      "rank": 34,
+      "rank": 35,
       "file": "animations/MoonshotAI-Kimi-K3.html",
       "reason": "腿部有运动，但双轮反复飞到左上再返回，车架长期悬于道路上方，骑行结构不稳定",
       "sha256": "bb10526c3974a1cb76d2eef60f770fe08d6397733fddd8a03a365f33025abe68",
@@ -378,7 +389,7 @@
       }
     },
     {
-      "rank": 35,
+      "rank": 36,
       "file": "animations/ZhipuAI-GLM-5.3.html",
       "reason": "车架与双轮可辨，但整车悬于道路上方，头身错位，腿和围巾零件分离",
       "sha256": "a11166a5f9a6f7c26d1919e37759f169c336e90777efa18ace707cbcc63372f0",
@@ -389,7 +400,7 @@
       }
     },
     {
-      "rank": 36,
+      "rank": 37,
       "file": "animations/Tencent-Hunyuan-3.html",
       "reason": "鸟与车偏在左上并悬于道路上方，后轮被边界截断，腿部另悬在上方，空间关系失衡",
       "sha256": "750523e4dd3858fe9f6efdb4ef5a031af289c50972fc03838afe4c8732a12946",
@@ -400,7 +411,7 @@
       }
     },
     {
-      "rank": 37,
+      "rank": 38,
       "file": "animations/NVIDIA-Nemotron-Unknown.html",
       "reason": "横穿画面本身是运动设计，但中段仍可见鸟头、肢体和轮辐分离，黑色实心车轮与车架关系混乱",
       "sha256": "df6b49fa72c7c0f55335770e73d5dfd1d6a002c5c5667a9dc9380ebf663a06d5",
@@ -411,7 +422,7 @@
       }
     },
     {
-      "rank": 38,
+      "rank": 39,
       "file": "animations/MistralAI-Unknown-Unknown.html",
       "reason": "黑白线描能辨认长嘴小鸟、车轮与起伏路面，但自行车整体翻转，鸟停留在车旁，两个主体各自运动。",
       "sha256": "6deb8e9837662a3c93e687bb675954e2392cd08b6fd2f3f396a3cd39b68b459b",
@@ -422,7 +433,7 @@
       }
     },
     {
-      "rank": 39,
+      "rank": 40,
       "file": "animations/Alibaba-QwenMax-3.7.html",
       "reason": "鸟长期偏在左上角并远离车架，车轮只剩淡弱轮廓与零散部件，骑行主体严重分离",
       "sha256": "1f63032b2c986d8c236ca3aa7500d390244c0a70b4e657047ba70e997da44493",
@@ -433,7 +444,7 @@
       }
     },
     {
-      "rank": 40,
+      "rank": 41,
       "file": "animations/IBM-Granite-Unknown.html",
       "reason": "只呈现蓝色椭圆、小圆与矩形等分散图形，鸟与自行车的连接关系和骑行主题不清楚",
       "sha256": "bcc722121c0c2a6ef16ea09540c9331fc41f39c20a6397e64b719550f695e186",
@@ -444,7 +455,7 @@
       }
     },
     {
-      "rank": 41,
+      "rank": 42,
       "file": "animations/Amazon-Unknown-Unknown.html",
       "reason": "白底原页仍只有黑色圆点、曲线和矩形，图形整体移动，未形成可辨识的鹈鹕骑行姿态",
       "sha256": "1fc6e43601332117e1df6f1e4a0f652a276f06985245f777ba0d109768f613f8",
@@ -455,7 +466,7 @@
       }
     },
     {
-      "rank": 42,
+      "rank": 43,
       "file": "animations/Poolside-Unknown-Unknown.html",
       "reason": "多帧只见天空、草地和道路，骑行主体未正常显示，标题也被场景遮挡",
       "sha256": "fed2b99e26816f29e94952be610d9569798b1c7d87837237a35ff311ee33c79f",

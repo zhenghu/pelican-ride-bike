@@ -1,6 +1,6 @@
 # Pelican Bicycle
 
-42 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
+43 个鹈鹕骑自行车动画版本的本地预览与对比入口。原始 HTML 集中放在 `animations/` 文件夹中，入口 `index.html` 保留在项目根目录。
 
 直接打开 `index.html` 即可使用，不需要安装依赖。也可以在目录中运行：
 
@@ -10,7 +10,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 
 访问 <http://127.0.0.1:18777>。
 
-“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 42 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
+“全部动画”页面位于 `pages/gallery.html`，可从顶部导航进入，或访问 <http://127.0.0.1:18777/pages/gallery.html>。它在同一页以响应式网格加载全部 43 个动画，每个作品独立播放，并提供原页和放大查看入口。新作品更新目录后也会自动出现在该页面。
 
 独立“质量排名”页面位于 `pages/ranking.html`，集中展示全部作品的名次、评语、创建日期与用量，支持名称和旧名称搜索；筛选后保留全站名次。点击作品可进入单版预览，“用量依据”可展开来源与估算说明。它与首页、总览页共用同一份排名目录，后续更新同步生效。
 
@@ -29,7 +29,7 @@ python3 -m http.server 18777 --bind 127.0.0.1
 ```text
 index.html                  预览与对比入口
 README.md                   项目说明
-animations/                 42 个原始动画
+animations/                 43 个原始动画
 pages/                      全部动画与质量排名页面
 assets/css/                 页面样式
 assets/js/                  页面交互与用量展示脚本
@@ -89,7 +89,7 @@ node --test scripts/test_usage_display.mjs
 
 仅提供数量级的 Token 用量保留 `tokensTotal: null`，并以 `tokensApproximation: "million-scale"` 标注；页面显示“千 K 级”（即百万级 Token），不推定确切数量或上下限。Fable 5.2 的费用按用户提供的约 10 USD 标记为估算，使用 2026-11-16 的 ECB 汇率折合约 ¥66.67，保留美元概数和估算说明。
 
-预览页和全部动画页按各作品的原始创建日期，从本地两份 CSV 匹配该模型当天的 Token 和 Usage。Token 使用 K（1 K = 1,000 tokens），保留最多两位小数。页面同时显示创建日期。CSV 记录是模型当天的用量，可能包含当天其他请求。用户直接提供的本动画用量保存在 `data/usage-overrides.json`，按文件名和创建日期覆盖 CSV 值，页面单独注明来源，重新生成时也会保留。金额字段 `totalUsage` 的单位为 USD。估算记录设置 `estimated: true` 并在 `note` 中保留估算依据；页面将 Token 和费用标为估算，注明非实际账单。
+预览页和全部动画页按各作品的原始创建日期，从本地两份 CSV 匹配该模型当天的 Token 和 Usage。Token 使用 K（1 K = 1,000 tokens），保留最多两位小数。页面同时显示创建日期。CSV 记录是模型当天的用量，可能包含当天其他请求。用户直接提供的本动画用量保存在 `data/usage-overrides.json`，按文件名和创建日期覆盖 CSV 值，页面单独注明来源，重新生成时也会保留。美元金额填写 `totalUsage`，人民币原价填写 `totalUsageRmb`，两者择一。人民币原价直接展示。估算记录设置 `estimated: true` 并在 `note` 中保留估算依据；页面将 Token 和费用标为估算，注明非实际账单。
 
 原始文件创建日期按 Europe/Berlin 时区从 macOS `st_birthtime` 提取并固定在 `data/animation-dates.json`。重新克隆、复制或修改文件不会改变统计日期。导入兼容 `date__day` 和 `date__hour`：小时记录先按 CSV 中的自然日期、模型求和，再与创建日期匹配；不混合新旧导出。源文件未提供时区转换信息，因此沿用源时间戳中的日期。添加作品时需将其原始创建日期补入该文件，不能用克隆日期代替。
 

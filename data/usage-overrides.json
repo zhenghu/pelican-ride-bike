@@ -107,5 +107,10 @@
     "tokensTotal": 686000,
     "totalUsage": "7.21",
     "note": "用户提供本动画实际用量：686K tokens（686,000），费用 7.21 美元。"
+  },
+  "animations/Huawei-OpenPangu-2.1.html": {
+    "createdDate": "2026-11-25",
+    "tokensTotal": 43000,
+    "totalUsageRmb": "0.20"
   }
 }
